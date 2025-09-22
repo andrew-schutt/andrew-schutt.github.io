@@ -6,7 +6,7 @@ categories: numbers programming
 ---
 The ancient Greeks didn’t just study numbers for calculation they also explored their personalities. They asked: what happens when you add up all the proper divisors of a number (that is, all the positive divisors excluding the number itself)? From this question came four beautiful classifications. Insipired by this [newsletter](https://buttondown.com/cassidoo/archive/the-love-that-you-withhold-is-the-pain-that-you/) from [Cassidoo](https://cassidoo.co/)
 
-1. Abundant Numbers
+## Abundant Numbers
 
 A number is called abundant if the sum of its proper divisors is greater than the number itself.
 
@@ -14,7 +14,7 @@ Example: 12 has divisors 1, 2, 3, 4, 6 → sum = 16, which is more than 12.
 
 Interpretation: it has “more than enough” divisors.
 
-2. Deficient Numbers
+## Deficient Numbers
 
 A number is deficient if the sum of its proper divisors is less than the number itself.
 
@@ -22,7 +22,7 @@ Example: 8 has divisors 1, 2, 4 → sum = 7, which is less than 8.
 
 Interpretation: it “falls short.”
 
-3. Perfect Numbers
+## Perfect Numbers
 
 A number is perfect when the sum of its proper divisors is exactly equal to the number itself.
 
@@ -30,7 +30,7 @@ Example: 28 has divisors 1, 2, 4, 7, 14 → sum = 28.
 
 Interpretation: balanced and complete. (The Greeks admired these numbers greatly.)
 
-4. Amicable Numbers
+## Amicable Numbers
 
 Here, the focus shifts to pairs. Two numbers are amicable if each number’s proper divisors add up to the other.
 
@@ -42,7 +42,7 @@ Divisors of 284: sum = 220.
 
 Interpretation: a friendship between numbers.
 
-Try It Yourself: Ruby Program
+## Try It Yourself: Ruby Program
 
 If you’d like to experiment with these number types, here’s a simple Ruby command-line program. You can run it with one number (to check if it’s abundant, deficient, or perfect) or with two numbers (to check if they’re amicable).
 
