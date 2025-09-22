@@ -4,7 +4,7 @@ title: "Four Ancient Ways to Describe Numbers"
 date: 2025-09-22 10:06:02
 categories: numbers programming
 ---
-The ancient Greeks didn’t just study numbers for calculation—they also explored their personalities. They asked: what happens when you add up all the proper divisors of a number (that is, all the positive divisors excluding the number itself)? From this question came four beautiful classifications.
+The ancient Greeks didn’t just study numbers for calculation they also explored their personalities. They asked: what happens when you add up all the proper divisors of a number (that is, all the positive divisors excluding the number itself)? From this question came four beautiful classifications. Insipired by this [newsletter](https://buttondown.com/cassidoo/archive/the-love-that-you-withhold-is-the-pain-that-you/) from [Cassidoo](https://cassidoo.co/)
 
 1. Abundant Numbers
 
@@ -127,3 +127,7 @@ end
 Closing Thought
 
 What’s fascinating is that this classification is over two thousand years old, yet still sparks curiosity today. Abundant, deficient, perfect, and amicable numbers remind us that math isn’t only about utility—it’s also about beauty and relationships.
+
+Source:
+https://www.encyclopedia.com/education/news-wires-white-papers-and-books/numbers-abundant-deficient-perfect-and-amicable
+
