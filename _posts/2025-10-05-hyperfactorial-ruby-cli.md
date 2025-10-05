@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "A Simple Ruby CLI for the Hyperfactorial"
-date: 2025-10-05 11:48:15 -0500
+date: 2025-10-05 11:48:15
 categories: ruby math cli
 ---
-
 ## What is the hyperfactorial?
 
 At a high level, the **hyperfactorial** of a non‑negative integer *n* is the product of each integer from 1 to *n*, raised to its own power:
@@ -15,20 +14,20 @@ For more background, see the MathWorld entry: [Hyperfactorial](https://mathworld
 
 ### Small examples
 
-- H(0) = 1  
-- H(1) = 1  
-- H(2) = 4  
-- H(3) = 108  
-- H(4) = 27,648  
-- H(5) = 86,400,000  
-- H(6) = 4,031,078,400,000  
-- H(7) = 3,319,766,398,771,200,000  
+- H(0) = 1
+- H(1) = 1
+- H(2) = 4
+- H(3) = 108
+- H(4) = 27,648
+- H(5) = 86,400,000
+- H(6) = 4,031,078,400,000
+- H(7) = 3,319,766,398,771,200,000
 - H(8) exceeds signed 64‑bit integer range
 
 ## Ruby CLI: straightforward, no flags
 
-This standalone script accepts **exactly one** non‑negative integer argument (0 allowed).  
-It prints the exact hyperfactorial if it fits in a signed 64‑bit integer; otherwise it prints `out of bounds`.  
+This standalone script accepts **exactly one** non‑negative integer argument (0 allowed).
+It prints the exact hyperfactorial if it fits in a signed 64‑bit integer; otherwise it prints `out of bounds`.
 Invalid input prints `invalid input` to STDERR and exits with code 1.
 
 ```ruby
@@ -80,7 +79,7 @@ chmod +x hyperfactorial
 # 86400000
 ```
 
-**Notes**  
-- Valid input: `0, 1, 2, …`  
-- Error behavior: `invalid input` to STDERR, exit code 1.  
+**Notes**
+- Valid input: `0, 1, 2, …`
+- Error behavior: `invalid input` to STDERR, exit code 1.
 - Range guard: prints `out of bounds` once the exact value would overflow a signed 64‑bit integer (H(8) and above).
