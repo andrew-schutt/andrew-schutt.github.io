@@ -5,7 +5,7 @@ date: 2026-08-31 09:00:00
 categories: jekyll slides
 ---
 
-I've given a handful of talks over the years and hosted every deck on [slides.com](https://slides.com/). It's a great editor, but I didn't love that all of my talks lived on a service I didn't control. So I moved them here, onto this site, where they sit in the same repo as everything else. It turned out to be pretty painless, mostly because slides.com decks are just [reveal.js](https://revealjs.com/) under the hood.
+I've given a handful of talks over the years and hosted every deck on [slides.com](https://slides.com/). It's a great editor, but I didn't love that all of my talks lived on a service I didn't control (not to mention I finally maxed out the free plan). So I moved them here, onto this site, where they sit in the same repo as everything else. It turned out to be pretty painless, mostly because slides.com decks are just [reveal.js](https://revealjs.com/) under the hood.
 
 Here's the whole process.
 
@@ -35,7 +35,7 @@ slides/
   ...
 ```
 
-The important detail is that the deck's `index.html` has **no YAML front matter**. That matters because Jekyll only processes files that start with front matter — everything else is copied through byte-for-byte. So Jekyll leaves the deck completely alone, and all of its relative asset paths (`lib/…`, the image folder) resolve exactly like they did in the ZIP.
+The important detail is that the deck's `index.html` has **no YAML front matter** (metadata at the top of Jekyll files). This is important because Jekyll only processes files that start with front matter — everything else is copied through byte-for-byte. So Jekyll leaves the deck completely alone, and all of its relative asset paths (`lib/…`, the image folder) resolve exactly like they did in the ZIP.
 
 From there it was just some glue:
 
