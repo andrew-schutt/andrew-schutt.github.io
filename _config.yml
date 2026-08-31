@@ -21,6 +21,16 @@ plugins:
 
 include: [".well-known"]
 
+# Silence Sass deprecation warnings coming from the remote theme's bundled
+# Bootstrap SCSS. There is no local SCSS in this repo, so every deprecation
+# originates in theme/dependency stylesheets we don't control.
+sass:
+  quiet_deps: true
+  # The theme's entry stylesheet (assets/main.scss) uses a top-level @import,
+  # whose deprecation quiet_deps can't reach; silence that one id too.
+  silence_deprecations:
+    - import
+
 defaults:
   - scope:
       path: "_posts/images"
