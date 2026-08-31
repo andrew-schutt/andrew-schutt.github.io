@@ -1,0 +1,26 @@
+version: 2
+updates:
+  # Ruby gems (Jekyll 4 + plugins) declared in the root Gemfile.
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      # Bundle routine minor/patch bumps into a single PR to cut noise;
+      # major bumps still open their own PR so breaking changes get reviewed.
+      ruby-minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Actions used by the Pages deploy workflow (.github/workflows/jekyll.yml).
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      github-actions:
+        update-types:
+          - "minor"
+          - "patch"
