@@ -3,10 +3,12 @@ email:           me@andrew-schutt.com
 description:     welcome to my little corner of the internet
 author:          Andrew Schutt
 baseurl:         ""
-url:             "http://andrew-schutt.com"
+url:             "https://andrew-schutt.com"
 github_username:  andrew-schutt
 devto_username:   andrewschutt
 show_downloads:   false
+lang:             en
+timezone:         America/Chicago
 
 # Build settings
 remote_theme:       StartBootstrap/startbootstrap-clean-blog-jekyll
@@ -18,6 +20,7 @@ plugins:
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
   - jekyll-remote-theme
   - jekyll-target-blank
+  - jekyll-seo-tag
 
 include: [".well-known"]
 
