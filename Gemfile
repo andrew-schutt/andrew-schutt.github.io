@@ -1,27 +1,22 @@
 source "https://rubygems.org"
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-# gem "minima", "~> 2.5"
-gem "jekyll-theme-clean-blog"
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", group: :jekyll_plugins
-# If you have any plugins, put them here!
+
+# Modern Jekyll, built and deployed via GitHub Actions (see .github/workflows/jekyll.yml).
+# Note: this repo no longer uses the `github-pages` gem, which pinned Jekyll 3.9 / Ruby < 4.0.
+gem "jekyll", "~> 4.3"
+
 group :jekyll_plugins do
-  gem 'jekyll-target-blank'
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-remote-theme"
+  gem "jekyll-feed", "~> 0.17"
+  gem "jekyll-paginate"
+  gem "jekyll-sitemap"
+  gem "jekyll-target-blank"
 end
 
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
+# Modern Ruby no longer ships webrick in the stdlib; needed for `jekyll serve`.
+gem "webrick", "~> 1.9"
+
+# Windows and JRuby do not include zoneinfo files, so bundle the tzinfo-data gem.
 platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", "~> 1.2"
+  gem "tzinfo", ">= 1", "< 3"
   gem "tzinfo-data"
 end
