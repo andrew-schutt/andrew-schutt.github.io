@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, minimal-ui">
+		<meta charset="utf-8">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="manifest" href='data:application/manifest+json,{"display": "standalone", "name": "Elixir &amp; Phoenix Lightning Talk"}' />
+		<title>Elixir &amp; Phoenix Lightning Talk</title>
+
+		<meta name="description" content="Slides for the introduction of an Elixir workshop for Web Geeks">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-asphalt-orange">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="a33f06e326f43fe963f5e5567426351f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 67px; height: auto;" data-block-id="53f46ef5cac9364ddde63fadc4b0cc95"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Elixir &amp; Phoenix</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 574px;" data-block-id="a28dac175293ef7d40ce2e0c9617dac3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Andrew Schutt</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 377px; height: 377px; left: 52px; top: 174px; min-width: 1px; min-height: 1px;" data-block-id="e79735b0a6e81a32b8479340c100ed52"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elixir-and-phoenix/28468f92f9a0f9c416cf2175e8cccaf8.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 395px; height: 395px; left: 523px; top: 165px; min-width: 1px; min-height: 1px;" data-block-id="320cb1539647257596f8742a22603d6d"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="1350" data-natural-height="1350" data-lazy-loaded="" data-src="elixir-and-phoenix/6cbbde6c1d4afec10ae1781b5d75e76a.png"></div></div></section><section class="stack" data-id="764ee0e8f255c008d0cafdf574bb2b8a"><section data-id="b976eacc34521e262154ccf6d3f72fa5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="ec45e3c761082e454000ded95fe1450d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Functional Programming</h1>
+</div></div></section><section data-id="4c7bcf4ea7c1f6cb127fa9ff16f44e9e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="35c7e57de3b2006b5a8b478973526779"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Functional Programming</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;" data-block-id="0aa9d500b8e97d69e5da97fbe7b5f0b1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:1.6em">"programming paradigm treats computation as the evaluation of functions"</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 21px; top: 644px; height: auto;" data-block-id="d023dfb0c9f9c7a9b706b300a7a47f76"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;">
+<pre>Functional Programming</pre>
+</div></div></section><section data-id="6f7d367f1724584d0bc20cf237d9a2d6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 21px; top: 644px; height: auto;" data-block-id="ffbb2ba315730852fa60f1d940566b88"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<pre>Functional Programming</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="e6c9f8a1ed2081af9d8500c6d8f8eced"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<h1>Immutable Values</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 264px; height: auto;" data-block-id="1985ad77806e2f496cac5fcc4546fe50"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 150%;">
+<ul>
+	<li>Variables can't be changed</li>
+</ul>
+</div></div></section><section data-id="9e70c4f87dfa6874291c798a0014900b"><div class="sl-block" data-block-type="text" style="width: 806px; left: 21px; top: 644px; height: auto;" data-block-id="efec1d2d6bc263ec280cb420223036e5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<pre>Functional Programming</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="8f492b6f3cb56dfe8bc0c6266c356d59"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;">
+<h1>First Class Functions<span style="display:none"> </span>
+</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 210px;" data-block-id="bd0f52ec89cbd24477da50c0f4ce7251"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 150%;">
+<ul>
+	<li>Functions can be...
+	<ul>
+		<li>variables</li>
+		<li>arguments</li>
+		<li>returned values</li>
+		<li>anonymous</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="bf7dfd5f640c0aca676422980449117d"><div class="sl-block" data-block-type="text" style="width: 806px; left: 21px; top: 644px; height: auto;" data-block-id="c61bb770f5c85b28f006d797a4396139"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<pre>Functional Programming</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="24de7fa4aac964b3be7cf56449869f0c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;">
+<h1>Pure Functions</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 636px; left: 162px; top: 309px;" data-block-id="af5569515908f216a73912de558e581b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 150%;">
+<ul>
+	<li>same input = same output</li>
+</ul>
+</div></div></section><section data-id="f746d0958ca9c447c117a3ad8eb34bd6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 21px; top: 644px; height: auto;" data-block-id="fa90c03c96c09cc886c4f28bfbabb3c5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<pre>Functional Programming</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="38d6a020c04bd3b83a9a5a2b50890616"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<h1>Recursion</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 190px;" data-block-id="c880c04b6dd70615f10c217541638da9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 150%;">
+<ul>
+	<li>Recursion
+	<ul>
+		<li>Recursion
+		<ul>
+			<li>Recursion
+			<ul>
+				<li>Recursion
+				<ul>
+					<li>Recursion!</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section></section><section class="stack" data-id="570c52b1b5a452285b2adec9cc94285c"><section data-id="8437592c3582c4a66740a6439e6a790f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="6da6dd95e427b147d225e672c92cb93c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Elixir</h1>
+</div></div></section><section data-id="e1cfaf566a159c3795373da6a39ba4a5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="7c2f429d7b5f39c1892cb8465ae7bbe4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>About Elixir</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 210px;" data-block-id="80a76bb6c91405449db4c1f928d6aff0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li style="text-align:left"><span style="font-size:1.4em">Erlang</span></li>
+	<li style="text-align:left"><span style="font-size:1.4em">Elixir History</span></li>
+</ul>
+</div></div></section><section data-id="822671b55f4c97d0ceebf5b6bd5e09d4"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="26037ce1ce18b9d85ac575146c0a1f07"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Erlang</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 21px; top: 644px; height: auto;" data-block-id="75e9fbf672832eef9fffc145f44f8be3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<pre>About Elixir</pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 454px; height: 454px; left: 253px; top: 140px; min-width: 4px; min-height: 4px;" data-block-id="38beda370170aac5e22a38135e2d9f83"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1350" data-natural-height="1350" data-lazy-loaded="" data-src="elixir-and-phoenix/cd6ac7b41965f4336359a82bb1fa4fe7.jpeg"></div></div></section><section data-id="ec4e8c406b301d0280c8dfb5a67b0e7c"><div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 601px; height: 439px; left: 180px; top: 154px;" data-block-id="bd56c427196d119efb659e0011282b7e"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 140%;"><pre><code>-module(hello_module).
+-export([some_fun/0, some_fun/1]).
+
+% A "Hello world" function
+some_fun() -&gt;
+  io:format('~s~n', ['Hello world!']).
+
+% This one works only with lists
+some_fun(List) when is_list(List) -&gt;
+  io:format('~s~n', List).
+
+% Non-exported functions are private
+priv() -&gt;
+  secret_info.
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="5974e88c4cf984c5a8ef8addffab0071"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;">
+<h1>Erlang</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 21px; top: 644px; height: auto;" data-block-id="5e4c88ff5db188d324f803623f8f0421"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;">
+<pre>About Elixir</pre>
+</div></div></section><section data-id="4bcfdc17647a902ebf949a38a5d1d3c6"><div class="sl-block" data-block-type="code" style="width: 608px; height: 467px; left: 176px; top: 140px;" data-block-id="72c9dc9389911562983539810763fc14"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 125%;"><pre><code>defmodule HelloModule do
+  # A "Hello world" function
+  def some_fun do
+    IO.puts "Hello world!"
+  end
+
+  # This one works only with lists
+  def some_fun(list) when is_list(list) do
+    IO.inspect list
+  end
+
+  # A private function
+  defp priv do
+    :secret_info
+  end
+end
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 87px; top: 21px; height: auto;" data-block-id="3c6e9429af8ee81a525f940e0b5f3c18"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;">
+<h1>Erlang</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="c749c31a2354508e101ac10d1a34c0db"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 15;">
+<pre>About Elixir</pre>
+</div></div></section><section data-id="6bfc7c069cb41a926364c82d8c370bec"><div class="sl-block" data-block-type="code" style="width: 438px; height: 402px; left: 501px; top: 210px;" data-block-id="56278ec0950e6837ce145133321266e7"><div class="sl-block-content notranslate" style="z-index: 10;"><pre><code>defmodule HelloModule do
+  # A "Hello world" function
+  def some_fun do
+    IO.puts "Hello world!"
+  end
+
+  # This one works only with lists
+  def some_fun(list) when is_list(list) do
+    IO.inspect list
+  end
+
+  # A private function
+  defp priv do
+    :secret_info
+  end
+end
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 429px; height: 402px; left: 26px; top: 210px;" data-block-id="060964924549eeb950b7a26ca20deff9"><div class="sl-block-content notranslate" style="z-index: 11;"><pre><code>-module(hello_module).
+-export([some_fun/0, some_fun/1]).
+
+% A "Hello world" function
+some_fun() -&gt;
+  io:format('~s~n', ['Hello world!']).
+
+% This one works only with lists
+some_fun(List) when is_list(List) -&gt;
+  io:format('~s~n', List).
+
+% Non-exported functions are private
+priv() -&gt;
+  secret_info.
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 87px; top: 21px; height: auto;" data-block-id="23a0f05e9f24bf344816e4bd61749d77"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;">
+<h1>Erlang</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="f2c7654f0701bb935a62c3de8b1faed9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 15;">
+<pre>About Elixir</pre>
+</div></div></section><section data-id="831b2f2dbb64dacbde0dfa77fa04abe0"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="2ce78416d7c5291fbf1eae98fe1e7395"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Erlang Origins</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="11d1982fbce1a8fa1a27993968822b82"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<pre>About Elixir</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 264px; height: auto;" data-block-id="27f81d537f9fb9173b183c4622e3a641"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 150%;">
+<ul>
+	<li>Created in 1986</li>
+	<li>Authored by Joe Armstrong</li>
+	<li>BEAM = Erlang VM</li>
+</ul>
+</div></div></section><section data-id="36382fab2e17b1b8854fed32950534bd"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="3df4ec242fdc87ac8a3b85742df3efef"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;">
+<h1>Erlang Traits</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="19aa805aba86563f2d051ec56b726892"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;">
+<pre>About Elixir</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 264px; height: auto;" data-block-id="0d01e9bd0789d1026c236393322723f1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 150%;">
+<ul>
+	<li>Performant</li>
+	<li>99.9999999% uptime</li>
+	<li>Fault tolerant</li>
+	<li>Concurrency</li>
+	<li>Hot swappable</li>
+</ul>
+</div></div></section><section data-id="88d3bd1fb09b315d2ac5c7cf898bd1f4"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="09c0764d86dd0cf386e31e99bb0dc5c3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;">
+<h1>Erlang OTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="5236f322e13bfdc90291db42d68b619f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;">
+<pre>About Elixir</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 264px; height: auto;" data-block-id="3ae7e473d3d431f63e44658269e4d7dc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 150%;">
+<ul>
+	<li>Open Telecom Protocol (OTP)</li>
+	<li>OTP and Erlang</li>
+</ul>
+</div></div></section><section data-id="0148c2bc76e8c60736da3db3ffdfd135"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="8e1f98f86dcdaa5df50cbf88746b7de2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;">
+<h1>Elixir History</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="bdc7c6a03f19f64c6a69c75aca832ede"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;">
+<pre>About Elixir</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 264px; height: auto;" data-block-id="293049f4a5ec8dc79eeaf3646fbf9d8f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 150%;">
+<ul>
+	<li>Created in 2011</li>
+	<li>Authored by Jose Valim</li>
+</ul>
+</div></div></section></section><section class="stack" data-id="946cfb5fe4908b20019bc559c5a3dc36"><section data-id="044270f36a9617424b124c6d41e3a6b2"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="ba0fbf896cca8ab417c1ecf340d4ecf8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Nerves</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 700px; left: 130px; top: 439px;" data-block-id="c7459fb89256f1e56537b35843cc9206"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3>https://github.com/nerves-project</h3>
+</div></div></section><section data-id="7ffb9b51ac4ae962ca3caa43ce17bd71"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="d70b27954592bcbcfa6d809d5df12056"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Nerves</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 210px;" data-block-id="345d0dd95fe7f2bfe930083a48ef69ac"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li style="text-align:left"><span style="font-size:1.4em">Platform</span></li>
+	<li style="text-align:left"><span style="font-size:1.4em">Framework</span></li>
+	<li style="text-align:left"><span style="font-size:1.4em">Tooling</span></li>
+</ul>
+</div></div></section></section><section data-id="8c6bb3617971587a3a03689ddcfb8ae9"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="762ed093b55befb28d7a3212a13a60ee"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Lumen</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 700px; left: 130px; top: 439px;" data-block-id="0e54a1b2b0f985ff26bcd0b39b25858a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3>https://github.com/lumen</h3>
+</div></div></section><section class="stack" data-id="65ba4b57cabb893efc95433154b81907"><section data-id="d62822f5e91d0d773fe46123555c371f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="92d8dce0848db5a39d4492d22939d7f1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Phoenix Framework</h1>
+</div></div></section><section data-id="34b3c7ffb91fbf3a7b6e696eae9d4fb2"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="e294ca6822a28935a2840e93eb171a01"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Phoenix Framework</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 247px; height: auto;" data-block-id="4b78dadeefa96460cea3c05975cedf7f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 150%;">
+<ul>
+	<li>Created in 2014</li>
+	<li>Authored by Chris McCord</li>
+</ul>
+</div></div></section><section data-id="da650b55986f93c6e25b3667f33b275c"><div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 87px; height: auto;" data-block-id="93a60b89553342858316b76029faa19a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Phoenix New</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 161px; height: auto;" data-block-id="9959e9910d5dfbd10eeb7a17de29bddf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 11; text-align: left;">
+<p>Very simple to get a new Phoenix project up and going similar to Rails</p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p>Running the above commands generates a simple Twitter clone. </p>
+
+<p> </p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 960px; height: 146px; left: 0px; top: 280px;" data-block-id="0ec467a0e62f455f28d40ce47aaf538e"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 145%;"><pre><code>mix phoenix.new example_app
+mix ecto.create
+mix phoenix.gen.html Comment comments body:string username:string
+mix ecto.migrate</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="115fe0871b5271379e9fa4bfb5e92c58"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;">
+<pre>Phoenix Framework</pre>
+</div></div></section><section data-id="e0842f09092b44a9d798785d98a49197"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="f32a6c73a2749df3e7e25e52301b8638"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>LiveView</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="a4a0ac20f26a48941665469849e6ec8c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<pre>Phoenix Framework</pre>
+</div></div></section><section data-id="b8b1cc5737191be31bb0fb61c5103a17"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 51px; height: auto;" data-block-id="9ad1f9f7714b0f014ff3ca4ac836cd5d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>LiveView</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="12001b7b7f0ec1c8b26a992aa77ebf1d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<pre>Phoenix Framework</pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 640px; height: 400px; left: 160px; top: 182px;" data-block-id="7ac5570919c18f3fcd77df924a61e264"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="640" data-natural-height="400" data-lazy-loaded="" data-src="elixir-and-phoenix/428820db2a2c24ab4d5221a240b8c66f.gif"></div></div></section><section data-id="a37220958eb3deca6b8bbeac36eae0c6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="bcff5d854d1c5ea0ad235d29a406d062"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Phoenix &amp; OTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="3777454661bbed80a338c1717c7a9f41"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<pre>Phoenix Framework</pre>
+</div></div></section><section data-id="95a6106bd35352b35d70374643098c62"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 36px; height: auto;" data-block-id="bcf7a0506a5c2ff1b36857913a94aa08"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Phoenix &amp; OTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="c0b669a5bb50ee7547cbbf0d4221c4ae"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<pre>Phoenix Framework</pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 290px; left: 77px; top: 205px;" data-block-id="b8f8fddca69b659aa0bb3922d740806e"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1324" data-natural-height="476" data-lazy-loaded="" data-src="elixir-and-phoenix/6232d7b2c6e0aed99d6dea1757961237.png"></div></div></section><section data-id="0b69d2a6ef142073296661c85ea4653e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 36px; height: auto;" data-block-id="b39cbd3029108a12111d66e832f80da7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Phoenix &amp; OTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="f07f7e90f3bdc55cdde5e5a6c7e1dcfe"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<pre>Phoenix Framework</pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 444px; left: 117px; top: 170px;" data-block-id="524d098731ab4a55471dc6a3da29a260"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="1380" data-natural-height="760" data-lazy-loaded="" data-src="elixir-and-phoenix/fb5934e2e79764c9707a70bf310759c6.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 290px; left: 52px; top: 148px;" data-block-id="5d952492a2a79ba31a8c543163221340"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1324" data-natural-height="476" data-lazy-loaded="" data-src="elixir-and-phoenix/6232d7b2c6e0aed99d6dea1757961237.png"></div></div></section><section data-id="0fd7e1e88987b5d906a6512c37c2425d"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 36px; height: auto;" data-block-id="b97a671ff52d778f78627d5b84beab44"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Phoenix &amp; OTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="e3bf24467b69b06d1addfb5315721d85"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<pre>Phoenix Framework</pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 363px; left: 77px; top: 204px;" data-block-id="4d9187ddac0aae6a13da937378338103"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="1353" data-natural-height="610" data-lazy-loaded="" data-src="elixir-and-phoenix/fab994d27084bb4c470b53c7c0700b78.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 290px; left: 52px; top: 148px;" data-block-id="bd60e293c542ef8d4cabd444ded5db4c"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1324" data-natural-height="476" data-lazy-loaded="" data-src="elixir-and-phoenix/6232d7b2c6e0aed99d6dea1757961237.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 444px; left: 117px; top: 170px;" data-block-id="26f05efc2db9289fab2dad85e72f9eac"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="1380" data-natural-height="760" data-lazy-loaded="" data-src="elixir-and-phoenix/fb5934e2e79764c9707a70bf310759c6.png"></div></div></section><section data-id="d0ed9885766fd1bfc408db0a2fbc5dd0"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="d63e53c382eb8fd05e025542d382444a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Phoenix &amp; OTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 31px; top: 654px; height: auto;" data-block-id="654f3075a63ab5b3cc6ce655496b9a3f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<pre>Phoenix Framework</pre>
+</div></div></section></section><section data-id="707a2ab7b11b18b5e56eea8605ae8347"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="f028f5ec04210a7b855f351761899b10"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Thanks!</h1>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1638514,"slug":"elixir-and-phoenix","title":"Elixir \u0026 Phoenix Lightning Talk","description":"Slides for the introduction of an Elixir workshop for Web Geeks","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2019-11-02T15:04:04.245Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/04b2788e0d2584579c9cd0a5e6f44b6a/thumb.jpg?1768491581","view_count":1205,"user":{"id":629464,"username":"boots","name":"Andrew Schutt","description":"","thumbnail_url":"https://www.gravatar.com/avatar/a4a6ea9a7c0197d9d98b923685006ba7?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture-2.png","account_type":"lite","team_id":null,"settings":{"id":476856,"present_controls":false,"present_upsizing":true,"present_pointer":false,"present_notes":false,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"asphalt-orange","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":35,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1768491581075,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"language":"en","source_deck_id":null,"notes":{"4c7bcf4ea7c1f6cb127fa9ff16f44e9e":"Is a programming paradigm treats computation as the evaluation of functions.  Avoids changing state and mutable data.\n\nYou are running functions as a means of determining results rather then mutating values.\n\nHistory stems from lambada calculus.\n\nLets talk through a couple of the core ideas and tenets of functional programming","6f7d367f1724584d0bc20cf237d9a2d6":"Because of this programs become more about data transformation and message passing.  Take in value and spit out a value that uses that value as a base.  (x + 1)  actually will returned a newly referenced variable.\n\nMany languages support immutability, but with Elixir it is the only method of variable declaration.","9e70c4f87dfa6874291c798a0014900b":"Functions that can take functions as arguments in or return functions as a result.  Assign functions as variables and anonymous functions are allowed. Something that you often think of with JS.","bf7dfd5f640c0aca676422980449117d":"Pure functions have no side effects.  If an entire application is made up of pure functions then state is never mutated.\n\nIf anytime a value is passed in you expect the same result.  That can optimized to be considered a constant.  (x + 1) x = 2 always returns 3.  That is considered a constant if 2 is passed in. ","f746d0958ca9c447c117a3ad8eb34bd6":"Recursion is when a function/method calls itself until a base case is reached.\n\nLargely stands in as a replacement for looping in lots of instances.\n\nThis helps to represent problems in smaller pieces and are useful for parallelization ","822671b55f4c97d0ceebf5b6bd5e09d4":"- You can't talk about and introduction to Elixir without talking about Erlang because Elixir runs within the Erlang VM\n\n- Similar to what Scala or Clojure are to Java.  That is what Elixir is to Erlang.\n\n- Not well known purely functional language that has some unique qualities we are going to touch on \n\n- It's uncommon for a variety of reasons:\n     - specialized for an industry\n     - created in Europe \n     - but in particular it has an unorthodox syntax... lets take a quick peek at some examples\n","36382fab2e17b1b8854fed32950534bd":"Erlang's big claims to fame are...\n\n- Mythic: But the language strives for 99.9999999% uptime.  \"Nine nines\"\n\n- Self healing capability.  Fault tolerant witin Erlang doesn't mean equate to being stable.  More that Erlang was designed to have a means of recovering from error states.\n\n- Using processes makes concurrency simplified \n\n- Code deploys are hot swappable.  No down time during a deploy Can't be dropping and interrupting phone calls during a deployment!\n\nErickson invented Erlang as a tool to address these problems (ability to run on under powered hardware, able to have high uptime, deploy without interruption) \n\n- concurrency, fault tolerance, zero down time deploys are all very difficult problems that Erlang has solved","88d3bd1fb09b315d2ac5c7cf898bd1f4":"Another aspect of Erlang is OTP. Which is a collection of libraries available with the Erlang virtual machine\n\nOTP (Open Telecom Protocol) is what enables theses traits of Erlang programs. OTP gives developers a collection of tools via principles, libraries, and middleware to build in these characteristics into applications to be highly fault tolerant and concurrent applications.\n\nOTP is maintained alongside Erlang the language itself and the Erlang runtime is considered a part of OTP\n\nAnd again since Elixir runs on the Erlang VM it is capable of leveraging OTP","0148c2bc76e8c60736da3db3ffdfd135":"- Created 2011 by Jose Valim who is well known in the Rails and Ruby community.\n\n- Elixir was created in response to performance with Ruby and no satisfactory concurrency story for Ruby\n\n- Elixir was heavily inspired by Ruby\n\n- v1.0 was released September 2014. \n\n- The most major release is 1.9 which was released earlier this year. There are no plans for a 2.0 version. \n","c34e0b3fd726d5f25a520ef5276391e2":"IEX is Elixir's interactive shell.  Great for testing out development.  Pretty much like IRB or Rails Console.\n\nh helper method is fantastic within IEX and you can also load .exs files directly into the shell to test out written modules\n\n==========================================\n\n- ExUnit is Elixir's test framework that included with the language\n\n- Documentation is considered a first class citizen within Elixir.  Documenting is done in markdown and at compile time extracted out and spun up into a server for browsing\n\n- Documentation is even has it's own tests for the code examples that are you documentation.\n\n==========================================\n\nMix (we will be using this in the workshop) is kind of like make for Elixir, but more.  Mix gives you packaging, project specific task creation, and scripting","5b4c600d9abdc7bf855c918aef4106ec":"IEX is Elixir's interactive shell.  Great for testing out development.  Pretty much like IRB or Rails Console.\n\nh helper method is fantastic within IEX and you can also load .exs files directly into the shell to test out written modules\n","25e17ae16d544598020c908b5d1011d3":"ExUnit is Elixir's test framework very similar to what Minitest is for Ruby.  The big difference is that documentation is considered a first class within Elixir.  Documenting is done in markdown and at compile time extracted out and spun up into a server.  \n\nDocumentation is even has it's own tests for the code examples that are you documentation.  Similar to Python's doctest.","e75be82938556f1d50f95b49d4bcbc39":"Mix is kind of like make for Elixir, but more.  It's more like a combination between make, rake, and bundler.","d62822f5e91d0d773fe46123555c371f":"Lets get into the Phoenix Framework. We have been slowly building up to this","b976eacc34521e262154ccf6d3f72fa5":"Before we get into Elixir and Phoenix lets do a quick dive into the Functional Programming paradigm\n\nPerhaps you have heard of Haskell, Elm, or Scala. These are other functional programming languages, but many of the concepts of functional programming are present in other \"non-pure\" functional languages.","ec4e8c406b301d0280c8dfb5a67b0e7c":"Here is an Erlang code snippet\n\nHonestly maybe Toran can decipher this, but I struggle to glance at this and quickly figure out what is happening exactly","4bcfdc17647a902ebf949a38a5d1d3c6":"Same functionality here, but done in Elixir\n\nMaybe just a little bit easier to read I would say?\n\nTo any who are familiar with Ruby this will look VERY similar","6bfc7c069cb41a926364c82d8c370bec":"Which one do you prefer?\n\nIgnore the beautiful syntax highlighting if you can\n\nwhich one do you prefer?","831b2f2dbb64dacbde0dfa77fa04abe0":"The thing about Erlang is that even though it's difficult to parse and read it's extremely battle hardened\n\n- Created in 1986\n    - Windows 1.0 came out in 1985 for context\n    \n- Developed within the Ericsson company for telecom technologies and currently handles 50% of telecom traffic\n\n- The Erlang VM is commonly referred to as the BEAM\n\n- Because of the constraints and requirements of telecom it was necessary to be distributed, highly concurrent, and fault tolerant\n\nThese are all characteristics that highly desirable in our web applications today\n","044270f36a9617424b124c6d41e3a6b2":"Enables a way to write embedded software using Elixir and the Erlang VM","34b3c7ffb91fbf3a7b6e696eae9d4fb2":"Created by Chris McCord in 2014.\n\nIt is built using the language Elixir.\n\nMakes use of the Model View Controller architectural pattern that is common in web development pattern helping to encourage decoupling within your application.\n\nMuch how Jose created Elixir out of shortcomings with Ruby. Phoenix was created by frustrations Chris had when trying to create real time applications with Rails.\n\nSince Phoenix was built using Elixir it benefits greatly from being highly performant. ","a33f06e326f43fe963f5e5567426351f":"Hello and thank you to Web Geeks and The Forge for having us tonight.\n\nToday I am going to give a brief intro to Elixir the programming language and Phoenix the web development framework\n\nSpecifically I want to call out some of the unique characteristics of Elixir and Phoenix\n\nLike Justin mentioned my name is Andrew Schutt and I work at Hy-Vee (writing software not working in the store!)","8437592c3582c4a66740a6439e6a790f":"That's the basics of functional programming lets get chat about Elixir ","e1cfaf566a159c3795373da6a39ba4a5":"Lets chat about...\n\nThe virtual machine that it runs on (Erlang)\n\nIt's history \n\nAnd some basic tooling of Elixir","707a2ab7b11b18b5e56eea8605ae8347":"","8c6bb3617971587a3a03689ddcfb8ae9":"Lumen enables Elixir applications to target WebAssembly and easy to deploy static executables \n\n- Lumen is both a compiler for Erlang to native code \nAND\n- An Erlang runtime that implements OTP\n\nIf you are unfamiliar with WebAssembly don't worry it confuses me too. It's basically a way for non-Javascript code to be written for browser client side or complement existing Javascript code.\n\nLoosely works as a replacement for Erlang and OTP by re-implementing OTP in Rust","7ffb9b51ac4ae962ca3caa43ce17bd71":"- Includes a build root that boots directly to the Erlang VM\n\n- Collection of Elixir modules to aid in embedded development\n\n- Command tools to accomplish and help with the development process","da650b55986f93c6e25b3667f33b275c":"","d44ee7da5743d0f81513dd9607873181":"","8bf0f7a27a9d79e7eb215b3d3e28c9b6":"Phoenix in general out performs most popular frameworks today \n\nhttps://www.techempower.com/benchmarks/#section=data-r17\u0026hw=ph\u0026test=fortune\u0026c=6\u0026o=e\u0026f=zik05z-zik073-zik0zj-zik0zj-zhxjwf-zdk8an-q2xtz3-qmx0qn-e3","69b46dec1830383168597c76df953bb4":"Think of Plug as what Rack is for Rails, Web Server Gateway Interface (WSGI) is for Python, Ring for Clojure.\n\nPlug is both an interface spec AND component that serves as an interface between Cowboy and Phoenix.","bef4358459405b84456a38d15a03e2da":"Serves as a database adapter and query generator for Elixir programs.  Think ActiveRecord for Rails or Orator for Python.\n\nAllows for a means to abstract database interface into Elixir code.\n\nThis is the Model in MVC.","b0d285e15d96a123ee696d7af05fd501":"Makes use of EEx (Embedded Elixir) for dynamic templates and is used by the Phoenix.Views module to render","e0842f09092b44a9d798785d98a49197":"LiveView enables rich, real-time user experiences with server-rendered HTML\n\nYou can create stateful applications that use state on the server with bidirectional communication via WebSockets","a37220958eb3deca6b8bbeac36eae0c6":"Lets marry some of the ideas that we have talked about with OTP, Erlang, Elixir and Phoenix\n\nWhat benefits to reap when you build web applications with Phoenix that is built on Elixir/Erlang/OTP\n\nFirst of all you are scalable from the start\n","b8b1cc5737191be31bb0fb61c5103a17":"Here is a quick preview of the kind of application functionality that comes from using Phoenix LiveView.\n\nAll of these features are done without the use of Javascript and written in Elixir\n\nHelps to avoid the gorilla and banana problem with JS\n\nSomeone wants to add simple interactivity to application and then you are knee deep in Babel and Webpack and questioning your career choices\n\nSomething like LiveView enables you to easily sprinkle in interactivity or frankly even build an application to be fully powered with LIveView as well.","0fd7e1e88987b5d906a6512c37c2425d":"Elixir tasks enable async await logic \n\nLong running jobs become processes that are fault tolerant and can recover from error states\n\n","95a6106bd35352b35d70374643098c62":"Distributed system development uses the Publish pattern within the system","0b69d2a6ef142073296661c85ea4653e":"The system will be concurrent by default because of the Erlang VM\n\nUsing something like GenServers allows you to create concurrent web applications that are highly fault tolerant ","d0ed9885766fd1bfc408db0a2fbc5dd0":"Since you are still just using Elixir code to solve these problems of long running processes you deploy the exact same way that you would your application without any outside dependencies"}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				scrollActivationWidth: null,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+
+	</body>
+</html>

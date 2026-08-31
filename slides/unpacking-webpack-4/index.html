@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, minimal-ui">
+		<meta charset="utf-8">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="manifest" href='data:application/manifest+json,{"display": "standalone", "name": "Unpacking Webpack 4"}' />
+		<title>Unpacking Webpack 4</title>
+
+		<meta name="description" content="a presentation for Des Moines Webgeeks Spring Social about Webpack and new features in Webpack 4">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-sea-yellow">
+		<div class="reveal">
+			<div class="slides">
+				<section class="stack" data-id="ab31793e129a7ec2ca2f8850c17316aa"><section data-id="8dcfb7062439f27ca2b91a6cdb4157da"><div class="sl-block" data-block-type="text" style="width: 886px; left: 38px; top: 216px; height: auto;" data-block-id="d8705333f3a040b256f5b6b151622652"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(3, 30, 54); z-index: 10;">
+<h1>Unpacking Webpack</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 539px; height: 155px; left: 211px; top: 33px;" data-block-id="37e3253121e07c7aa99597c6d74f4a7a"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="3047" data-natural-height="876" data-lazy-loaded="" data-src="unpacking-webpack-4/651a9c6fb8e0f9e3a7eb0d18f0afbeb9.svg"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 886px; left: 38px; top: 414px; height: auto;" data-block-id="b7bd81ddf6d6dc2e4083f2b60b5511c2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(3, 30, 54); z-index: 12;">
+<h3>Andrew Schutt</h3>
+</div></div>
+</section><section data-id="6866afdd85b0159107e0772ebe41f52d"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="83f13bc86d8fe3bc6cf25f5ea548c90b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Who I'm I?</h2>
+</div></div>
+</section><section data-id="b8c76e657d2636e18444128c5a1ce116"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="3506c128599f9974079a369b7450f5b1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>What's a Webpack?</h1>
+</div></div></section><section data-id="7f8a3296e3795c536d9c8a785b332514"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="2ce2fbd6e95847485314d3984ed91463"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>What's a Webpack?</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 186px;" data-block-id="577207437eff6f7b5f867986ffc97fb1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left; color: rgb(3, 30, 54);">
+<blockquote>
+<p><span style="font-size:1.2em">A static module bundler for modern JavaScript applications.</span></p>
+</blockquote>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 406px;" data-block-id="1dbc987fb6f0304b6a0475e3a8412ac1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; color: rgb(3, 30, 54);">
+<blockquote><span style="font-size:1.2em">...recursively builds a <em>dependency graph that includes every module ... then packages all of those modules into one or more bundles.</em></span></blockquote>
+</div></div></section><section data-id="edeac2cb4ad049679f10710dc0e074cd"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="71412145a22885542c4d544ab1c8a976"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Modules</h1>
+</div></div></section><section data-id="a939d4dd822418cd11f11c8ec57c8880"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="1c6aba888df2b2a8a7aa5bffa346cf30"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Modules</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 193px;" data-block-id="0ec3023cc2f3fcd59a91b897ae814daf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left; color: rgb(3, 30, 54);">
+<blockquote><span style="font-size:1.2em">Good authors divide their books into chapters and sections; good programmers divide their programs into modules.</span></blockquote>
+</div></div></section><section data-id="b101f04629d15744f2bba5389c033505"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="6b025ecc795ba2dbfea9e9515d577e71"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 26;">
+<h1>Modules</h1>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 80px; height: 70px; left: 42px; top: 271px;" data-block-id="32ecab3519f6ce02b6961c8ca817b55e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 27;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-1-1523295861200"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-1-1523295861200)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 60px; left: 52px; top: 287px;" data-block-id="230c9250d48461b82a010b13da18878f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 28; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 80px; height: 70px; left: 57px; top: 286px;" data-block-id="131b18a5cf00d090bfb4a3118fbc64f5"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 29;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-2-1523295861210"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-2-1523295861210)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 60px; left: 67px; top: 302px;" data-block-id="31f2da4b1209ba342bc8c04cef24a1ef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 30; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 80px; height: 70px; left: 72px; top: 301px;" data-block-id="b6a1024d9213c91f61da7916a13fad5f"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 31;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-3-1523295861220"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-3-1523295861220)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 60px; left: 82px; top: 317px;" data-block-id="2ad3dd945c599a338ccfb682cca4c228"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 32; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 80px; height: 70px; left: 87px; top: 316px;" data-block-id="f9fb582f9e4278a542b99f2dc8f2ad64"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 33;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-4-1523295861234"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-4-1523295861234)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 60px; left: 97px; top: 332px;" data-block-id="aeb4fb311e6cd7c035175f9781b7e579"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 34; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 80px; height: 70px; left: 102px; top: 331px;" data-block-id="4c6cdaea1c819359d5e477b21f21b2bb"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 35;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-5-1523295861246"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-5-1523295861246)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 60px; left: 112px; top: 347px;" data-block-id="350f38e0431ad047cdb5bcc8036c90c1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 36; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 80px; height: 70px; left: 117px; top: 346px;" data-block-id="804fc1be60ea983cc83ab4cb007b4669"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 37;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-6-1523295861260"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-6-1523295861260)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 60px; left: 127px; top: 362px;" data-block-id="c98b80e2f6060406a727699fafe36ff3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 38; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 80px; height: 70px; left: 132px; top: 361px;" data-block-id="7a96d7e57c13bcfaa667bd60b1060e9a"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 39;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-7-1523295861270"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-7-1523295861270)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 60px; left: 142px; top: 377px;" data-block-id="6c8dda29a13ce1728a86416fbe039fb6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 40; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 80px; height: 70px; left: 147px; top: 376px;" data-block-id="835f9e67c43da23bfe0695cee5b77dec"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 41;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-8-1523295861282"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-8-1523295861282)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 60px; left: 157px; top: 392px;" data-block-id="ca169e176a240e4958bd72b4b25c0006"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 42; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 80px; height: 70px; left: 162px; top: 391px;" data-block-id="769ad4274c80c2d0b44abe65fc9a6236"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 43;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-9-1523295861298"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-9-1523295861298)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 60px; left: 172px; top: 407px;" data-block-id="98c3d371396d09e5812ba593531589c7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 44; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 80px; height: 70px; left: 177px; top: 406px;" data-block-id="d40f48e0b19e6c6562fe6ef6558415d9"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 45;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-10-1523295861306"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-10-1523295861306)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 60px; left: 187px; top: 422px;" data-block-id="435b6590df24a7d299f1d557abda376c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 46; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 161px; height: 165px; left: 757px; top: 269px;" data-block-id="fe187c2c5adffee55c92adedec3c3cd5"><div class="sl-block-content" data-shape-type="symbol-wondering" data-shape-fill-color="rgb(7, 55, 99)" data-shape-stretch="true" style="z-index: 47;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(7, 55, 99)"><path d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zM16 3c7.18 0 13 5.82 13 13s-5.82 13-13 13-13-5.82-13-13 5.82-13 13-13zM23.304 18.801l0.703 2.399-13.656 4-0.703-2.399zM8 10c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2-1.105 0-2-0.895-2-2zM20 10c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2-1.105 0-2-0.895-2-2z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 102px; top: 306px;" data-block-id="47c46765a3bc0e68bcf171d0e72e7cb4"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="286" data-line-y2="-74" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 18;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="526" height="1" viewBox="-240 -75 526 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="284" y2="-74"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="284" y2="-74"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(284,-74) rotate(90.109)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 117px; top: 321px;" data-block-id="0c2fe90b78d22ab8ed83f62ea84a5362"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="286" data-line-y2="-74" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="526" height="1" viewBox="-240 -75 526 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="284" y2="-74"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="284" y2="-74"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(284,-74) rotate(90.109)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 132px; top: 336px;" data-block-id="b12550ac2b4b9b9650bac1195de492f2"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="286" data-line-y2="-74" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 20;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="526" height="1" viewBox="-240 -75 526 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="284" y2="-74"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="284" y2="-74"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(284,-74) rotate(90.109)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 147px; top: 351px;" data-block-id="79a9d88cb1573172c568863182c96bd7"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="286" data-line-y2="-74" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 21;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="526" height="1" viewBox="-240 -75 526 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="284" y2="-74"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="284" y2="-74"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(284,-74) rotate(90.109)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 162px; top: 366px;" data-block-id="cfcab9dadc368b9cde9f9c61dc4bce7d"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="286" data-line-y2="-74" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 22;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="526" height="1" viewBox="-240 -75 526 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="284" y2="-74"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="284" y2="-74"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(284,-74) rotate(90.109)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 177px; top: 381px;" data-block-id="badb4e1af45c316b6b55c2f629fb2717"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="286" data-line-y2="-74" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 23;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="526" height="1" viewBox="-240 -75 526 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="284" y2="-74"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="284" y2="-74"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(284,-74) rotate(90.109)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 192px; top: 396px;" data-block-id="6e61df92a9694d3d7008d3a90bd20d46"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="286" data-line-y2="-74" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 24;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="526" height="1" viewBox="-240 -75 526 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="284" y2="-74"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="284" y2="-74"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(284,-74) rotate(90.109)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 207px; top: 411px;" data-block-id="36a5471af56866eb35e150af5e29abd5"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="286" data-line-y2="-74" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 25;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="526" height="1" viewBox="-240 -75 526 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="284" y2="-74"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="284" y2="-74"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(284,-74) rotate(90.109)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 222px; top: 426px;" data-block-id="18ae1c15cc0b171ea42e936afa580ff9"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="286" data-line-y2="-74" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="526" height="1" viewBox="-240 -75 526 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="284" y2="-74"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="284" y2="-74"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(284,-74) rotate(90.109)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 237px; top: 441px;" data-block-id="968bda756e049d73663d8c42685d4780"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="286" data-line-y2="-74" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="526" height="1" viewBox="-240 -75 526 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="284" y2="-74"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="284" y2="-74"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(284,-74) rotate(90.109)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div></section><section data-id="418512e7de5e9a0d5bce5a512f260946"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="96d575fde8bc8aced21eed48f1ede2e9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 26;">
+<h1>Modules</h1>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 48px; top: 266px;" data-block-id="7c6e5bb89bc7e61111add0ee49a100c6"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 54;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-11-1523295861580"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-11-1523295861580)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 63px; top: 281px;" data-block-id="9cb653a2ee0d757b1ecfea7395a955e7"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 55;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-12-1523295861584"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-12-1523295861584)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 73px; top: 297px;" data-block-id="fa7bea7f27d989af980f2da6c6060d05"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 56; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 78px; top: 296px;" data-block-id="e26e611d05cf521faa1566e36ae232c6"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 57;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-13-1523295861594"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-13-1523295861594)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 88px; top: 312px;" data-block-id="88613926bf20548b9bb71942f9a6fb62"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 58; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 93px; top: 311px;" data-block-id="c4f8ba4ee15057902020075151a30873"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 59;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-14-1523295861606"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-14-1523295861606)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 103px; top: 327px;" data-block-id="2819c92ab9ca411ad0d0a6f7d3d4f49a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 60; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 108px; top: 326px;" data-block-id="1f9e9ad64695b01e9482183c40445f39"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 61;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-15-1523295861610"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-15-1523295861610)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 118px; top: 342px;" data-block-id="d7413a47777c2038f4f1fb5a8319a8ec"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 62; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 123px; top: 341px;" data-block-id="148d2b07ae2cf7c390d82a57e83d3cea"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 63;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-16-1523295861618"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-16-1523295861618)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 133px; top: 357px;" data-block-id="15fba94427c26314554ac1e9f3b0baf6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 64; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 138px; top: 356px;" data-block-id="49b0b717c269c54a920b91f2a12a6f40"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 65;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-17-1523295861626"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-17-1523295861626)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 148px; top: 372px;" data-block-id="55e5165543860134a7d8fd4797c1de30"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 66; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 153px; top: 371px;" data-block-id="5cccd0f0ec9de1dccaf3702c434bcaf8"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 67;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-18-1523295861634"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-18-1523295861634)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 163px; top: 387px;" data-block-id="40af75847bff854f96e8a2da01c24098"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 68; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 168px; top: 386px;" data-block-id="585ddf30967504483c3e7c0201f9a322"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 69;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-19-1523295861640"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-19-1523295861640)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 178px; top: 402px;" data-block-id="981e3d9ceab5cb6687854b61954eb8b2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 70; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 183px; top: 401px;" data-block-id="d93ea187a614e21706cd1240380bc231"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 71;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-20-1523295861644"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-20-1523295861644)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 193px; top: 417px;" data-block-id="dc130368a03e54bd6bd6983ccaa8fe5e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 72; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 138px; top: 316px;" data-block-id="5957915c1de4b25ee4864656b646ae61"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="8" data-line-y2="-90" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 48;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="248" height="15" viewBox="-240 -90 248 15"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="6" y2="-90"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="6" y2="-90"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(6,-90) rotate(86.539)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 153px; top: 326px;" data-block-id="37107a30982980adf56a8b1963785934"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-7" data-line-y2="-95" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 49;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="233" height="20" viewBox="-240 -95 233 20"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-9" y2="-95"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-9" y2="-95"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-9,-95) rotate(85.094)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 168px; top: 336px;" data-block-id="16783a0aa5bd6a70bf1516911bd33fc7"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-22" data-line-y2="-100" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 50;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="218" height="25" viewBox="-240 -100 218 25"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-24" y2="-100"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-24" y2="-100"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-24,-100) rotate(83.458)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 183px; top: 347px;" data-block-id="fd5451b08112a14579da54c627baf86a"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-37" data-line-y2="-104" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 51;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="203" height="29" viewBox="-240 -104 203 29"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-39" y2="-104"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-39" y2="-104"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-39,-104) rotate(81.87)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 198px; top: 362px;" data-block-id="aca4c396020bc99c35e3ea0ec37b7d0e"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-52" data-line-y2="-104" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 52;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="188" height="29" viewBox="-240 -104 188 29"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-54" y2="-104"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-54" y2="-104"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-54,-104) rotate(81.231)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 213px; top: 376px;" data-block-id="ffa3c21fd65fc6f323ca24c140cd038c"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-67" data-line-y2="-105" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 53;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="173" height="30" viewBox="-240 -105 173 30"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-69" y2="-105"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-69" y2="-105"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-69,-105) rotate(80.162)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 228px; top: 386px;" data-block-id="0a934243fdd6cf595d2b6917145be93c"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-82" data-line-y2="-110" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="158" height="35" viewBox="-240 -110 158 35"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-84" y2="-110"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-84" y2="-110"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-84,-110) rotate(77.51)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 243px; top: 396px;" data-block-id="1cbe4b8acb8337259d68bff95ee34e10"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-97" data-line-y2="-115" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 17;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="143" height="40" viewBox="-240 -115 143 40"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-99" y2="-114"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-99" y2="-114"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-99,-114) rotate(74.373)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 170px; height: 170px; left: 754px; top: 264px;" data-block-id="459a5281d25f113a4467ebcbafa3ca7d"><div class="sl-block-content" data-shape-type="symbol-smiley" data-shape-fill-color="rgb(7, 55, 99)" data-shape-stretch="true" style="z-index: 73;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(7, 55, 99)"><path d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zM16 3c7.18 0 13 5.82 13 13s-5.82 13-13 13-13-5.82-13-13 5.82-13 13-13zM8 10c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2-1.105 0-2-0.895-2-2zM20 10c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2-1.105 0-2-0.895-2-2zM22.003 19.602l2.573 1.544c-1.749 2.908-4.935 4.855-8.576 4.855s-6.827-1.946-8.576-4.855l2.573-1.544c1.224 2.036 3.454 3.398 6.003 3.398s4.779-1.362 6.003-3.398z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 119px; height: 119px; left: 401px; top: 296px;" data-block-id="38ae4452ce5991e01dfddfdef8bd7196"><div class="sl-block-content" style="z-index: 74;"><img style="" data-natural-width="600" data-natural-height="600" data-lazy-loaded="" data-src="unpacking-webpack-4/b3ebb6a615ff6eb2590416ebc070cf7a.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 461px; top: 355px;" data-block-id="d13b176d9f779ca65cc94fd372e0f09f"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="23" data-line-y2="-69" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="263" height="6" viewBox="-240 -75 263 6"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="21" y2="-69"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="21" y2="-69"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(21,-69) rotate(91.307)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 114px; top: 281px;" data-block-id="f717909df49a1739a6e364b1b7dbc447"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="32" data-line-y2="-60" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="272" height="15" viewBox="-240 -75 272 15"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="30" y2="-60"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="30" y2="-60"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(30,-60) rotate(93.156)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 129px; top: 296px;" data-block-id="ed233a364657b1a3e6bbbd1816f2e283"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="17" data-line-y2="-70" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="257" height="5" viewBox="-240 -75 257 5"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="15" y2="-70"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="15" y2="-70"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(15,-70) rotate(91.115)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 144px; top: 311px;" data-block-id="c68b94b8f80353d4aaa2720d0e503200"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="2" data-line-y2="-75" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="242" height="1" viewBox="-240 -75 242 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="0" y2="-75"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="0" y2="-75"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(0,-75) rotate(90)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div></section><section data-id="7e7e131fdb143a70864f39df58ba9926"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="a476f687b2edb36a7b200e7aeb526663"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16;">
+<h1>Modules</h1>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 48px; top: 266px;" data-block-id="d5ff8c95bdbca2b09cbc4f6c02dad32a"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 23;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-21-1523296203018"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-21-1523296203018)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 63px; top: 281px;" data-block-id="b8d29d673b362bdfb384f67463420e37"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 24;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-22-1523296203024"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-22-1523296203024)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 73px; top: 297px;" data-block-id="8086fc19b49f875294c58792e9672e0b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 78px; top: 296px;" data-block-id="2a8b507cda31aa86ae9332386919b6b8"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 26;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-23-1523296203034"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-23-1523296203034)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 88px; top: 312px;" data-block-id="ecb549db13a88f4b9518ba91ad046c33"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 27; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 93px; top: 311px;" data-block-id="c0615d26d197cb916d1309f14b349ec7"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 28;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-24-1523296203042"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-24-1523296203042)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 103px; top: 327px;" data-block-id="5555b4378a2c08f0fe5e6cac1a47242c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 29; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 108px; top: 326px;" data-block-id="7fd855c7ac6f885649971cec7a6a5958"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 30;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-25-1523296203052"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-25-1523296203052)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 118px; top: 342px;" data-block-id="33d6c047d47961280f3a6a00c3b96636"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 31; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 123px; top: 341px;" data-block-id="40fb65dc5ac231cd1bbda14d3844c608"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 32;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-26-1523296203066"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-26-1523296203066)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 133px; top: 357px;" data-block-id="96720e4c796faaeead513de8b279b09d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 33; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 138px; top: 356px;" data-block-id="34e076a8678efdba1173171b16ba4072"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 34;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-27-1523296203076"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-27-1523296203076)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 148px; top: 372px;" data-block-id="deabbd5db0b3d35e8f64ceb155dc3dfd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 35; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 153px; top: 371px;" data-block-id="7181022ad0944ec819b9adc9adf069a5"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 36;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-28-1523296203086"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-28-1523296203086)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 163px; top: 387px;" data-block-id="5a3c333bbdb6c633aed58c97cba3723c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 37; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 168px; top: 386px;" data-block-id="8d55a0fdcac93241aec06d13f0fa7f54"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 38;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-29-1523296203092"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-29-1523296203092)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 178px; top: 402px;" data-block-id="0f3ed6b76c8536074c42f412d0c7973b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 39; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 183px; top: 401px;" data-block-id="9865c8ed5baa736609b4df6599382f95"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 40;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-30-1523296203104"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-30-1523296203104)" class="shape-element" fill="rgb(255, 255, 0)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 193px; top: 417px;" data-block-id="1009d2c8559b5360438c81568d21f8e9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 41; color: rgb(0, 0, 0);">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 138px; top: 316px;" data-block-id="ff012296a41e78637c29b641bd84d202"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="8" data-line-y2="-90" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 17;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="248" height="15" viewBox="-240 -90 248 15"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="6" y2="-90"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="6" y2="-90"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(6,-90) rotate(86.539)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 153px; top: 326px;" data-block-id="2e4724de845f7b5f5980bfa69c8beed4"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-7" data-line-y2="-95" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 18;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="233" height="20" viewBox="-240 -95 233 20"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-9" y2="-95"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-9" y2="-95"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-9,-95) rotate(85.094)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 168px; top: 336px;" data-block-id="324c6f04e4e4d58bf8237299e459f408"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-22" data-line-y2="-100" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="218" height="25" viewBox="-240 -100 218 25"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-24" y2="-100"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-24" y2="-100"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-24,-100) rotate(83.458)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 183px; top: 347px;" data-block-id="b79fb7191a1cf36beba8b8b3e0b85963"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-37" data-line-y2="-104" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 20;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="203" height="29" viewBox="-240 -104 203 29"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-39" y2="-104"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-39" y2="-104"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-39,-104) rotate(81.87)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 198px; top: 362px;" data-block-id="232645e91f691173c5b84404a298ce3c"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-52" data-line-y2="-104" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 21;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="188" height="29" viewBox="-240 -104 188 29"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-54" y2="-104"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-54" y2="-104"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-54,-104) rotate(81.231)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 213px; top: 376px;" data-block-id="08be1cfdea42dc5398cb84f151f39ad2"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-67" data-line-y2="-105" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 22;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="173" height="30" viewBox="-240 -105 173 30"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-69" y2="-105"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-69" y2="-105"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-69,-105) rotate(80.162)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 228px; top: 386px;" data-block-id="abd9eaede4e184bc70c903c045669c7d"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-82" data-line-y2="-110" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="158" height="35" viewBox="-240 -110 158 35"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-84" y2="-110"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-84" y2="-110"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-84,-110) rotate(77.51)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 243px; top: 396px;" data-block-id="78aaf7738e680a80676b4e0f6c1101dd"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-97" data-line-y2="-115" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="143" height="40" viewBox="-240 -115 143 40"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-99" y2="-114"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-99" y2="-114"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-99,-114) rotate(74.373)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 170px; height: 170px; left: 754px; top: 264px;" data-block-id="bbfef8f28eca46c80b495fa3e651748d"><div class="sl-block-content" data-shape-type="symbol-happy" data-shape-fill-color="rgb(7, 55, 99)" data-shape-stretch="true" style="z-index: 42;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(7, 55, 99)"><path d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zM16 3c7.18 0 13 5.82 13 13s-5.82 13-13 13-13-5.82-13-13 5.82-13 13-13zM16 18.711c3.623 0 7.070-0.963 10-2.654-0.455 5.576-4.785 9.942-10 9.942-5.215 0-9.544-4.371-10-9.947 2.93 1.691 6.377 2.658 10 2.658zM8 11c0-1.657 0.895-3 2-3s2 1.343 2 3c0 1.657-0.895 3-2 3-1.105 0-2-1.343-2-3zM20 11c0-1.657 0.895-3 2-3s2 1.343 2 3c0 1.657-0.895 3-2 3-1.105 0-2-1.343-2-3z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 119px; height: 119px; left: 401px; top: 296px;" data-block-id="6ad405e5f0d46ba13721c47a6c54db6e"><div class="sl-block-content" style="z-index: 43;"><img style="" data-natural-width="600" data-natural-height="600" data-lazy-loaded="" data-src="unpacking-webpack-4/b3ebb6a615ff6eb2590416ebc070cf7a.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 461px; top: 351px;" data-block-id="82c80cde88b002b4b021fb65e87be6ae"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="19" data-line-y2="-79" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="259" height="4" viewBox="-240 -79 259 4"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="17" y2="-79"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="17" y2="-79"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(17,-79) rotate(89.115)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 114px; top: 281px;" data-block-id="941e008a72e57ebe940d818b4a6bcaca"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="32" data-line-y2="-60" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="272" height="15" viewBox="-240 -75 272 15"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="30" y2="-60"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="30" y2="-60"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(30,-60) rotate(93.156)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 129px; top: 296px;" data-block-id="ef834fcde15f9f9af8c324a599a47ea9"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="17" data-line-y2="-70" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="257" height="5" viewBox="-240 -75 257 5"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="15" y2="-70"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="15" y2="-70"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(15,-70) rotate(91.115)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 144px; top: 311px;" data-block-id="f401e9c5bc6224b2d96519f7d7dfab97"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="2" data-line-y2="-75" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="242" height="1" viewBox="-240 -75 242 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="0" y2="-75"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="0" y2="-75"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(0,-75) rotate(90)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 112px; top: 528px;" data-block-id="a892b4dd686abaeb0232b892b44f36b8"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(180, 167, 214)" data-shape-stretch="true" style="z-index: 45;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-31-1523296203236"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-31-1523296203236)" class="shape-element" fill="rgb(180, 167, 214)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 122px; top: 544px;" data-block-id="c33dc811344a5fe2274db3e1ffe57549"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 46; color: rgb(0, 0, 0);">
+<p>CSS</p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 172px; top: 407px;" data-block-id="f7532d60f650afc83624779cccf51db7"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-26" data-line-y2="-231" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 44;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="214" height="156" viewBox="-240 -231 214 156"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-28" y2="-230"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-28" y2="-230"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-28,-230) rotate(53.909)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 70px; left: 223px; top: 585px;" data-block-id="00088702080382400382428adfc5fbd1"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(182, 215, 168)" data-shape-stretch="true" style="z-index: 49;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 70"><defs><clipPath id="shape-mask-32-1523296203254"><rect width="80" height="70"></rect></clipPath></defs><rect width="80" height="70" clip-path="url(#shape-mask-32-1523296203254)" class="shape-element" fill="rgb(182, 215, 168)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 60px; left: 233px; top: 601px;" data-block-id="cea1ba63bc37f1e0bd84a24e979f61c7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 50; color: rgb(0, 0, 0);">
+<p>IMG</p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 283px; top: 417px;" data-block-id="395d3a5cad0dc263bccfe5a0eb65c7a8"><div class="sl-block-content" data-line-x1="-240" data-line-y1="-75" data-line-x2="-137" data-line-y2="-278" data-line-color="#073763" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 48;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="103" height="203" viewBox="-240 -278 103 203"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-240" y1="-75" x2="-138" y2="-276"></line><line stroke="#073763" stroke-width="2" x1="-240" y1="-75" x2="-138" y2="-276"></line><path style="fill: rgba(0,0,0,0);" stroke="#073763" stroke-width="2" transform="translate(-138,-276) rotate(26.903)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div></section><section data-id="ca0f80fab1d00e672450f4d3159794a2"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="4d8a4a7e4357ec517dcebb700ec74f30"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Dependency Graph</h1>
+</div></div></section><section data-id="d65dd29de63662f1d4872d9fae0d0c50"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="e20e3af5934a401824555318276b50a3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Dependency Graph</h1>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 160px; height: 140px; left: 80px; top: 210px;" data-block-id="24f1583435939d4ed297d94e72ed9efd"><a class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#ffffff" data-shape-stroke-width="5" href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 160 140"><defs><clipPath id="shape-mask-33-1523296204206"><ellipse rx="80" ry="70" cx="80" cy="70"></ellipse></clipPath></defs><ellipse rx="80" ry="70" cx="80" cy="70" clip-path="url(#shape-mask-33-1523296204206)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffffff" stroke-width="10"></ellipse></svg></a></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 86px; left: 117px; top: 249px;" data-block-id="6abbf9cdea53e7e22b4f7385f0c8cb97"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><strong><span style="font-size:1.6em">D</span></strong></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 160px; height: 140px; left: 400px; top: 490px;" data-block-id="bb5ab438763e5402d0389e2a12a45ca2"><a class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#ffffff" data-shape-stroke-width="5" href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 160 140"><defs><clipPath id="shape-mask-34-1523296204214"><ellipse rx="80" ry="70" cx="80" cy="70"></ellipse></clipPath></defs><ellipse rx="80" ry="70" cx="80" cy="70" clip-path="url(#shape-mask-34-1523296204214)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffffff" stroke-width="10"></ellipse></svg></a></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 86px; left: 437px; top: 529px;" data-block-id="1562643e86eb3b34ed03765aa96bb6a2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><strong><span style="font-size:1.6em">C</span></strong></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 160px; height: 140px; left: 400px; top: 210px;" data-block-id="426c8ee6d4ad9dec8fdf60b9690fffee"><a class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#ffffff" data-shape-stroke-width="5" href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 160 140"><defs><clipPath id="shape-mask-35-1523296204224"><ellipse rx="80" ry="70" cx="80" cy="70"></ellipse></clipPath></defs><ellipse rx="80" ry="70" cx="80" cy="70" clip-path="url(#shape-mask-35-1523296204224)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffffff" stroke-width="10"></ellipse></svg></a></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 86px; left: 437px; top: 249px;" data-block-id="565d558c23f9f44b47defb87e7857ea7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p><strong><span style="font-size:1.6em">B</span></strong></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 160px; height: 140px; left: 773px; top: 311px;" data-block-id="6425d28acc532837a36f6c74df8f04ed"><a class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 17;" data-shape-stroke-color="#ffffff" data-shape-stroke-width="5" href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 160 140"><defs><clipPath id="shape-mask-36-1523296204236"><ellipse rx="80" ry="70" cx="80" cy="70"></ellipse></clipPath></defs><ellipse rx="80" ry="70" cx="80" cy="70" clip-path="url(#shape-mask-36-1523296204236)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffffff" stroke-width="10"></ellipse></svg></a></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 86px; left: 810px; top: 350px;" data-block-id="59cd6c8fa005ed126a191c408586c8fb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18;">
+<p><strong><span style="font-size:1.6em">A</span></strong></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 560px; top: 280px;" data-block-id="39547b40a0716b4e6fca2004a8b0c7d8"><div class="sl-block-content" data-line-x1="180" data-line-y1="30" data-line-x2="404" data-line-y2="85" data-line-color="#031e36" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 19;" data-line-width="15px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="224" height="55" viewBox="180 30 224 55"><line stroke="#031e36" stroke-width="15" x1="202.5" y1="35.5" x2="404.5" y2="85.5"></line><polygon fill="#031e36" transform="translate(202,35) rotate(103.795)" points="0,22.5 22.5,-22.5 -22.5,-22.5"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 247px; top: 280px;" data-block-id="4bb3a3c2b779cc56eb61a4a22e059ad3"><div class="sl-block-content" data-line-x1="251" data-line-y1="96" data-line-x2="404" data-line-y2="100" data-line-color="#031e36" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 21;" data-line-width="15px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="153" height="4" viewBox="251 96 153 4"><line stroke="#031e36" stroke-width="15" x1="273.5" y1="97.5" x2="404.5" y2="100.5"></line><polygon fill="#031e36" transform="translate(273,97) rotate(91.498)" points="0,22.5 22.5,-22.5 -22.5,-22.5"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 560px; top: 430px;" data-block-id="e7f82199e66af02ed3a486a88ed59185"><div class="sl-block-content" data-line-x1="180" data-line-y1="230" data-line-x2="404" data-line-y2="100" data-line-color="#031e36" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 22;" data-line-width="15px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="224" height="130" viewBox="180 100 224 130"><line stroke="#031e36" stroke-width="15" x1="199.5" y1="219.5" x2="404.5" y2="100.5"></line><polygon fill="#031e36" transform="translate(199,219) rotate(59.871)" points="0,22.5 22.5,-22.5 -22.5,-22.5"></polygon></svg></div></div></section><section data-id="fae494a71cd75c7b2d4393894b8bb726"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="f61388f88a02adfc0e4b4ed71ce7f6f3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Four Core Concepts</h1>
+</div></div></section><section data-id="ccc430d70e7622a999d5cff89cf05c88">
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 63px; top: 0px; height: auto;" data-block-id="4910e16ee72064c5c617674d1d558171"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Four Core Concepts</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 140px;" data-block-id="fc8c9dc85dbeea6a11f738990e05c190"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:1.8em">Entry</span></p>
+</div></div></section><section data-id="72ad4557a6918f2e92820009a19bb8c2">
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 63px; top: 0px; height: auto;" data-block-id="9fe29f539d181975a033a00d5f6215e6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Four Core Concepts</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 140px;" data-block-id="bcd076b7c125f2457954901fa90c9bdd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:1.8em">Entry</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 280px;" data-block-id="bb72fe1b5d915ac48b89ea359ef57485"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:1.8em">Output</span></p>
+</div></div></section><section data-id="5146a9fc393688b9a57d6750d4263738">
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 63px; top: 0px; height: auto;" data-block-id="00c5527cf2637a4d10cc2a5eb63abe26"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Four Core Concepts</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 140px;" data-block-id="c44e7b006ba5d5cba805da4713f095fd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:1.8em">Entry</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 280px;" data-block-id="9cbb8b6c212855749af6c7c1e650c79a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:1.8em">Output</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 420px;" data-block-id="3fee00008ce59e6184a5169762d95715"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:1.8em">Loaders</span></p>
+</div></div></section><section data-id="ec818f44c2c20163bfd914fed06b17f9">
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 63px; top: 0px; height: auto;" data-block-id="96ca325ff2291b36cde789e040bf43fa"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Four Core Concepts</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 140px;" data-block-id="b15c53befb29ed3847f89cc0027d543d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:1.8em">Entry</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 280px;" data-block-id="65f548f503a780b8549d87d84d86d14d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:1.8em">Output</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 420px;" data-block-id="f63fab837f4763bd67e519e4a5d20db3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:1.8em">Loaders</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 560px;" data-block-id="26783fc9c32d33ca0daedb56318e0f1b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><span style="font-size:1.8em">Plugins</span></p>
+</div></div></section><section data-id="c14a464f9d8fd1613444440eca838285"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="fe45f22e9edc9228af2781b740224388"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Configuration</h1>
+</div></div></section><section data-id="5569c17cefa6caef52c104818fb66cfb">
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 63px; top: 0px; height: auto;" data-block-id="49878b6a460db48836ae69896664d753"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Configuration</h1>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" data-block-id="6b9108879bb031b0f82c62d6066981d1" style="min-width: 30px; min-height: 30px; width: 897px; height: 567px; left: 32px; top: 119px;"><div class="sl-block-content notranslate" style="z-index: 12;"><pre><code style="padding: 10px;">    
+    const path = require('path');
+
+    const HtmlPlugin = require('html-webpack-plugin');
+
+    module.exports = {
+      entry: './src/index.js',
+      output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+      },
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: [ 'babel-loader' ]
+          }
+        ]
+      },
+      plugins: [
+        new HtmlPlugin({
+          template: "./html/index.html"
+        })
+      ]
+    };
+
+</code></pre></div></div></section><section data-id="35d211c50c4711aabd8051bf313d0913">
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 63px; top: 0px; height: auto;" data-block-id="2d504ff580a21dc62aeb3c02240b5e9e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Configuration</h1>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 895px; height: 564px; left: 32px; top: 119px;" data-block-id="acbfdeeda88cb0866099f14e1a33da00"><div class="sl-block-content notranslate" style="z-index: 11;"><pre><code style="padding: 10px;">    
+    const path = require('path');
+
+    const HtmlPlugin = require('html-webpack-plugin');
+
+    module.exports = {
+      entry: './src/index.js',
+      output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+      },
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: [ 'babel-loader' ]
+          }
+        ]
+      },
+      plugins: [
+        new HtmlPlugin({
+          template: "./html/index.html"
+        })
+      ]
+    };
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="515d87f1c820ca3a6cc4358978bedadb" style="min-width: 4px; min-height: 4px; width: 306px; height: 51px; left: 86px; top: 229px;"><div class="sl-block-style" style="z-index: 13;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#eeeeee" data-shape-stroke-width="10" href=""><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 306 51"><defs><clipPath id="shape-mask-37-1523296207634"><rect width="306" height="51"></rect></clipPath></defs><rect width="306" height="51" clip-path="url(#shape-mask-37-1523296207634)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#eeeeee" stroke-width="20"></rect></svg></div></div></div></section><section data-id="ea2d238f18f984b764f4052df0be0775">
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 63px; top: 0px; height: auto;" data-block-id="dc183ab50e97070eb516c53c9ae88b87"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Configuration</h1>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 897px; height: 561px; left: 32px; top: 119px;" data-block-id="1fe57ded216b119546086a9195f586ce"><div class="sl-block-content notranslate" style="z-index: 11;"><pre><code style="padding: 10px;">    
+    const path = require('path');
+
+    const HtmlPlugin = require('html-webpack-plugin');
+
+    module.exports = {
+      entry: './src/index.js',
+      output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+      },
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: [ 'babel-loader' ]
+          }
+        ]
+      },
+      plugins: [
+        new HtmlPlugin({
+          template: "./html/index.html"
+        })
+      ]
+    };
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 464px; height: 98px; left: 80px; top: 252px;" data-block-id="13f01967c363e7f8619f7c35521311d8"><div class="sl-block-style" style="z-index: 12;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#eeeeee" data-shape-stroke-width="10" href=""><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 464 98"><defs><clipPath id="shape-mask-38-1523296238164"><rect width="464" height="98"></rect></clipPath></defs><rect width="464" height="98" clip-path="url(#shape-mask-38-1523296238164)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#eeeeee" stroke-width="20"></rect></svg></div></div></div></section><section data-id="6556c9dbf62adf663c8f8a38a1ecc4cb">
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 63px; top: 0px; height: auto;" data-block-id="6e4bdaf7551c2bbdd6e96a0b81c141d7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Configuration</h1>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 896px; height: 568px; left: 32px; top: 119px;" data-block-id="47bdd15e40a087fd117b796786881a6a"><div class="sl-block-content notranslate" style="z-index: 11;"><pre><code style="padding: 10px;">    
+    const path = require('path');
+
+    const HtmlPlugin = require('html-webpack-plugin');
+
+    module.exports = {
+      entry: './src/index.js',
+      output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+      },
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: [ 'babel-loader' ]
+          }
+        ]
+      },
+      plugins: [
+        new HtmlPlugin({
+          template: "./html/index.html"
+        })
+      ]
+    };
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 464px; height: 204px; left: 80px; top: 322px;" data-block-id="41d161bac79f4796671c1012f2683c8d"><div class="sl-block-style" style="z-index: 12;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#eeeeee" data-shape-stroke-width="10" href=""><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 464 204"><defs><clipPath id="shape-mask-39-1523296246210"><rect width="464" height="204"></rect></clipPath></defs><rect width="464" height="204" clip-path="url(#shape-mask-39-1523296246210)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#eeeeee" stroke-width="20"></rect></svg></div></div></div></section><section data-id="633bca6ae31cff2844b8cc5ff6172eb4">
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 63px; top: 0px; height: auto;" data-block-id="752ccc7a32431602771ca4a2a124ffa7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Configuration</h1>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 896px; height: 567px; left: 32px; top: 119px;" data-block-id="2211f024b00d44f303a9896b3595f02e"><div class="sl-block-content notranslate" style="z-index: 11;"><pre><code style="padding: 10px;">    
+    const path = require('path');
+
+    const HtmlPlugin = require('html-webpack-plugin');
+
+    module.exports = {
+      entry: './src/index.js',
+      output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+      },
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: [ 'babel-loader' ]
+          }
+        ]
+      },
+      plugins: [
+        new HtmlPlugin({
+          template: "./html/index.html"
+        })
+      ]
+    };
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 464px; height: 132px; left: 80px; top: 529px;" data-block-id="4e11a2dc8b259a3876055bda01c09a20"><div class="sl-block-style" style="z-index: 12;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#eeeeee" data-shape-stroke-width="10" href=""><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 464 132"><defs><clipPath id="shape-mask-40-1523296259244"><rect width="464" height="132"></rect></clipPath></defs><rect width="464" height="132" clip-path="url(#shape-mask-40-1523296259244)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#eeeeee" stroke-width="20"></rect></svg></div></div></div></section><section data-id="9dbc7c52cefe20ccff7eddc83d1eb492"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="6d2c63f7c29d4a25a26633897634954d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Webpack 4</h1>
+</div></div></section><section data-id="375cb6ce47fd9b248a2baa17325568de"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="d1675ee1dd327e688f91c7d08d5394cb"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Webpack 4</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 263px; height: auto;" data-block-id="8aa81da02194d8e0cfbe161f076faa26"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>No config</li>
+</ul>
+</div></div></section><section data-id="52d49e59e8e3db2502e936eb192c8e3c"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="febea220addc5322bcd244eb40cd4826"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Webpack 4</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 263px; height: auto;" data-block-id="997448a100047bd022a7aab466a90541"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>No config</li>
+	<li>mode</li>
+</ul>
+</div></div></section><section data-id="8f25965e50bbbea6c32e6b844d52cf77"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="8acda6ef152ee2aeaf78ed712f81a419"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Webpack 4</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 263px; height: auto;" data-block-id="e800356f9967a29c02ce4e58632b6061"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>No config</li>
+	<li>mode</li>
+	<li>Speed&nbsp;</li>
+</ul>
+</div></div></section><section data-id="8cb0c3c5b5b94eb60d41692a4dc8a371"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="5d26e9bb2b86032fe183b5524227f0bf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Example</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="842d2acb7ee0b06af0c0a33e1c2b3541" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 40px; top: 401px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="https://github.com/cartothemax/webpack-example-app" target="_blank">https://github.com/cartothemax/webpack-example-app</a></p>
+</div></div></section><section data-id="1c898878e1756fb8b7c67b388745c6d5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="535076410d2d385b41d625a38bcccf84"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Thank you!</h1>
+</div></div>
+</section></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1223190,"slug":"unpacking-webpack-4","title":"Unpacking Webpack 4","description":"a presentation for Des Moines Webgeeks Spring Social about Webpack and new features in Webpack 4","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2018-04-04T01:58:15.808Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/42b2a93decf7ee5aefef70adbd4f8b3b/thumb.jpg?1523317366","view_count":2824,"user":{"id":629464,"username":"boots","name":"Andrew Schutt","description":"","thumbnail_url":"https://www.gravatar.com/avatar/a4a6ea9a7c0197d9d98b923685006ba7?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture-2.png","account_type":"lite","team_id":null,"settings":{"id":476856,"present_controls":false,"present_upsizing":true,"present_pointer":false,"present_notes":false,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"sea-yellow","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":true,"slide_number":false,"slide_count":28,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1788204051154,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":null,"language":"en","source_deck_id":null,"notes":{"6866afdd85b0159107e0772ebe41f52d":"So, hello! I am Andrew Schutt\n\nI am a Software Developer at Hy-Vee that works primarily with Javascript and C# developing web applications. Hy-Vee is a local retailer. You maybe have even shopped at a Hy-Vee!\n\nMy history as developer starts writing back-end code or server side and I have been doing more and more front-end development (aka Javascript) more and more. When I started at Hy-Vee I begin working on and creating full stack Javascript applications. \n\nThis was when I began getting my hands dirty using Webpack","8dcfb7062439f27ca2b91a6cdb4157da":"Anybody here do \"modern\" Javascript development of any kind (frontend frameworks or Node)?\n\nOf those folks has anyone found the JavaScript development ecosystem and tooling difficult to fully grasp?\n\nI share in that frustration. \n\nI personally have found the development ecosystem overwhelming and difficult to grasp\n\nToday we are spending some time to chat about a tool within the JavaScript development ecosystem called Webpack to get a full grasp of the tool and it's uses.","b8c76e657d2636e18444128c5a1ce116":"What is a Webpack anyways? I am sure many have heard of it or even setup Webpack, but it's easy to use and can be a little difficult to fully understand.","7f8a3296e3795c536d9c8a785b332514":"I know you were all screaming this in your head.\n\nSo the term MODULE comes up a bit here and that's because it is the big problem that Webpack is aiming solve. Modularization is a concept that is generally taken care of by the programming language itself. Javascript only supported modules in 2015.\n\nDEPENDENCY GRAPH is a graph that can be used to determining dependencies. Specifically in this context it's used to graph the additional pieces of software that I need to run software\n\nWe are going to spend a minute talking about each of these in depth.","edeac2cb4ad049679f10710dc0e074cd":"Modularization or modules simply put is when you put some code into one location tomake use of that code in another file.\n\nAnother name for a module would be an assembly in the C# and F# world or as a package in Java and Go \n\nTo further complicate the issue other languages will refer to a module as collection of packages and others might refer to packages as a collection of modules...\n\n","a939d4dd822418cd11f11c8ec57c8880":"Good modules are a contained and discrete chunk of functionality. Often an encapsulated abstraction, single task, and are often reusable.\n\nUsing modules creates an easier to maintain application, re-useable code, and prevents namespace pollution(!)\n\nLots of similarities exist between objects and classes.\n\nAt the end of the day it's simplest to think of modules as code deconstruction. It's the definition of Lego pieces you use to build with.\n\n","b101f04629d15744f2bba5389c033505":"This is the problem that webpack is solving for us.\n\nThe big problem with modularizing you code is that we don't want all of these individual files to be sent down the wire.\n\nFor example say we have a project with 20 files that each take 50 milliseconds to be sent to the user. That's one second already and we haven't started to send down all the NPM packages we are dependent on!\n","418512e7de5e9a0d5bce5a512f260946":"Sending one single large file has better network performance then many files at once. \n\nDecreasing the size of the file by minifiying and uglifying the file helps make this a smaller performance hit as well.","7e7e131fdb143a70864f39df58ba9926":"In addition to handling javascript files Webpack can also package up image and styles modules.","ca0f80fab1d00e672450f4d3159794a2":"Any time one file depends on another it treats this file as a dependency. Webpack will actually walk through a file and figure out all the necessary files that are depended on and create this graph.\n\n","d65dd29de63662f1d4872d9fae0d0c50":"This graph is then used to determine how to package the modules, this is often just a single bundle, that is in turn loaded by the browser.\n\n","fae494a71cd75c7b2d4393894b8bb726":"Webpack has many different use cases, but at it's built on four concepts that are used when setting up webpack","ccc430d70e7622a999d5cff89cf05c88":"Entry is the beginning point of the building out the dependency graph. This would be the A from the previous diagram.\n\nFrom this entry point webpack figures out the other modules depended on \n\nThe entry point is one of the pieces that is configured in the webpack configuration","72ad4557a6918f2e92820009a19bb8c2":"This tells webpack where to emit (produces) the bundles and how to name the files.\n\nThe location of these outputted files is also configurable.\n\nThe output is often referred to as the manifest","5146a9fc393688b9a57d6750d4263738":"Loaders enable webpack to handle more than just Javascript files\n\nThese loaders are able to transform files into consumable modules to be used. They are used to process all the different types of file types.\n\nA good example of this would be converting Coffeescript into plain old JavaScript\n\nLoaders do not influence the actual build process","ec818f44c2c20163bfd914fed06b17f9":"Both loaders and plugins extend webpack considerably.\n\nPlugins are capable of many different things with webpack and considered the lifeblood of webpack. \n\nPlugins are able to integrate into webpack and are able to heavily influence many different phases during the build process\n\n","c14a464f9d8fd1613444440eca838285":"The configuration file is the actual JavaScript file that is used to setup webpack for a project and holds all of the settings\n\nThe configuration file can have JS code written in as well and enables for some a lot of possibilities. Because it is a full JavaScript file you can import other files, split up configs for different parts of a project, use control flow (if statements)","5569c17cefa6caef52c104818fb66cfb":"Here is an basic example configuration file that leverages all four of these concepts","35d211c50c4711aabd8051bf313d0913":"First configuration is the entry point that webpack will start at to create the dependency graph.\n\nIt's common to name this file index\n\nWe will look at an example index.js file in a little bit here. It's a pretty simple file though.","ea2d238f18f984b764f4052df0be0775":"The output option is where webpack will put the bundled up modules. \n\nAgain it's common to name the folder this will go called /dist\n\nIn this example the file will be named bundle or main\n\n__dirname referencing the current directory. It's the equivalent of saying root","6556c9dbf62adf663c8f8a38a1ecc4cb":"Here we have a loader defined that will load in js files and bundle them up as part of our distribution.\n\nThe other interesting thing we are doing here is ignoring the node_modules directory and leveraging babel to allow us to write modern javascript, but output to simple javascript allowing support for all browsers","633bca6ae31cff2844b8cc5ff6172eb4":"Here is an example of the usage of a plugin. In this case it will generate an html file for us and add the packaged javascript automatically for us","9dbc7c52cefe20ccff7eddc83d1eb492":"","375cb6ce47fd9b248a2baa17325568de":"Now webpack 4 has been released and the big changes were the beginning of default values for the entry and output configuration options.\n\nThis means that out of the box webpack will work with no config needed.","52d49e59e8e3db2502e936eb192c8e3c":"A new introduction allows for setting the mode that you are running webpack as. Either production or development are shipped with webpack now.\n\nEach mode is a basic configuration that will optimize for each mode type.\n\nProduction: smaller file size, asset optimization\n\nDevelopment: faster compile time, tooling for debugging","8f25965e50bbbea6c32e6b844d52cf77":"Pretty simple one here. Webpack is faster with it's latest iteration for the time spent creating the bundles"}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: true,
+				slideNumber: false,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				scrollActivationWidth: null,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+
+	</body>
+</html>

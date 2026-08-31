@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, minimal-ui">
+		<meta charset="utf-8">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="manifest" href='data:application/manifest+json,{"display": "standalone", "name": "Elm Programming Language"}' />
+		<title>Elm Programming Language</title>
+
+		<meta name="description" content="a presentation for Iowa Code Camp as an introduction to the Elm Programming Language">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-sky-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="0d17131e0517251ac6e1605de04d3f11"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 59px; height: auto;" data-block-id="a920083787cd2b1544e3eb82dac2ef76"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Elm Programming Language</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 630px;" data-block-id="31a0f77e702f5b652c27277b97e4a878"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Andrew Schutt</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 230px; height: 230px; left: 365px; top: 330px;" data-block-id="8d6882a1ea51b81f1c7fb782db98e74f"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/9f8ac33aab698c8b217d9be4622b0140.png"></div></div></section><section class="stack" data-id="adfaad801e5ee6ecfe176247d67f8932"><section data-id="a489fb2d03e8c82742e9312587256890"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="7de026976607408f92b19d4599225274"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Hello!</h1>
+</div></div></section><section data-id="ae3c9410c530b861a7639bb90137f0fe"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 372px; height: 372px; left: 294px; top: 164px;" data-block-id="f3232eaa86a207fd62bded5b942cc1b8"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1052" data-natural-height="1052" data-lazy-loaded="" data-src="elm-programming-language/4c737f4b34ca806aab920b1db7517eca.png"></div></div></section><section data-id="9af5b6a4cd89cc781c1aae8b313c844e"><div class="sl-block" data-block-type="image" style="width: 372px; height: 372px; left: 294px; top: 164px; min-width: 4px; min-height: 4px;" data-block-id="45520e45394d68bf79f3bdaf7690113c"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1052" data-natural-height="1052" data-lazy-loaded="" data-src="elm-programming-language/4c737f4b34ca806aab920b1db7517eca.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 20px; top: 31px;" data-block-id="fc5432f4ca2fe0823cf94e664f4ae632"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><u>Dialects</u></p>
+</div></div></section><section data-id="4dcb8fc75fdb8fd147720bb28a26d2b3"><div class="sl-block" data-block-type="image" style="width: 372px; height: 372px; left: 294px; top: 164px; min-width: 4px; min-height: 4px;" data-block-id="6a677abf827016ad61a52aa293189c95"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1052" data-natural-height="1052" data-lazy-loaded="" data-src="elm-programming-language/4c737f4b34ca806aab920b1db7517eca.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 20px; top: 31px;" data-block-id="55e4d8311c61bc15cf5bee517b7e2581"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><u>Dialects</u></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 191px; height: 132px; left: 20px; top: 101px; min-width: 4px; min-height: 4px;" data-block-id="f03af33ccd47aa2bb6c0f059159630f2"><div class="sl-block-content" style="z-index: 12; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="slide-right"><img style="" data-natural-width="400" data-natural-height="277" data-lazy-loaded="" data-src="elm-programming-language/4a48f255aedac4c397daedae4d054eb3.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 172px; height: 172px; left: 103px; top: 252px; min-width: 4px; min-height: 4px;" data-block-id="5fe6378d2691d8bf9e1eb0715329c6dd"><div class="sl-block-content" style="z-index: 13; transition-duration: 0.6s; transition-delay: 1.2s;" data-animation-type="slide-right"><img style="" data-natural-width="1187" data-natural-height="1187" data-lazy-loaded="" data-src="elm-programming-language/7cc67a927968c8fd669dffabf1d0920c.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 181px; height: 181px; left: 8px; top: 424px; min-width: 4px; min-height: 4px;" data-block-id="139f22dee0c0ccc880616eeaa5a0b112"><div class="sl-block-content" style="z-index: 14; transition-duration: 0.6s; transition-delay: 1.8s;" data-animation-type="slide-right"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/99dee8f619d3621326a89cb5b0cc6e16.png"></div></div></section><section data-id="06ca8e1e7a70527d58cc1b687189d7fc"><div class="sl-block" data-block-type="image" style="width: 372px; height: 372px; left: 294px; top: 164px; min-width: 4px; min-height: 4px;" data-block-id="981cb7d89a43c6f6deee15a53a17a689"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1052" data-natural-height="1052" data-lazy-loaded="" data-src="elm-programming-language/4c737f4b34ca806aab920b1db7517eca.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 20px; top: 31px;" data-block-id="4778a0ab20c4387be8c3c402ee2edc43"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><u>Dialects</u></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 191px; height: 132px; left: 20px; top: 101px; min-width: 4px; min-height: 4px;" data-block-id="82b5bcfbd0823a84b9f8faeaffac7135"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="400" data-natural-height="277" data-lazy-loaded="" data-src="elm-programming-language/4a48f255aedac4c397daedae4d054eb3.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 172px; height: 172px; left: 103px; top: 252px; min-width: 4px; min-height: 4px;" data-block-id="ff9c17c8aca7ff9913f2e8f24d6d3e27"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1187" data-natural-height="1187" data-lazy-loaded="" data-src="elm-programming-language/7cc67a927968c8fd669dffabf1d0920c.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 181px; height: 181px; left: 8px; top: 424px; min-width: 4px; min-height: 4px;" data-block-id="dd9ab6ce52fc50fedfde721a09792bee"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/99dee8f619d3621326a89cb5b0cc6e16.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 680px; top: 31px;" data-block-id="70ee461efe5702b91c5ab7c9353d2d59"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><u>Frameworks</u></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 102px; height: 102px; left: 710px; top: 91px; min-width: 4px; min-height: 4px;" data-block-id="500d1003dfa74ee126d945e3111231be"><div class="sl-block-content" style="z-index: 16; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="slide-left"><img style="" data-natural-width="1200" data-natural-height="1200" data-lazy-loaded="" data-src="elm-programming-language/eb4d351dac32e4219df764fbe13156ba.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 136px; height: 129px; left: 744px; top: 216px; min-width: 4px; min-height: 4px;" data-block-id="f7f43d283c61624a30ceda4c3de4f344"><div class="sl-block-content" style="z-index: 17; transition-duration: 0.6s; transition-delay: 1.2s;" data-animation-type="slide-left"><img style="" data-natural-width="324" data-natural-height="308" data-lazy-loaded="" data-src="elm-programming-language/2cf1e361872cbd414cef96268b12899b.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 139px; height: 124px; left: 761px; top: 377px; min-width: 4px; min-height: 4px;" data-block-id="fedb2dc2da3741fbae032fb47307a899"><div class="sl-block-content" style="z-index: 18; transition-duration: 0.6s; transition-delay: 1.8s;" data-animation-type="slide-left"><img style="" data-natural-width="1509" data-natural-height="1350" data-lazy-loaded="" data-src="elm-programming-language/21b229a505f09b052c2e9048fccb68b7.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 149px; height: 149px; left: 806px; top: 546px; min-width: 4px; min-height: 4px;" data-block-id="196c964a7e8f2689a69f33d7c5255199"><div class="sl-block-content" style="z-index: 19; transition-duration: 0.6s; transition-delay: 3s;" data-animation-type="slide-left"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/a285b60193111b76fd94eedbd3da9a56.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 103px; height: 94px; left: 680px; top: 454px; min-width: 4px; min-height: 4px;" data-block-id="067f40a22ee923e0da7ba640c3b2b9fb"><div class="sl-block-content" style="z-index: 20; transition-duration: 0.6s; transition-delay: 2.4s;" data-animation-type="scale-up"><img style="" data-natural-width="1494" data-natural-height="1350" data-lazy-loaded="" data-src="elm-programming-language/7bdc95dfe16fb51c44ef8e841bbc48fb.png"></div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="width: 130px; height: 130px; left: 679px; top: 566px; min-width: 4px; min-height: 4px;" data-block-id="ff20d2ef59bc6bb67469383174724de2"><div class="sl-block-content" style="z-index: 22; transition-duration: 0.6s; transition-delay: 3.4s;" data-animation-type="fade-in"><img style="" data-natural-width="280" data-natural-height="280" data-lazy-loaded="" data-src="elm-programming-language/b9d6093f9289aa134db54a8227f73901.png"></div></div></section><section data-id="f2d9122e685aaf983b3294ba849af882"><div class="sl-block" data-block-type="image" style="width: 372px; height: 372px; left: 294px; top: 164px; min-width: 4px; min-height: 4px;" data-block-id="7a5a556a8c145490eb4071f635fb9969"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1052" data-natural-height="1052" data-lazy-loaded="" data-src="elm-programming-language/4c737f4b34ca806aab920b1db7517eca.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 20px; top: 31px;" data-block-id="e2ffb5cccfc87cb3f18f2bdaaf4e3bf3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><u>Dialects</u></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 191px; height: 132px; left: 20px; top: 101px; min-width: 4px; min-height: 4px;" data-block-id="f76b684677a42f07a09127e06b8909fa"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="400" data-natural-height="277" data-lazy-loaded="" data-src="elm-programming-language/4a48f255aedac4c397daedae4d054eb3.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 172px; height: 172px; left: 103px; top: 252px; min-width: 4px; min-height: 4px;" data-block-id="ceb5fd39d116f17a1ad0ceb48ed1ca2b"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1187" data-natural-height="1187" data-lazy-loaded="" data-src="elm-programming-language/7cc67a927968c8fd669dffabf1d0920c.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 181px; height: 181px; left: 8px; top: 424px; min-width: 4px; min-height: 4px;" data-block-id="7db7cb190bc857e53c3d94f723e67611"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/99dee8f619d3621326a89cb5b0cc6e16.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 680px; top: 31px;" data-block-id="7eaedf5ef1b204137763c10b1916c9eb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><u>Frameworks</u></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 102px; height: 102px; left: 710px; top: 91px; min-width: 4px; min-height: 4px;" data-block-id="69fe77ea3da063039240a01d8e263c5e"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="1200" data-natural-height="1200" data-lazy-loaded="" data-src="elm-programming-language/eb4d351dac32e4219df764fbe13156ba.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 136px; height: 129px; left: 744px; top: 216px; min-width: 4px; min-height: 4px;" data-block-id="3401b84c4a9fb167907d00bf27434025"><div class="sl-block-content" style="z-index: 17;"><img style="" data-natural-width="324" data-natural-height="308" data-lazy-loaded="" data-src="elm-programming-language/2cf1e361872cbd414cef96268b12899b.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 139px; height: 124px; left: 761px; top: 377px; min-width: 4px; min-height: 4px;" data-block-id="753e0ac2d8d5af0d4dffe927402c5cef"><div class="sl-block-content" style="z-index: 18;"><img style="" data-natural-width="1509" data-natural-height="1350" data-lazy-loaded="" data-src="elm-programming-language/21b229a505f09b052c2e9048fccb68b7.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 149px; height: 149px; left: 806px; top: 546px; min-width: 4px; min-height: 4px;" data-block-id="e397f3433462d52667cf8c61d2ba0894"><div class="sl-block-content" style="z-index: 19;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/a285b60193111b76fd94eedbd3da9a56.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 103px; height: 94px; left: 687px; top: 443px; min-width: 4px; min-height: 4px;" data-block-id="5a56180012c69ec4fbb24afcf8afcd93"><div class="sl-block-content" style="z-index: 20;"><img style="" data-natural-width="1494" data-natural-height="1350" data-lazy-loaded="" data-src="elm-programming-language/7bdc95dfe16fb51c44ef8e841bbc48fb.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 180px; height: 94px; left: 509px; top: 54px; min-width: 4px; min-height: 4px;" data-block-id="ca39e0336cf702f9d13741dec58753b5"><div class="sl-block-content" style="z-index: 21; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="slide-down"><img style="" data-natural-width="2500" data-natural-height="1309" data-lazy-loaded="" data-src="elm-programming-language/359822bf8afd0f1ecbf368299ae35d57.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 184px; height: 184px; left: 276px; top: 9px; min-width: 4px; min-height: 4px;" data-block-id="0c7d4c8665348288e11db669480be2fe"><div class="sl-block-content" style="z-index: 22; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="slide-down"><img style="" data-natural-width="1350" data-natural-height="1350" data-lazy-loaded="" data-src="elm-programming-language/257639490455a7a800063668fff16b29.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 379px; top: 12px;" data-block-id="c599ffa5f9d4716575c3cb852ad057e4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24;">
+<p><u>Packaging</u></p>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="image" style="width: 130px; height: 130px; left: 676px; top: 565px; min-width: 4px; min-height: 4px;" data-block-id="d46b49f20c8dd21aa1819f733c3cf6ba"><div class="sl-block-content" style="z-index: 26;"><img style="" data-natural-width="280" data-natural-height="280" data-lazy-loaded="" data-src="elm-programming-language/b9d6093f9289aa134db54a8227f73901.png"></div></div></section><section data-id="d1730c675963b17b6428b57364c6d3db"><div class="sl-block" data-block-type="image" style="width: 372px; height: 372px; left: 294px; top: 164px; min-width: 4px; min-height: 4px;" data-block-id="4323b3c176d4d03c77e5495be25e0d34"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1052" data-natural-height="1052" data-lazy-loaded="" data-src="elm-programming-language/4c737f4b34ca806aab920b1db7517eca.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 20px; top: 31px;" data-block-id="9935e87fa9a0ce7276f0eb1ce1471198"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><u>Dialects</u></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 191px; height: 132px; left: 20px; top: 101px; min-width: 4px; min-height: 4px;" data-block-id="9982560980b449148d911a89cff75937"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="400" data-natural-height="277" data-lazy-loaded="" data-src="elm-programming-language/4a48f255aedac4c397daedae4d054eb3.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 172px; height: 172px; left: 103px; top: 252px; min-width: 4px; min-height: 4px;" data-block-id="8ebf0a28865e439f500945f955f688c9"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1187" data-natural-height="1187" data-lazy-loaded="" data-src="elm-programming-language/7cc67a927968c8fd669dffabf1d0920c.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 181px; height: 181px; left: 8px; top: 424px; min-width: 4px; min-height: 4px;" data-block-id="8883c689567943ba28908128d4a7fd1f"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/99dee8f619d3621326a89cb5b0cc6e16.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 680px; top: 31px;" data-block-id="8fdf6b2beb6786b553e75dffb8f42f11"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><u>Frameworks</u></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 102px; height: 102px; left: 710px; top: 91px; min-width: 4px; min-height: 4px;" data-block-id="dea2445b81bad142d578bae480ab3bb1"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="1200" data-natural-height="1200" data-lazy-loaded="" data-src="elm-programming-language/eb4d351dac32e4219df764fbe13156ba.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 136px; height: 129px; left: 744px; top: 216px; min-width: 4px; min-height: 4px;" data-block-id="c67e2cf363a07bfcc5772da7d44cb8b2"><div class="sl-block-content" style="z-index: 17;"><img style="" data-natural-width="324" data-natural-height="308" data-lazy-loaded="" data-src="elm-programming-language/2cf1e361872cbd414cef96268b12899b.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 139px; height: 124px; left: 761px; top: 377px; min-width: 4px; min-height: 4px;" data-block-id="af5bc28fc598320841dc88d3f4541aa3"><div class="sl-block-content" style="z-index: 18;"><img style="" data-natural-width="1509" data-natural-height="1350" data-lazy-loaded="" data-src="elm-programming-language/21b229a505f09b052c2e9048fccb68b7.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 149px; height: 149px; left: 806px; top: 546px; min-width: 4px; min-height: 4px;" data-block-id="dc09a47690e6b6f4db9b12c964f3192a"><div class="sl-block-content" style="z-index: 19;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/a285b60193111b76fd94eedbd3da9a56.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 103px; height: 94px; left: 687px; top: 454px; min-width: 4px; min-height: 4px;" data-block-id="7e4ad701fefdcd9e4544b6de52243ae1"><div class="sl-block-content" style="z-index: 20;"><img style="" data-natural-width="1494" data-natural-height="1350" data-lazy-loaded="" data-src="elm-programming-language/7bdc95dfe16fb51c44ef8e841bbc48fb.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 180px; height: 94px; left: 509px; top: 54px; min-width: 4px; min-height: 4px;" data-block-id="9ac0c94dd777c94de28ea3caf1c9847d"><div class="sl-block-content" style="z-index: 21;"><img style="" data-natural-width="2500" data-natural-height="1309" data-lazy-loaded="" data-src="elm-programming-language/359822bf8afd0f1ecbf368299ae35d57.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 184px; height: 184px; left: 276px; top: 9px; min-width: 4px; min-height: 4px;" data-block-id="fbea845fdf992328e5f0e08f69910911"><div class="sl-block-content" style="z-index: 22;"><img style="" data-natural-width="1350" data-natural-height="1350" data-lazy-loaded="" data-src="elm-programming-language/257639490455a7a800063668fff16b29.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 379px; top: 12px;" data-block-id="a2132fe1bbd280f80cd2b2efa72b1b88"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23;">
+<p><u>Packaging</u></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 134px; height: 134px; left: 393px; top: 546px; min-width: 4px; min-height: 4px;" data-block-id="cf54ffd48fcb029e8f76c27557cda7a6"><div class="sl-block-content" style="z-index: 24; transition-duration: 0.6s; transition-delay: 2.4s;" data-animation-type="slide-up"><img style="" data-natural-width="300" data-natural-height="300" data-lazy-loaded="" data-src="elm-programming-language/e199c0ee4e6d330aed0ab29a18318e78.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 109px; height: 117px; left: 222px; top: 546px; min-width: 4px; min-height: 4px;" data-block-id="06dc61d2e610ccbb7fd236bf671d83f5"><div class="sl-block-content" style="z-index: 25; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="slide-up"><img style="" data-natural-width="450" data-natural-height="480" data-lazy-loaded="" data-src="elm-programming-language/9800d3d3e5eb596752507a617de10d5c.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 107px; height: 107px; left: 560px; top: 577px; min-width: 4px; min-height: 4px;" data-block-id="21e45345f89582693ff06b5198cfb886"><div class="sl-block-content" style="z-index: 27; transition-duration: 0.6s; transition-delay: 1.2s;" data-animation-type="slide-up"><img style="" data-natural-width="200" data-natural-height="200" data-lazy-loaded="" data-src="elm-programming-language/4805a34e746b7b7009e82b60a99b1186.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 20px; top: 631px;" data-block-id="640219e4958d32e6dfab0d62198f9665"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 28;">
+<p><u>Utilities</u></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 130px; height: 130px; left: 676px; top: 565px; min-width: 4px; min-height: 4px;" data-block-id="5467ca1d80467ed39897105ffc3ca864"><div class="sl-block-content" style="z-index: 30;"><img style="" data-natural-width="280" data-natural-height="280" data-lazy-loaded="" data-src="elm-programming-language/b9d6093f9289aa134db54a8227f73901.png"></div></div></section><section data-id="de6766733363aec1a1aacfeecb80ae84"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 511px; left: 77px; top: 70px;" data-block-id="a95a652cff567cc39b92ac0bae01e236"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1024" data-natural-height="649" data-lazy-loaded="" data-src="elm-programming-language/7de82d20a899c8eb20ec3b954c982818.png"></div></div></section><section data-id="35546ab1fea98d6d1d8f20693c841a79">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="width: 400px; height: 400px; left: 53px; top: 150px; min-width: 4px; min-height: 4px;" data-block-id="ca08c2497ee645483610f4d81e546614"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/9f8ac33aab698c8b217d9be4622b0140.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 580px; top: 140px;" data-block-id="b970f29c6acb0af0b112defacac00c38"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left; font-size: 120%;">
+<p><u>Dialect</u></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 580px; top: 200px;" data-block-id="d6fe362f5de41bcf2c8ad003f5c0b94b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left; font-size: 120%;">
+<p><u>Framework</u></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 580px; top: 270px;" data-block-id="62a9b5f11d58520baa040aecf7128075"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 120%;">
+<p><u>Packaging</u></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 580px; top: 340px;" data-block-id="a1a6bbcfc92348d0b8f62ad814c5d8b8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; text-align: left; font-size: 120%;">
+<p><u>Utilities</u></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 248px; left: 516px; top: 479px;" data-block-id="bdf14640c9bfac4ec0b0528236172531"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; text-align: left; font-size: 160%;">
+<p>It's all Elm!</p>
+</div></div></section></section><section class="stack" data-id="acb45d1fa22d94c0a467699b72b7e799"><section data-id="51ce0eec9cd3590bf23567ca47248a02"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="54285bb239ffcb876a91044545ccac3f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>What is Elm?</h1>
+</div></div></section><section data-id="0c8d0847324adf474a746d139b634eae"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 70px;" data-block-id="bff0080f5ecb36cc5f99d623e14ac6fa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 200%;">
+<p>Elm</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 400px; height: 400px; left: 280px; top: 160px;" data-block-id="370681b65740d3b2306001a7c948b73b"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/9f8ac33aab698c8b217d9be4622b0140.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 573px;" data-block-id="350663b65702ca209fb14ad458b8082e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><a href="http://elm-lang.org" target="_blank">elm-lang.org</a></p>
+</div></div></section><section data-id="961df21ce54b806dcde26c4cb251e927"><div class="sl-block" data-block-type="text" style="width: 914px; left: 14px; top: 280px; height: auto;" data-block-id="9364fd6befe866047a9ebd0d054c39bc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Created By <span class="c-icon__sub">@czaplic</span>
+</h1>
+</div></div></section><section data-id="70506482958b3fd25784752fcd41cbcd"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 246px; height: 246px; left: 50px; top: 157px;" data-block-id="261b56e93f3bbaabe37d42198c7602cb"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/9f8ac33aab698c8b217d9be4622b0140.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 246px; height: 246px; left: 677px; top: 157px;" data-block-id="ccdf420c3ec49282a5a54d14ad94913a"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1052" data-natural-height="1052" data-lazy-loaded="" data-src="elm-programming-language/4c737f4b34ca806aab920b1db7517eca.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 310px; height: 97px; left: 330px; top: 232px;" data-block-id="dc4e3f3d166c447d2d81e49efac4a56c"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 310 97"><polygon points="0,29.099999999999998 155,29.099999999999998 155,0 310,48.5 155,97 155,67.89999999999999 0,67.89999999999999" class="shape-element" fill="#000000"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;" data-block-id="d7a48a027ca11a5be704b3263d44f752"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>compiles to</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 512px;" data-block-id="765852ad30a780e1b0b4e89b6c75226d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>https://guide.elm-lang.org/install.html</p>
+</div></div></section><section data-id="aa18311296877c81cbd96be08ccfca62"><div class="sl-block" data-block-type="image" style="width: 246px; height: 246px; left: 50px; top: 157px; min-width: 4px; min-height: 4px;" data-block-id="510f6b8f9f305d8362304c0dae69cef5"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/9f8ac33aab698c8b217d9be4622b0140.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 246px; height: 246px; left: 677px; top: 157px; min-width: 4px; min-height: 4px;" data-block-id="50d30d45a58d4964fcd73554828c30c0"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1052" data-natural-height="1052" data-lazy-loaded="" data-src="elm-programming-language/4c737f4b34ca806aab920b1db7517eca.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 310px; height: 97px; left: 330px; top: 232px;" data-block-id="16dd84552a865a0524bcc0ea961be76c"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 310 97"><polygon points="0,29.099999999999998 155,29.099999999999998 155,0 310,48.5 155,97 155,67.89999999999999 0,67.89999999999999" class="shape-element" fill="#000000"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 331px;" data-block-id="80dd1047852e199abdaa164820ea1fde"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>compiles to</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 838px; height: 132px; left: 61px; top: 490px;" data-block-id="83651ac4e9e3fd6063a59ecbbc15bb71"><div class="sl-block-content notranslate" style="z-index: 14; font-size: 200%;"><pre class="http"><code>
+    &gt; elm make Main.elm --output elm.js</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 290px; left: 28px; top: 412px;" data-block-id="c2704d77d3c25327ba420156069a42e6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Main.elm</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 290px; left: 655px; top: 412px;" data-block-id="a843e1971f0710db73025f2940cbedc4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p>elm.js</p>
+</div></div></section><section data-id="0e1a4772b585a599e576c6bac07aa22a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="868a78b09501aa8fa2ddea543c872a49"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Functional</h1>
+</div></div></section><section data-id="a545eb1238d470f2a89cc68cf3a981fc"><div class="sl-block" data-block-type="text" style="width: 806px; left: 87px; top: 301px; height: auto;" data-block-id="b4654963fe0f5bf33d92e4ff85f29ba6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Pure Functions</h1>
+</div></div></section><section data-id="ed8bff9e75470b31c81de56152235afe"><div class="sl-block" data-block-type="text" style="width: 806px; left: 87px; top: 21px; height: auto;" data-block-id="40066a708d97f193aa5aa017460c60c5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Pure Functions</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 500px; height: 300px; left: 230px; top: 200px;" data-block-id="89cb77cf97cd4ecbac2251fd53400b93"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre class="http"><code>    
+    &gt; add 3 5 -- 8
+    &gt; add 3 5 -- 8
+    &gt; add 3 5 -- 8</code></pre></div></div></section><section data-id="9d0db0e700b8e5cc1204d72e06acdb70"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="8c10d0b957a51239f1e86e76aa84f8f6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Declarative</h1>
+</div></div></section><section data-id="64ed692785fa061406a019b948bdc93c"><div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 942px; height: 580px; left: 10px; top: 109px;" data-block-id="9491ccbabd4016e6cae1fdc9d7e4d097"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre><code>
+
+    var numbers = [1, 2, 3, 4, 5];
+
+    function doubleNumbers (numbers) {
+        const doubled = [];
+        const l = numbers.length;
+    
+        for (let i = 0; i &lt; l; i++) {
+            doubled.push(numbers[i] * 2);
+        };
+    
+        return doubled;
+    };</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 855px; left: 53px; top: 11px; height: auto;" data-block-id="1596a92e729e4324e6dd4031b59721a7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<h1>Imperative Example</h1>
+</div></div></section><section data-id="c5f01e7ae2117de149b95347de904188"><div class="sl-block" data-block-type="code" style="width: 942px; height: 580px; left: 10px; top: 109px;" data-block-id="b31917d7e7a18352c37ae62a8fbf4d52"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 200%;"><pre><code>
+    myList = [1, 2, 3, 4, 5]
+    
+    double n = n * 2
+
+    doubleNumbers list = 
+        List.map double list
+
+    doubleNumbers myList
+    </code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 855px; left: 53px; top: 11px; height: auto;" data-block-id="730fe82f0a05633e9306c124ad92d66e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Declarative Example</h1>
+</div></div></section><section data-id="2d2c8ac0b77a77a3192072464f205250"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="5ced629f0b4ee8710de4624af2de776a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Immutable</h1>
+</div></div></section></section><section data-id="be13259848a4f4c70f1aa25c39b3e6da"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 476px; height: 595px; left: 242px; top: 20px;" data-block-id="5ac5fe70ba4cc6fed26d88a3b0ffbad4"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="791" data-natural-height="989" data-lazy-loaded="" data-src="elm-programming-language/72caf058c381efd856e8f75d40e74b24.jpg"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 360px; top: 651px;" data-block-id="26b3f09297ea41ce4bc7d3404e15cf17"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 63%;">
+<p>By Ptelea - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=16572537</p>
+</div></div></section><section class="stack" data-id="bfd58809ed4a4bcc4bc491acdecf6eee"><section data-id="2046bf8a73909597b8d07b8e5ba3a771"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="e5501c74a566f9aff7794cbbdd7aa80d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Why use Elm?</h1>
+</div></div></section><section data-id="b2cae5c907285eadf98ed839dde74d5e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="378ca42a663f8d6e1ac58d8eed899fe2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Performance</h1>
+</div></div></section><section data-id="4449f68e3473965463b41f520709a15d"><div class="sl-block" data-block-type="image" style="width: 842px; height: 569px; left: 59px; top: 49px; min-width: 4px; min-height: 4px;" data-block-id="8bb00585c1be7dd79d2fb087a15aae6a"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="740" data-natural-height="500" data-lazy-loaded="" data-src="elm-programming-language/90f1506080946d7d2c749a7c001732cd.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 501px; left: 459px; top: 661px;" data-block-id="6c3473eff2802dbc2ba9a6153e42affe"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:0.5em">* https://elm-lang.org/blog/small-assets-without-the-headache</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 425px; left: 0px; top: 638px;" data-block-id="a9a1efbcc646a1065359d886a8f04106"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:1.2em"><a href="https://realworld.io" target="_blank">https://realworld.io</a></span></p>
+</div></div></section><section data-id="12eeb0dae963b76a5c77f4a6e294c4ba">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 501px; left: 459px; top: 661px;" data-block-id="5c17cf4fa7f9f3205b7260ecd11e5593"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:0.5em">* https://elm-lang.org/blog/blazing-fast-html-round-two</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 861px; height: 538px; left: 50px; top: 34px;" data-block-id="d46f266add29abd72b4baac50c743384"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="800" data-natural-height="500" data-lazy-loaded="" data-src="elm-programming-language/3031339bd0643577738a4685a12a9b3f.png"></div></div></section><section data-id="da21550c08013d4ebbd7af6c65106d45"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="76046b93be6d6df0537e8aee2a60ba67"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Performance</h1>
+</div></div></section><section data-id="fa4d7d8287f3baccac32a4cd63e7a53d"><div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 722px; height: 187px; left: 119px; top: 233px;" data-block-id="eba0eef53e708715ea9b09594e5540fd"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 250%;"><pre class="http"><code>
+    &gt; elm make --optimize</code></pre></div></div></section><section data-id="2f7828b13c959e8ad84665564294dc39"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="005f2d4b961e61dff2728aaaf3188fdc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>"No runtime exceptions"</h1>
+</div></div></section><section data-id="cc54d0002c946eca1431fd121d3f6f4a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="60a8a916bbfe1667dbf42f4a1757869f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Compiler</h1>
+</div></div></section><section data-id="a2559070a7c86e2eebdc98ddf5c695de"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 21px; height: auto;" data-block-id="c0487f132a471450ab58d2394dfa18f7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Compiler Errors</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 672px; height: 498px; left: 144px; top: 163px;" data-block-id="4e305e4758b3e4f0793dd7d3b913243d"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="580" data-natural-height="430" data-lazy-loaded="" data-src="elm-programming-language/444432c5d565939ae166e0b16515a020.png"></div></div></section><section data-id="fa17de529ad04ee50312670f5919f198">
+<div class="sl-block" data-block-type="text" style="width: 855px; left: 53px; top: 267px; height: auto;" data-block-id="2ffe2edaa34d410cb0fa8f03caab351b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Error Handling</h1>
+</div></div></section><section data-id="341944c1964182437a2f76739fc2185b">
+<div class="sl-block" data-block-type="text" style="width: 855px; left: 53px; top: 11px; height: auto;" data-block-id="d5d327f7f612464cf87104a05b4f2fec"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Error Handling</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 464px; left: 0px; top: 131px;" data-block-id="2793b21c39f86c5b93cb8e628420e0fc"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 175%;"><pre><code>
+    
+    function fetchCatz() {
+        return fetch('http://www.funnycatpix.com/')
+               .then(r =&gt; r.json())
+               .then(photo =&gt; { /* handle photo */ }); 
+    }</code></pre></div></div></section><section data-id="d54171c007e210ad8b1cb1a7276c0f6c"><div class="sl-block" data-block-type="code" style="width: 960px; height: 464px; left: 0px; top: 131px;" data-block-id="42f40c2cce79c4c9ddff05f69b760eae"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 175%;"><pre><code>
+    
+    function fetchCatz() {
+        return fetch('http://www.funnycatpix.com/')
+               .then(r =&gt; r.json())
+               .then(photo =&gt; { /* handle photo */ }); 
+    }</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 855px; left: 53px; top: 11px; height: auto;" data-block-id="c0cd1a097d850de9866b6df9af17e749"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<h1>Error Handling</h1>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 135px; height: 44px; left: 253px; top: 381px;" data-block-id="3aa327765092cabd394f66eb550a7da0"><div class="sl-block-style" style="z-index: 13; transform: rotate(30deg);"><div class="sl-block-content" data-shape-type="arrow-left" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 135 44"><polygon points="135,13.2 67.5,13.2 67.5,0 0,22 67.5,44 67.5,30.799999999999997 135,30.799999999999997 135,13.2" class="shape-element" fill="rgb(255, 255, 0)"></polygon></svg></div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 292px; top: 431px;" data-block-id="fddf116102aa1db91c2a4d82ce0a818c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(255, 255, 0);">
+<h3><strong>No catch statement!</strong></h3>
+</div></div></section><section data-id="018a1fe0043a3f60becfc8116db56909"><div class="sl-block" data-block-type="code" style="width: 960px; height: 368px; left: 0px; top: 178px;" data-block-id="f092fa5f2bae0e79e6aa88e3b6a278a0"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 175%;"><pre><code>
+    
+  fetchCatz : Cmd Msg 
+  fetchCatz =
+    Http.get
+    { url = "http://www.funnycatpix.com/"
+    , expect = Http.expectJson LoadCatz photoDecoder }</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 855px; left: 53px; top: 11px; height: auto;" data-block-id="86c06ede80b066364782b0fd33a661fa"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Error Handling</h1>
+</div></div>
+
+</section><section data-id="6c562c10f6b61939fad2a473635c73a8"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="d316409d65dd967fc3a2b3b74dcc156d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Strong Static Typing</h1>
+</div></div></section><section data-id="2f46e54f3c16f60f79cae1b49fc4950c"><div class="sl-block" data-block-type="code" style="width: 942px; height: 580px; left: 10px; top: 109px;" data-block-id="0d7a39b0348d40501bb9963128950547"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 200%;"><pre><code>
+    
+    score : Int
+    score = 0
+
+    greeting : String
+    greeting = "Hello!"    
+
+    needCoffee : Bool
+    needCoffee = True
+
+    numbers : List
+    numbers = [1, 2, 3, 4]</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 855px; left: 53px; top: 11px; height: auto;" data-block-id="53d818d00803e007dd805466f7d1d88a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Static Types</h1>
+</div></div></section></section><section data-id="45434c1b6f194f809ccf4f01a895f3ee"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 360px; top: 651px;" data-block-id="6cdac6ca48f94c3ca61a327bf745607c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 63%;">
+<p>By Melburnian - Own work, CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=1287428</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 363px; height: 518px; left: 299px; top: 53px;" data-block-id="d7b0b56989096680f7fbaf1e83a9aeda"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="945" data-natural-height="1350" data-lazy-loaded="" data-src="elm-programming-language/dae27e599ee312d4824661aa03599eb4.jpg"></div></div></section><section class="stack" data-id="356616b8898d39cc9a87f24e99c5213a"><section data-id="7bdad1e6647f955e48ac8653e8b5d302"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="3a4f44af3f198a2fac1160dfea330d76"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Syntax and Features</h1>
+</div></div></section><section data-id="7cf182cf273f1c6079a4676925f5875a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="464a01022009949bb69c51000a512827"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Functions</h1>
+</div></div></section><section data-id="d9c406c3d685e650f240ed75aeabc4c4"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 11px; height: auto;" data-block-id="525e1496f568d09cfa005909c5872f10"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Functions</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 545px; height: 210px; left: 208px; top: 280px;" data-block-id="5060ebb3723ca57082dbe7e366156567"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre><code>
+    
+    isNegative n = n &lt; 0</code></pre></div></div></section><section data-id="b90adce66ba24ca1d00ce0e7c26f86a5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 11px; height: auto;" data-block-id="b89553d9fe89ff1b32923953c569105e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Functions</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 545px; height: 572px; left: 208px; top: 109px;" data-block-id="b0cffe5c4a7d2bf7c9a7a2d64ace9dd8"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre><code>
+    
+    isNegative n = n &lt; 0
+
+    isNegative 4
+    False
+
+    isNegative -8
+    True
+
+    isNegative (-2 * -11)
+    False</code></pre></div></div></section><section data-id="18490bd5133ab20aacb2915f2d0f6414"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 11px; height: auto;" data-block-id="b9d86be2a9accf2b812a3b0c9c5dd659"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Anonymous Functions</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 572px; left: 80px; top: 109px;" data-block-id="b437cc472275d05f748c5fadb3e1bb3c"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre><code>
+    
+    \n -&gt; n &lt; 0
+
+    (\n -&gt; n &lt; 0) 4
+    False
+
+    (\n -&gt; n &lt; 0) -8
+    True
+
+    (\n -&gt; n &lt; 0) (-2 * -11)
+    False</code></pre></div></div></section><section data-id="8f474a58a8a7412ec6e4e08ef906f2dd"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="d8e8d0ed9a183b5286cd246760f25e42"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Function Currying</h1>
+</div></div></section><section data-id="27459e898f73b8560baf5224e97765f0"><div class="sl-block" data-block-type="code" style="width: 727px; height: 521px; left: 117px; top: 125px;" data-block-id="a211ea820257cfcc125c02f2707c2262"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 200%;"><pre><code>
+    
+    add x y z = x + y + z
+
+    add 1 2 3
+    ((add 1) 2) 3
+
+    add1 = add 1
+    add2 = add1 2
+    add2 3 -- 6
+   
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 855px; left: 54px; top: 11px; height: auto;" data-block-id="dca257fb25fd3251779af2216551b687"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Currying</h1>
+</div></div></section><section data-id="f77a12b1c7cbd7a34d23f10a2e9f5840"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="f06b9e1c603ce1b37ea670d4f6d1ea32"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Piping</h1>
+</div></div></section><section data-id="f6ffb4f2e13e9951d6f18b7c72c64f0a"><div class="sl-block" data-block-type="code" style="width: 942px; height: 126px; left: 10px; top: 109px;" data-block-id="cb3e383cc9018191c97b390d55d10d79"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 135%;"><pre><code>
+    
+  format str = String.trim (String.repeat 4 (String.toUpper str))</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 855px; left: 53px; top: 11px; height: auto;" data-block-id="50b4ab838abce7a04d04cf95b19b41f4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<h1>Piping</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 942px; height: 404px; left: 10px; top: 280px;" data-block-id="a2eec07d3ebfe32b23def8a694169bc9"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 180%;"><pre><code>
+    
+    format str = 
+        str
+            |&gt; String.toUpper
+            |&gt; String.repeat 4
+            |&gt; String.trim
+</code></pre></div></div></section><section data-id="8b92519d434c10c6fc181ccd64e8ac42"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="be9c1fc09c79358b5c04938655e9eb36"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Annotations</h1>
+</div></div></section><section data-id="130ee3d417c525f0de7eb4c46cb803a1"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 11px; height: auto;" data-block-id="a67943e85ee9553549289ca5f424234d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Annotations</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 881px; height: 318px; left: 40px; top: 191px;" data-block-id="675ceb36a7bc4aa1c0421c2d04ff5ef5"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre><code>
+    
+    -- doubles ints and adds two results
+    doSomething x y = 
+        (x * 2) + (y * 2)</code></pre></div></div></section><section data-id="b7c696aa66dcbb4bfd4786f5cfa7ec0e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 11px; height: auto;" data-block-id="568d067ae0bce232b4d442c489479c7e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Annotations</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 881px; height: 318px; left: 40px; top: 191px;" data-block-id="70486d93e7586d98282e1060f5139eeb"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre><code>
+    
+    -- doubles ints and adds two results
+    doSomething x y = 
+        (x * 2) + (y * 2)</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 61px; height: 58px; left: 47px; top: 292px;" data-block-id="63993f08f2e02dc1d6b50aad0b3d84c7"><div class="sl-block-content" data-shape-type="symbol-checkmark-circle" data-shape-fill-color="rgb(0, 255, 0)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(0, 255, 0)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM13.52 23.383l-7.362-7.363 2.828-2.828 4.533 4.535 9.617-9.617 2.828 2.828-12.444 12.445z"></path></g></svg></div></div></section><section data-id="49b2159145f75f72bc03421cee60dde3"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 11px; height: auto;" data-block-id="616b5cd6c3cdbeab8abcb11c9646efcf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Annotations</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 881px; height: 313px; left: 40px; top: 168px;" data-block-id="c5ad84d9a7bb9900b32056dbcb8c3045"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre><code>
+    -- doubles ints and adds two results
+    doSomething x y = 
+        (x * 2.0) + (y * 2.0)</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 61px; height: 58px; left: 47px; top: 228px;" data-block-id="6aedc3014213330269a9ee1c974a3830"><div class="sl-block-content" data-shape-type="symbol-checkmark-circle" data-shape-fill-color="rgb(0, 255, 0)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(0, 255, 0)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM13.52 23.383l-7.362-7.363 2.828-2.828 4.533 4.535 9.617-9.617 2.828 2.828-12.444 12.445z"></path></g></svg></div></div></section><section data-id="9b15084f077abacae32b5607b6e98a5c"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 11px; height: auto;" data-block-id="e804e32d8fee29955d4518d0499872d4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Annotations</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 881px; height: 313px; left: 40px; top: 168px;" data-block-id="0f4b771ff25cd79f5a0e966d65b9c3e3"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre><code>
+    doSomething : Int -&gt; Int -&gt; Int
+    doSomething x y = 
+        (x * 2.0) + (y * 2.0)</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 62px; height: 61px; left: 57px; top: 210px;" data-block-id="cbfd0c8b6079d20ac8f903a388b9a6be"><div class="sl-block-content" data-shape-type="symbol-x-circle" data-shape-fill-color="rgb(255, 0, 0)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(255, 0, 0)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM23.914 21.086l-2.828 2.828-5.086-5.086-5.086 5.086-2.828-2.828 5.086-5.086-5.086-5.086 2.828-2.828 5.086 5.086 5.086-5.086 2.828 2.828-5.086 5.086 5.086 5.086z"></path></g></svg></div></div></section><section data-id="2dce922e82ad18d0fb30d3bd8b44ce94"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 11px; height: auto;" data-block-id="d0a243cd0423c98085c4e91370d34d9c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Annotations</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 881px; height: 313px; left: 40px; top: 168px;" data-block-id="eba5f6fe024edea7a579aedaa3f83a39"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre><code>
+    doSomething : Float -&gt; Float -&gt; Float
+    doSomething x y = 
+        (x * 2.0) + (y * 2.0)</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 61px; height: 58px; left: 47px; top: 228px;" data-block-id="627c7550a27014fcc4591af6d8afea9b"><div class="sl-block-content" data-shape-type="symbol-checkmark-circle" data-shape-fill-color="rgb(0, 255, 0)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(0, 255, 0)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM13.52 23.383l-7.362-7.363 2.828-2.828 4.533 4.535 9.617-9.617 2.828 2.828-12.444 12.445z"></path></g></svg></div></div></section><section data-id="f671ba9b02cf21e24addc4ef4b782823"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="623e22e7065bcb1452f8b1ac34363a4e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Lists</h1>
+</div></div></section><section data-id="0e6fda01d41da82f1105b96bfd7bc892"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="905bd6e8c03187289ac7bb6e9da52659"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Lists</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 942px; height: 381px; left: 10px; top: 109px;" data-block-id="e8b702a66fc67e2935d466c11290da99"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre><code>
+    
+    numbers = [1, 2, 3, 4]
+
+    strings = ["one", "two" "three", "four"]
+
+    numsAndStrs = [1, "two", 3, "four"]</code></pre></div></div></section><section data-id="dfdd4a4175daf0774b51986f451d2dff"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 15px; height: auto;" data-block-id="6c7fa3fecd717f2a7e4d1b893e2d5b76"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Lists</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 942px; height: 324px; left: 10px; top: 109px;" data-block-id="eab243a93dc49673adc0288439069a43"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre><code>
+    
+    numbers = [1, 2, 3, 4]
+
+    strings = ["one", "two" "three", "four"]
+
+    numsAndStrs = [1, "two", 3, "four"]</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 62px; height: 61px; left: 31px; top: 341px;" data-block-id="9fd2528362e1f106b42fc0a204bac1d9"><div class="sl-block-content" data-shape-type="symbol-x-circle" data-shape-fill-color="rgb(255, 0, 0)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(255, 0, 0)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM23.914 21.086l-2.828 2.828-5.086-5.086-5.086 5.086-2.828-2.828 5.086-5.086-5.086-5.086 2.828-2.828 5.086 5.086 5.086-5.086 2.828 2.828-5.086 5.086 5.086 5.086z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 118px; left: 77px; top: 534px;" data-block-id="3005260add0ca7fe244571e5a950f3f2"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="1034" data-natural-height="152" data-lazy-loaded="" data-src="elm-programming-language/fea6b565f31d86d5f3fea7a67bf9f7b0.png"></div></div></section><section data-id="0897559f9ccdb5760d15ad3f6849b49b"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="5ca3a93a020bbd4f11437cd86cc6d1d0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Records</h1>
+</div></div></section><section data-id="f4c661e86ce20a72ba04eb8989f1cdf4"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 11px; height: auto;" data-block-id="53b15d697a077d1649d296e0887a0527"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Records</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 838px; height: 496px; left: 61px; top: 172px;" data-block-id="83b940c79ecd3b50d0f6a6f0e744e2fa"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre><code>
+    
+    album = 
+        { title = "Rubber Soul"
+        , artist = "The Beatles"
+        , tracks = [1, 2, 3, 4, 5]
+        }
+
+    album.title
+    "Rubber Soul" : String </code></pre></div></div></section><section data-id="318e1b2d256ddd2d8a37092a3d2ba49f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 21px; height: auto;" data-block-id="c4babeb054f27f7eb04ab7cf2bb5f936"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Immutable</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 774px; height: 580px; left: 99px; top: 112px;" data-block-id="af52cf839587142df6f177ab23e52638"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre><code>
+    
+    album.title = "Abbey Road"
+
+
+    { album | title = "Abbey Road" }
+
+    { title = "Abbey Road"
+    , artist = "The Beatles"
+    , tracks = [1, 2, 3, 4, 5] 
+    }</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 62px; height: 61px; left: 109px; top: 180px;" data-block-id="e19cf70ac84f14ca6c6ae818e481a180"><div class="sl-block-content" data-shape-type="symbol-x-circle" data-shape-fill-color="rgb(255, 0, 0)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(255, 0, 0)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM23.914 21.086l-2.828 2.828-5.086-5.086-5.086 5.086-2.828-2.828 5.086-5.086-5.086-5.086 2.828-2.828 5.086 5.086 5.086-5.086 2.828 2.828-5.086 5.086 5.086 5.086z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 61px; height: 58px; left: 109px; top: 312px;" data-block-id="c581ce4f268b50144b031bf118e0e343"><div class="sl-block-content" data-shape-type="symbol-checkmark-circle" data-shape-fill-color="rgb(0, 255, 0)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(0, 255, 0)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM13.52 23.383l-7.362-7.363 2.828-2.828 4.533 4.535 9.617-9.617 2.828 2.828-12.444 12.445z"></path></g></svg></div></div></section><section data-id="e301eaa7f97973e2593cc5e384d4a654"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 21px; height: auto;" data-block-id="6d2facf73a59ca6d5ed3c9e3289428b6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Immutable</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 888px; height: 580px; left: 36px; top: 113px;" data-block-id="e12173d6ebe4fcb610d30cc31d78a9ab"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 180%;"><pre><code>
+    album = { title = "Rubber Soul", ... }
+    abbeyRoad = { album | title = "Abbey Road" }
+
+    abbeyRoad
+    { title = "Abbey Road", ... }
+
+    album
+    { title = "Rubber Soul", ... }
+</code></pre></div></div></section><section data-id="6d1c17dd820fadd3ed328795c8d8c33f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="74aeb7677c58ab3919662531e37be793"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Tuples</h1>
+</div></div></section><section data-id="402d46a07d28a022d8693102bc585348"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 12px; height: auto;" data-block-id="574b1a703fd3519edf9bcf319030c7c7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Tuples</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 738px; height: 347px; left: 111px; top: 121px;" data-block-id="4f038393854ff0fd2c66b741838a69ca"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre><code>    
+    (1)
+
+    (1, "two")
+
+    (1, "two", 3.0)
+
+    (1, "two", 3.0, Four)</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 62px; height: 61px; left: 122px; top: 397px;" data-block-id="06f37ad323ff5d93726ed19a4357e9af"><div class="sl-block-content" data-shape-type="symbol-x-circle" data-shape-fill-color="rgb(255, 0, 0)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(255, 0, 0)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM23.914 21.086l-2.828 2.828-5.086-5.086-5.086 5.086-2.828-2.828 5.086-5.086-5.086-5.086 2.828-2.828 5.086 5.086 5.086-5.086 2.828 2.828-5.086 5.086 5.086 5.086z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 582px; height: 188px; left: 189px; top: 490px;" data-block-id="4af71f850ada856456be8fc58c3a1cad"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="582" data-natural-height="188" data-lazy-loaded="" data-src="elm-programming-language/313cb01daf3f4450afbb2a11a6a5f8c1.png"></div></div></section><section data-id="adb76772a191025223bbc93169ca137b"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="bd2fa1f473c14733878e7d7af4baefd3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Type Aliases</h1>
+</div></div></section><section data-id="7e189833802d6f14ebfc5fce0d05fa98"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 8px; height: auto;" data-block-id="31e0b5d38c0cc6ae54556051f650b0cc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Type Aliases</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 942px; height: 569px; left: 10px; top: 117px;" data-block-id="b1116b62b16b99e30c4bf70ea5253bf6"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 180%;"><pre><code>
+    type alias Pet = 
+        { name : String
+        , breed : String
+        , age : Int
+        }
+
+    dog = Pet "Bunsen" "Dog" 0
+
+    puppyBirthday : Pet -&gt; Int
+    puppyBirthday pet =
+        pet.age + 1
+
+    { dog | age = puppyBirthday dog }
+    { age = 1, breed = "Dog", name = "Bunsen" }</code></pre></div></div></section><section data-id="cd054ca13feb1c3d1f60c76f23e5565f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 8px; height: auto;" data-block-id="c2d91240059956aa7e37859cd355573f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Type Aliases</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 942px; height: 569px; left: 10px; top: 117px;" data-block-id="7853429962b246dddbfd580b5d684a44"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 180%;"><pre><code>
+    type alias Pet = 
+        { name : String
+        , breed : String
+        , age : Int
+        }
+
+    dog = Pet "Bunsen" "Dog" 0
+
+    puppyBirthday : Pet -&gt; Int
+    puppyBirthday pet =
+        pet.age + 1
+
+    { dog | age = puppyBirthday dog }
+    { age = 1, breed = "Dog", name = "Bunsen" }</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 424px; height: 210px; left: 68px; top: 147px;" data-block-id="2aafa697a292008905cf1627329d6d8e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#0000ff" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 424 210"><defs><clipPath id="shape-mask-2-1544212801663"><rect width="424" height="210" rx="0" ry="0"></rect></clipPath></defs><rect width="424" height="210" rx="0" ry="0" clip-path="url(#shape-mask-2-1544212801663)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#0000ff" stroke-width="20"></rect></svg></div></div></section><section data-id="31773416eef7b3b7609ace110ff1cdb4"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 8px; height: auto;" data-block-id="d5c5ab100eed68b2e54e34800bfbda4c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Type Aliases</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 942px; height: 569px; left: 10px; top: 117px;" data-block-id="a03f406d798be098a72136aaced7d16a"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 180%;"><pre><code>
+    type alias Pet = 
+        { name : String
+        , breed : String
+        , age : Int
+        }
+
+    dog = Pet "Bunsen" "Dog" 0
+
+    puppyBirthday : Pet -&gt; Int
+    puppyBirthday pet =
+        pet.age + 1
+
+    { dog | age = puppyBirthday dog }
+    { age = 1, breed = "Dog", name = "Bunsen" }</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 516px; height: 83px; left: 63px; top: 350px;" data-block-id="9d27de36ef4e5dd6efdee8129d78ae0d"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#0000ff" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 516 83"><defs><clipPath id="shape-mask-3-1544212855679"><rect width="516" height="83" rx="0" ry="0"></rect></clipPath></defs><rect width="516" height="83" rx="0" ry="0" clip-path="url(#shape-mask-3-1544212855679)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#0000ff" stroke-width="20"></rect></svg></div></div></section><section data-id="c74debda0459022da6586f4bd8c33aaf"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 8px; height: auto;" data-block-id="9a2cc30cd5703b19b262043504fc6b44"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Type Aliases</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 942px; height: 569px; left: 10px; top: 117px;" data-block-id="257db5e5d71dbd804398d9674a295429"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 180%;"><pre><code>
+    type alias Pet = 
+        { name : String
+        , breed : String
+        , age : Int
+        }
+
+    dog = Pet "Bunsen" "Dog" 0
+
+    puppyBirthday : Pet -&gt; Int
+    puppyBirthday pet =
+        pet.age + 1
+
+    { dog | age = puppyBirthday dog }
+    { age = 1, breed = "Dog", name = "Bunsen" }</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 818px; height: 239px; left: 62px; top: 433px;" data-block-id="6223442338b92842c6892d85edbcc091"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#0000ff" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 818 239"><defs><clipPath id="shape-mask-4-1544212919497"><rect width="818" height="239" rx="0" ry="0"></rect></clipPath></defs><rect width="818" height="239" rx="0" ry="0" clip-path="url(#shape-mask-4-1544212919497)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#0000ff" stroke-width="20"></rect></svg></div></div></section><section data-id="343093222c6fbc231b45cf4dee1f5d51"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="de24791fc47b73273ad7cf537f1e3177"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Union Types</h1>
+</div></div></section><section data-id="8224f952395e777672ca3fe5423c9994"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 6px; height: auto;" data-block-id="89c06844b885025f51a4bb5d903e2550"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Union Types</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 942px; height: 322px; left: 9px; top: 210px;" data-block-id="c62a254dcd1064662fe6385a72322e23"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 180%;"><pre><code>
+    type Breed = Dog | Cat | Parrot    
+
+    type alias Pet = 
+        { name : String
+        , breed : String
+        , age : Int
+        }
+
+    </code></pre></div></div></section><section data-id="b5d4c49815962a5ff2c42a4d5db530ec"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 6px; height: auto;" data-block-id="2b7f55b3be6066c3719c4e402e3f2c2b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Union Types</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 898px; height: 322px; left: 31px; top: 210px;" data-block-id="f6785ee48bd050fc73f49b68b413a8df"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 180%;"><pre><code>
+    type Breed = Dog | Cat | Parrot    
+
+    type alias Pet = 
+        { name : String
+        , breed : Breed
+        , age : Int
+        }
+
+    </code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 334px; height: 78px; left: 146px; top: 371px;" data-block-id="62636fe04772adf1a2bee7ac14be2f0c"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#ff9900" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 334 78"><defs><clipPath id="shape-mask-5-1544213246977"><rect width="334" height="78" rx="0" ry="0"></rect></clipPath></defs><rect width="334" height="78" rx="0" ry="0" clip-path="url(#shape-mask-5-1544213246977)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff9900" stroke-width="20"></rect></svg></div></div></section><section data-id="006141c1f4ee8b2988896bb4895ccf9d"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 6px; height: auto;" data-block-id="0fd0c7fe916d18140c31439b1065d77a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Union Types</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 898px; height: 322px; left: 31px; top: 210px;" data-block-id="58373182f4409fecb05d5d45f0f6913b"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 180%;"><pre><code>
+
+        dog = Pet "Bunsen" "Dog" 0
+
+
+
+        dog = Pet "Bunsen" Dog 0</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 62px; height: 61px; left: 108px; top: 280px;" data-block-id="d5a2964f1a8bef4c7917ff2341898ef5"><div class="sl-block-content" data-shape-type="symbol-x-circle" data-shape-fill-color="rgb(255, 0, 0)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(255, 0, 0)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM23.914 21.086l-2.828 2.828-5.086-5.086-5.086 5.086-2.828-2.828 5.086-5.086-5.086-5.086 2.828-2.828 5.086 5.086 5.086-5.086 2.828 2.828-5.086 5.086 5.086 5.086z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 61px; height: 58px; left: 109px; top: 420px;" data-block-id="6a923081ab8cc3be39bb034ae943d912"><div class="sl-block-content" data-shape-type="symbol-checkmark-circle" data-shape-fill-color="rgb(0, 255, 0)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(0, 255, 0)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM13.52 23.383l-7.362-7.363 2.828-2.828 4.533 4.535 9.617-9.617 2.828 2.828-12.444 12.445z"></path></g></svg></div></div></section><section data-id="279ab2997d14c66b85de1daf2dc4888a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="ea76b6a6a09bb137b93adfebaab1f7f0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Case Statements</h1>
+</div></div></section><section data-id="5cf4f9154954e0acedba77b48afeca8f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 14px; height: auto;" data-block-id="6917bf946ecf75a25da9621902f02ab7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Case Statements</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 942px; height: 580px; left: 10px; top: 109px;" data-block-id="8c20fcc25d876cc5d186a779abd445d9"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre><code>
+    dog = Pet "Bunsen" Dog 1
+    cat = Pet "Beaker" Cat 6
+
+    talk : Pet -&gt; String
+    talk pet =
+      case pet of
+            Dog -&gt;
+              "Bark! Bark!"
+
+            Cat -&gt;
+              "Meow! Meow!"
+        
+        </code></pre></div></div></section><section data-id="6428aded05292c50f83e91fd23774440"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 14px; height: auto;" data-block-id="7c336a03f0cdc4cf14fc926f4edeacc3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Case Statements</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 942px; height: 580px; left: 10px; top: 109px;" data-block-id="f60060edc2eb329814943bf17a069d69"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre><code>
+    dog = Pet "Bunsen" Dog 1
+    cat = Pet "Beaker" Cat 6
+
+    talk : Pet -&gt; String
+    talk pet =
+      case pet of
+            Dog -&gt;
+              "Bark! Bark!"
+
+            Cat -&gt;
+              "Meow! Meow!"
+        
+        </code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 519px; height: 110px; left: 77px; top: 140px;" data-block-id="542cdbfee8c5e662352ed42cc743031f"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#00ffff" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 519 110"><defs><clipPath id="shape-mask-7-1544216376388"><rect width="519" height="110" rx="0" ry="0"></rect></clipPath></defs><rect width="519" height="110" rx="0" ry="0" clip-path="url(#shape-mask-7-1544216376388)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#00ffff" stroke-width="20"></rect></svg></div></div></section><section data-id="0d742e95d16b7685ebfde5a4f7649464"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 14px; height: auto;" data-block-id="df6094f50d096d6d6a05791e6176ff37"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Case Statements</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 942px; height: 580px; left: 10px; top: 109px;" data-block-id="8121f628004010a2c5d9dbb16b685b0c"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre><code>
+    dog = Pet "Bunsen" Dog 1
+    cat = Pet "Beaker" Cat 6
+
+    talk : Pet -&gt; String
+    talk pet =
+      case pet of
+            Dog -&gt;
+              "Bark! Bark!"
+
+            Cat -&gt;
+              "Meow! Meow!"
+        
+        </code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 519px; height: 374px; left: 69px; top: 256px;" data-block-id="b87a443bb9b3651106d264b607a3e215"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#00ffff" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 519 374"><defs><clipPath id="shape-mask-8-1544216406050"><rect width="519" height="374" rx="0" ry="0"></rect></clipPath></defs><rect width="519" height="374" rx="0" ry="0" clip-path="url(#shape-mask-8-1544216406050)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#00ffff" stroke-width="20"></rect></svg></div></div></section><section data-id="c6a81aa818249f1ebaa4c57ae2d1a86d"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 14px; height: auto;" data-block-id="9d35f1f7a6071c5fa71d3eb053367bf8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Case Statements</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 933px; height: 577px; left: 14px; top: 112px;" data-block-id="444b68919f0d382ac56eeafcec429832"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 190%;"><pre><code>
+
+    talk : Pet -&gt; String
+    talk pet =
+      case pet of
+            Dog -&gt;
+              "Bark! Bark!"
+
+            Cat -&gt;
+              "Meow! Meow!"
+
+            Parrot -&gt;
+              "Squawk! Squawk!
+        
+        </code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 657px; height: 397px; left: 69px; top: 256px;" data-block-id="5be7940b5f2e31d655a82af21f24c3e2"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#00ffff" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 657 397"><defs><clipPath id="shape-mask-1-1544224151158"><rect width="657" height="397" rx="0" ry="0"></rect></clipPath></defs><rect width="657" height="397" rx="0" ry="0" clip-path="url(#shape-mask-1-1544224151158)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#00ffff" stroke-width="20"></rect></svg></div></div></section><section data-id="c7ee0ba44ab15fbaf50d9d555c2652ea"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="05ffae8939b29e5f702240d3afe60908"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Maybe Type</h1>
+</div></div></section><section data-id="0fd3d68fbe38743d44817c79e2c620be"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 7px; height: auto;" data-block-id="1b5801323841af16885eb5439da888a0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Maybe Type</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 470px; height: 347px; left: 245px; top: 187px;" data-block-id="ab99faec52643da04d3b2bcbb4192c3c"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre><code>
+    
+    type Maybe a  
+        = Just a
+        | Nothing</code></pre></div></div></section><section data-id="33149aeebe9ff92b2f1f0a3d379659b1"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 7px; height: auto;" data-block-id="b9e1c489bf008db0e9e406c4afa0dadd"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Maybe Type</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 687px; height: 533px; left: 137px; top: 140px;" data-block-id="e1c78bc57d22b1378c07642855846903"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre><code>
+    
+    type Maybe a  
+        = Just a
+        | Nothing
+
+    Just 3.14 : Maybe Float
+    Just "hi" : Maybe String
+    Just True : Maybe Bool
+    Nothing   : Maybe a
+</code></pre></div></div></section></section><section class="stack" data-id="f299fd275e598e1d4c04b5f3d5980208"><section data-id="dbb98088de7d35ebeff77c24c11fbea5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="c64da89f6dc11322f7b272545542b2b6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Tooling</h1>
+</div></div></section><section data-id="fb78f3bbf6561e287a880625e115263e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="d52e6b8476db285abb2f758fef26a9bf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Tooling</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 184px;" data-block-id="d5174e472bb81a819bd644d72537083a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>
+	<pre><span style="font-size:1.6em">Packages   -&gt; elm install</span></pre>
+	</li>
+	<li>
+	<pre><span style="font-size:1.6em">Compiler   -&gt; elm make</span></pre>
+	</li>
+	<li>
+	<pre><span style="font-size:1.6em">REPL       -&gt; elm repl</span></pre>
+	</li>
+	<li>
+	<pre><span style="font-size:1.6em">Dev Server -&gt; elm reactor
+</span></pre>
+	</li>
+	<li>
+	<pre><span style="font-size:1.6em">Framework  -&gt; Elm Architecture</span></pre>
+	</li>
+</ul>
+</div></div></section></section><section class="stack" data-id="5e7a9d621c6c2af917eb0a90d35ce263"><section data-id="caa4b54f05d19cbaf5becefb801a9cf4"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="8c4a38ab6409dd8ca164b4f37a803a98"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Elm Architecture</h1>
+</div></div></section><section data-id="a79b52685cbee601633a02128c1b75b8"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="f8913d6fa186c7a60926dadd600f0a66"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Elm Architecture</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 263px; height: auto;" data-block-id="30d936078e1b5d31c86bc77ab32a8af7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Model - state of application</li>
+	<li>Update - update your state</li>
+	<li>View - display your state</li>
+</ul>
+</div></div></section><section data-id="f763ad114847e60c71137eb5812506a0"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 22px; height: auto;" data-block-id="a60c9e30368107af5508be7879d9c896"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Elm Architecture</h2>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 181px; height: 140px; left: 390px; top: 140px;" data-block-id="a34d7c9b252832b59b1f57725e4e1b8e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#274e13" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 181 140"><defs><clipPath id="shape-mask-17-1544161658045"><rect width="181" height="140" rx="0" ry="0"></rect></clipPath></defs><rect width="181" height="140" rx="0" ry="0" clip-path="url(#shape-mask-17-1544161658045)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#274e13" stroke-width="20"></rect></svg></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 110px; height: 104px; left: 426px; top: 158px;" data-block-id="262e3da247db64c415c1456284fdfcd3"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="830" data-natural-height="783" data-lazy-loaded="" data-src="elm-programming-language/93d0ec13d38fde0039e82ff8fc319de3.jpg"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 336px; height: 254px; left: 320px; top: 433px;" data-block-id="66655dc8079e0b38dff5e8a48fdf0ae1"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1001" data-natural-height="756" data-lazy-loaded="" data-src="elm-programming-language/8281919666f772a3d08aff8464a269bc.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 167px; left: 397px; top: 101px;" data-block-id="7cb29a4fcf4a6e0f113f644a6d16b970"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; color: rgb(0, 0, 0);">
+<p><strong>Model</strong></p>
+</div></div></section><section data-id="e2492304808bfab91bf03c0b9ae3a08e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 22px; height: auto;" data-block-id="f93b193ca4e963022711fcf25f74eace"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Elm Architecture</h2>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 181px; height: 140px; left: 390px; top: 140px;" data-block-id="32834818331cd51834e16e34cb70c795"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#274e13" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 181 140"><defs><clipPath id="shape-mask-18-1544161945819"><rect width="181" height="140" rx="0" ry="0"></rect></clipPath></defs><rect width="181" height="140" rx="0" ry="0" clip-path="url(#shape-mask-18-1544161945819)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#274e13" stroke-width="20"></rect></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 110px; height: 104px; left: 426px; top: 158px; min-width: 4px; min-height: 4px;" data-block-id="6b5fc115b93b7261c2f238d27c965532"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="830" data-natural-height="783" data-lazy-loaded="" data-src="elm-programming-language/93d0ec13d38fde0039e82ff8fc319de3.jpg"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 336px; height: 254px; left: 313px; top: 433px; min-width: 4px; min-height: 4px;" data-block-id="6ad4ac1ed44e9e97a22b869f9108ac1d"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1001" data-natural-height="756" data-lazy-loaded="" data-src="elm-programming-language/8281919666f772a3d08aff8464a269bc.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 571px; top: 210px;" data-block-id="ab48171676ca30eaca3ffed8813b72bc"><div class="sl-block-content" data-line-x1="420" data-line-y1="87" data-line-x2="191" data-line-y2="-40" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 14;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="229" height="127" viewBox="191 -40 229 127"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="413" y1="83" x2="191" y2="-40"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.704195753239706" stroke-linecap="round" x1="413" y1="83" x2="191" y2="-40"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(413,83) rotate(-60.988)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 190px; height: 176px; left: 742px; top: 314px;" data-block-id="ada41c4ae137bab743460ee02beef54f"><div class="sl-block-content" data-shape-type="diamond" data-shape-fill-color="rgb(102, 0, 0)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 190 176"><polygon points="190,88 95,176 0,88 95,0" class="shape-element" fill="rgb(102, 0, 0)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 167px; left: 754px; top: 383px;" data-block-id="866b0b4309bdd8926ef9adaa011f27cd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; color: rgb(255, 255, 255);">
+<p><strong>View</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 167px; left: 397px; top: 101px;" data-block-id="3edb712f0d46a7dde200c8a99ef2f223"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(0, 0, 0);">
+<p><strong>Model</strong></p>
+</div></div></section><section data-id="07da43e0e3c9793669d4a3383f18d5e0"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 22px; height: auto;" data-block-id="0f5c2a9d940de82ec8f142cde34fae5c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Elm Architecture</h2>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 181px; height: 140px; left: 390px; top: 140px;" data-block-id="8389ff071639f12d57bf1c4ca6000043"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#274e13" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 181 140"><defs><clipPath id="shape-mask-21-1544162184705"><rect width="181" height="140" rx="0" ry="0"></rect></clipPath></defs><rect width="181" height="140" rx="0" ry="0" clip-path="url(#shape-mask-21-1544162184705)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#274e13" stroke-width="20"></rect></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 110px; height: 104px; left: 426px; top: 158px; min-width: 4px; min-height: 4px;" data-block-id="5865fcf62f7f52bbb3ed9bbe3dff3df6"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="830" data-natural-height="783" data-lazy-loaded="" data-src="elm-programming-language/93d0ec13d38fde0039e82ff8fc319de3.jpg"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 336px; height: 254px; left: 313px; top: 433px; min-width: 4px; min-height: 4px;" data-block-id="e2ff512e363040f711b1ae410aa70eb5"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="1001" data-natural-height="756" data-lazy-loaded="" data-src="elm-programming-language/8281919666f772a3d08aff8464a269bc.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 571px; top: 210px;" data-block-id="952c7e9d481f90c4d9bbbcda791e4efe"><div class="sl-block-content" data-line-x1="420" data-line-y1="87" data-line-x2="191" data-line-y2="-40" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 15;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="229" height="127" viewBox="191 -40 229 127"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="413" y1="83" x2="191" y2="-40"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.704195753239706" stroke-linecap="round" x1="413" y1="83" x2="191" y2="-40"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(413,83) rotate(-60.988)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 190px; height: 176px; left: 742px; top: 314px;" data-block-id="107601280c285978e1592ab98f28add3"><div class="sl-block-content" data-shape-type="diamond" data-shape-fill-color="rgb(102, 0, 0)" data-shape-stretch="true" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 190 176"><polygon points="190,88 95,176 0,88 95,0" class="shape-element" fill="rgb(102, 0, 0)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 754px; top: 383px;" data-block-id="d8263a03cbe170fcc53ca529360f22ca"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(255, 255, 255);">
+<p><strong>View</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 397px; top: 101px;" data-block-id="cb62ff33f5c04a39ec4fe4de6d7369e5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(0, 0, 0);">
+<p><strong>Model</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 640px; top: 445px;" data-block-id="4fa4d1c2fd82886e5aba180c70ed1588"><div class="sl-block-content" data-line-x1="41" data-line-y1="89" data-line-x2="191" data-line-y2="-40" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 19;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="150" height="129" viewBox="41 -40 150 129"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="47" y1="84" x2="191" y2="-40"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 19.784084512557058" stroke-linecap="round" x1="47" y1="84" x2="191" y2="-40"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(47,84) rotate(49.304)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 110px; height: 104px; left: 419px; top: 508px; min-width: 4px; min-height: 4px;" data-block-id="8394885b2b6573b8ec7c0f826ce8a6f1"><div class="sl-block-content" style="z-index: 20;"><img style="" data-natural-width="830" data-natural-height="783" data-lazy-loaded="" data-src="elm-programming-language/93d0ec13d38fde0039e82ff8fc319de3.jpg"></div></div></section><section data-id="0e8d7c4b0156403eb36198f70e73a726"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 22px; height: auto;" data-block-id="09e4867acaa621cccf8ed044e6974600"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Elm Architecture</h2>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 181px; height: 140px; left: 390px; top: 140px;" data-block-id="ff8c8dcc2e9be7d3dc2db1339963e3d8"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#274e13" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 181 140"><defs><clipPath id="shape-mask-22-1544162211654"><rect width="181" height="140" rx="0" ry="0"></rect></clipPath></defs><rect width="181" height="140" rx="0" ry="0" clip-path="url(#shape-mask-22-1544162211654)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#274e13" stroke-width="20"></rect></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 110px; height: 104px; left: 426px; top: 158px; min-width: 4px; min-height: 4px;" data-block-id="4e4f2dd832aaba092309dfc61ed1a613"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="830" data-natural-height="783" data-lazy-loaded="" data-src="elm-programming-language/93d0ec13d38fde0039e82ff8fc319de3.jpg"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 336px; height: 254px; left: 313px; top: 433px; min-width: 4px; min-height: 4px;" data-block-id="7223c60def0613ed31ba952a6abc717a"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1001" data-natural-height="756" data-lazy-loaded="" data-src="elm-programming-language/8281919666f772a3d08aff8464a269bc.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 571px; top: 210px;" data-block-id="0138a241be637d4b46a04aebe06ca5f3"><div class="sl-block-content" data-line-x1="420" data-line-y1="87" data-line-x2="191" data-line-y2="-40" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 14;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="229" height="127" viewBox="191 -40 229 127"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="413" y1="83" x2="191" y2="-40"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.704195753239706" stroke-linecap="round" x1="413" y1="83" x2="191" y2="-40"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(413,83) rotate(-60.988)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 190px; height: 176px; left: 742px; top: 314px;" data-block-id="6ecddac1fcac59ad317d7c3b97bdb18b"><div class="sl-block-content" data-shape-type="diamond" data-shape-fill-color="rgb(102, 0, 0)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 190 176"><polygon points="190,88 95,176 0,88 95,0" class="shape-element" fill="rgb(102, 0, 0)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 754px; top: 383px;" data-block-id="e6d3a8f49c966a1efd9aa4f77447ea4d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; color: rgb(255, 255, 255);">
+<p><strong>View</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 397px; top: 101px;" data-block-id="baa3af410cc20cd3c033dc73557427d8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p><strong>Model</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 649px; top: 446px;" data-block-id="562ef949635fa0a87c614136c9b44c02"><div class="sl-block-content" data-line-x1="41" data-line-y1="89" data-line-x2="183" data-line-y2="-35" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 18;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="142" height="124" viewBox="41 -35 142 124"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="47" y1="84" x2="183" y2="-35"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.852055590836773" stroke-linecap="round" x1="47" y1="84" x2="183" y2="-35"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(47,84) rotate(48.871)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 199px; height: 187px; left: 61px; top: 290px;" data-block-id="e44c8bdccf278a66b44a25cbf4bc4a39"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(127, 96, 0)" data-shape-stretch="true" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 199 187"><ellipse rx="99.5" ry="93.5" cx="99.5" cy="93.5" class="shape-element" fill="rgb(127, 96, 0)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 206px; top: 466px;" data-block-id="36eb6370f6812d8a7d9d95aa8a3fd549"><div class="sl-block-content" data-line-x1="26" data-line-y1="68" data-line-x2="140" data-line-y2="185" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 20;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="114" height="117" viewBox="26 68 114 117"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="31" y1="73" x2="140" y2="185"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.15060452008264" stroke-linecap="round" x1="31" y1="73" x2="140" y2="185"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(31,73) rotate(135.744)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 77px; top: 363px;" data-block-id="b27b1d16140929d403079b9111abe7a6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(255, 255, 255);">
+<p><strong>Update</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 94px; height: 80px; left: 193px; top: 560px;" data-block-id="170ca9caebc996bdda275463aa4e571d"><div class="sl-block-content" data-shape-type="symbol-user" data-shape-fill-color="rgb(28, 69, 135)" data-shape-stretch="true" style="z-index: 22;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 24 32"><g class="shape-element" fill="rgb(28, 69, 135)"><path d="M12 16c-6.625 0-12 5.375-12 12 0 2.211 1.789 4 4 4h16c2.211 0 4-1.789 4-4 0-6.625-5.375-12-12-12zM6 6c0-3.314 2.686-6 6-6s6 2.686 6 6c0 3.314-2.686 6-6 6-3.314 0-6-2.686-6-6z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 110px; height: 104px; left: 427px; top: 526px; min-width: 4px; min-height: 4px;" data-block-id="88cb8914a544b9694f76e30b784f84e7"><div class="sl-block-content" style="z-index: 24;"><img style="" data-natural-width="830" data-natural-height="783" data-lazy-loaded="" data-src="elm-programming-language/93d0ec13d38fde0039e82ff8fc319de3.jpg"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 61px; height: 69px; left: 145px; top: 531px; min-width: 4px; min-height: 4px;" data-block-id="8290f3ac937685cdaab99db2f35f35f0"><div class="sl-block-content" style="z-index: 25;"><img style="" data-natural-width="441" data-natural-height="500" data-lazy-loaded="" data-src="elm-programming-language/8b780fb4bd11ad6a60b89614ae8bc245.png"></div></div></section><section data-id="6c1c4fda3dc09f6e6f57710524d011b0"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 22px; height: auto;" data-block-id="7a23bef051e8884c4f36b850a2ff76fc"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Elm Architecture</h2>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 181px; height: 140px; left: 390px; top: 140px;" data-block-id="e4706387fd6ba464f2eea3e29e882cda"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#274e13" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 181 140"><defs><clipPath id="shape-mask-23-1544162651652"><rect width="181" height="140" rx="0" ry="0"></rect></clipPath></defs><rect width="181" height="140" rx="0" ry="0" clip-path="url(#shape-mask-23-1544162651652)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#274e13" stroke-width="20"></rect></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 336px; height: 254px; left: 313px; top: 433px; min-width: 4px; min-height: 4px;" data-block-id="1af5c3651bec55781359662e156178a5"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1001" data-natural-height="756" data-lazy-loaded="" data-src="elm-programming-language/8281919666f772a3d08aff8464a269bc.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 571px; top: 210px;" data-block-id="a97265e90ccc12505261747c5a08a6d5"><div class="sl-block-content" data-line-x1="420" data-line-y1="87" data-line-x2="191" data-line-y2="-40" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 13;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="229" height="127" viewBox="191 -40 229 127"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="413" y1="83" x2="191" y2="-40"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.704195753239706" stroke-linecap="round" x1="413" y1="83" x2="191" y2="-40"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(413,83) rotate(-60.988)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 190px; height: 176px; left: 742px; top: 314px;" data-block-id="1771f057bcc7cb37115c57e709b20506"><div class="sl-block-content" data-shape-type="diamond" data-shape-fill-color="rgb(102, 0, 0)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 190 176"><polygon points="190,88 95,176 0,88 95,0" class="shape-element" fill="rgb(102, 0, 0)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 754px; top: 383px;" data-block-id="42ec2d736346c05bae3d152eefc83160"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; color: rgb(255, 255, 255);">
+<p><strong>View</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 397px; top: 101px;" data-block-id="b82ced00ef5cd71044b25f646e0d455e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p><strong>Model</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 649px; top: 446px;" data-block-id="c8ef79ca5358528d0eb1959a6e5663db"><div class="sl-block-content" data-line-x1="41" data-line-y1="89" data-line-x2="183" data-line-y2="-35" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 18;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="142" height="124" viewBox="41 -35 142 124"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="47" y1="84" x2="183" y2="-35"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.852055590836773" stroke-linecap="round" x1="47" y1="84" x2="183" y2="-35"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(47,84) rotate(48.871)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 199px; height: 187px; left: 61px; top: 290px;" data-block-id="be7cfb55275e79545799aa9753b95493"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(127, 96, 0)" data-shape-stretch="true" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 199 187"><ellipse rx="99.5" ry="93.5" cx="99.5" cy="93.5" class="shape-element" fill="rgb(127, 96, 0)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 206px; top: 466px;" data-block-id="9dcf0d439753af1de0896bcf9c3fc417"><div class="sl-block-content" data-line-x1="26" data-line-y1="68" data-line-x2="140" data-line-y2="185" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 20;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="114" height="117" viewBox="26 68 114 117"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="31" y1="73" x2="140" y2="185"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.15060452008264" stroke-linecap="round" x1="31" y1="73" x2="140" y2="185"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(31,73) rotate(135.744)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 77px; top: 363px;" data-block-id="f5ace162cc1baa389c6e5c480a779ae6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(255, 255, 255);">
+<p><strong>Update</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 93px; height: 106px; left: 435px; top: 157px; min-width: 4px; min-height: 4px;" data-block-id="ebccfaf82e864cbded14607de3512bfe"><div class="sl-block-content" style="z-index: 23;"><img style="" data-natural-width="441" data-natural-height="500" data-lazy-loaded="" data-src="elm-programming-language/8b780fb4bd11ad6a60b89614ae8bc245.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 217px; top: 202px;" data-block-id="bf0a438ec84911d888b9dbff5268f677"><div class="sl-block-content" data-line-x1="313" data-line-y1="83" data-line-x2="140" data-line-y2="185" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 24;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="173" height="102" viewBox="140 83 173 102"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="307" y1="87" x2="140" y2="185"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.257343139471217" stroke-linecap="round" x1="307" y1="87" x2="140" y2="185"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(307,87) rotate(239.477)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 110px; height: 104px; left: 427px; top: 526px; min-width: 4px; min-height: 4px;" data-block-id="f6ce3bce4b6a0eb3548ad63190ef4d0e"><div class="sl-block-content" style="z-index: 25;"><img style="" data-natural-width="830" data-natural-height="783" data-lazy-loaded="" data-src="elm-programming-language/93d0ec13d38fde0039e82ff8fc319de3.jpg"></div></div></section><section data-id="f70d9f25a2a1949f1165393553a9e857"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 22px; height: auto;" data-block-id="ba8bb88fa5f58c501d4f9e94b440d833"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Elm Architecture</h2>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 181px; height: 140px; left: 390px; top: 140px;" data-block-id="9dcd31a480ecea29de3d019e07b9168b"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#274e13" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 181 140"><defs><clipPath id="shape-mask-24-1544162711138"><rect width="181" height="140" rx="0" ry="0"></rect></clipPath></defs><rect width="181" height="140" rx="0" ry="0" clip-path="url(#shape-mask-24-1544162711138)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#274e13" stroke-width="20"></rect></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 336px; height: 254px; left: 313px; top: 433px; min-width: 4px; min-height: 4px;" data-block-id="aa1a893d1000c79bf3f420a6a6bb5864"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1001" data-natural-height="756" data-lazy-loaded="" data-src="elm-programming-language/8281919666f772a3d08aff8464a269bc.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 571px; top: 210px;" data-block-id="6e337e04de5958086d509a63ee602c1b"><div class="sl-block-content" data-line-x1="420" data-line-y1="87" data-line-x2="191" data-line-y2="-40" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 13;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="229" height="127" viewBox="191 -40 229 127"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="413" y1="83" x2="191" y2="-40"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.704195753239706" stroke-linecap="round" x1="413" y1="83" x2="191" y2="-40"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(413,83) rotate(-60.988)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 190px; height: 176px; left: 742px; top: 314px;" data-block-id="2034d1931130bd4dc7e2bff0d3ed2966"><div class="sl-block-content" data-shape-type="diamond" data-shape-fill-color="rgb(102, 0, 0)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 190 176"><polygon points="190,88 95,176 0,88 95,0" class="shape-element" fill="rgb(102, 0, 0)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 754px; top: 383px;" data-block-id="d9320cffefca7c5ed866be08dba03d0a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; color: rgb(255, 255, 255);">
+<p><strong>View</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 397px; top: 101px;" data-block-id="e85eabd2895b116bba5b64874c295ecc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; color: rgb(0, 0, 0);">
+<p><strong>Model</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 649px; top: 446px;" data-block-id="13040a054c6a56aa6ec7f0ebd76ba6e6"><div class="sl-block-content" data-line-x1="41" data-line-y1="89" data-line-x2="183" data-line-y2="-35" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 17;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="142" height="124" viewBox="41 -35 142 124"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="47" y1="84" x2="183" y2="-35"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.852055590836773" stroke-linecap="round" x1="47" y1="84" x2="183" y2="-35"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(47,84) rotate(48.871)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 199px; height: 187px; left: 61px; top: 290px;" data-block-id="c04c9c4af2d0d054c7e9534e3752633b"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(127, 96, 0)" data-shape-stretch="true" style="z-index: 18;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 199 187"><ellipse rx="99.5" ry="93.5" cx="99.5" cy="93.5" class="shape-element" fill="rgb(127, 96, 0)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 206px; top: 466px;" data-block-id="dd58e49714d5eccdf7479a0d08fe053d"><div class="sl-block-content" data-line-x1="26" data-line-y1="68" data-line-x2="140" data-line-y2="185" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 19;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="114" height="117" viewBox="26 68 114 117"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="31" y1="73" x2="140" y2="185"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.15060452008264" stroke-linecap="round" x1="31" y1="73" x2="140" y2="185"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(31,73) rotate(135.744)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 77px; top: 363px;" data-block-id="47bb3f92818d90fcdce5f2316bce9a5a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(255, 255, 255);">
+<p><strong>Update</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 93px; height: 106px; left: 435px; top: 157px; min-width: 4px; min-height: 4px;" data-block-id="4063af9d7b82f324769ea27bc36eaa02"><div class="sl-block-content" style="z-index: 21;"><img style="" data-natural-width="441" data-natural-height="500" data-lazy-loaded="" data-src="elm-programming-language/8b780fb4bd11ad6a60b89614ae8bc245.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 217px; top: 202px;" data-block-id="af891fc556d1212002b0e2ca9a4666bd"><div class="sl-block-content" data-line-x1="313" data-line-y1="83" data-line-x2="140" data-line-y2="185" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 23;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="173" height="102" viewBox="140 83 173 102"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="307" y1="87" x2="140" y2="185"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.257343139471217" stroke-linecap="round" x1="307" y1="87" x2="140" y2="185"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(307,87) rotate(239.477)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 93px; height: 106px; left: 434px; top: 517px; min-width: 4px; min-height: 4px;" data-block-id="5a3ef992b3709b71564006cd5e05e2f5"><div class="sl-block-content" style="z-index: 25;"><img style="" data-natural-width="441" data-natural-height="500" data-lazy-loaded="" data-src="elm-programming-language/8b780fb4bd11ad6a60b89614ae8bc245.png"></div></div></section><section data-id="3e3a0bfa998d563afc366c49c634f851"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 22px; height: auto;" data-block-id="0bb2f33ae28ffc876c8a4e2349435593"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Elm Architecture</h2>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 181px; height: 140px; left: 390px; top: 140px;" data-block-id="95991731f68784b8f843538a83da246e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#274e13" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 181 140"><defs><clipPath id="shape-mask-25-1544163182295"><rect width="181" height="140" rx="0" ry="0"></rect></clipPath></defs><rect width="181" height="140" rx="0" ry="0" clip-path="url(#shape-mask-25-1544163182295)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#274e13" stroke-width="20"></rect></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 336px; height: 254px; left: 313px; top: 433px; min-width: 4px; min-height: 4px;" data-block-id="d5315919119e99e3ed8f24d657f2a4ba"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1001" data-natural-height="756" data-lazy-loaded="" data-src="elm-programming-language/8281919666f772a3d08aff8464a269bc.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 571px; top: 210px;" data-block-id="b1a8e3a5cc557d1c756d9284b0912c17"><div class="sl-block-content" data-line-x1="420" data-line-y1="87" data-line-x2="191" data-line-y2="-40" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 13;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="229" height="127" viewBox="191 -40 229 127"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="413" y1="83" x2="191" y2="-40"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.704195753239706" stroke-linecap="round" x1="413" y1="83" x2="191" y2="-40"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(413,83) rotate(-60.988)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 190px; height: 176px; left: 742px; top: 314px;" data-block-id="f35a05b7c08005ca591e859b92cb917a"><div class="sl-block-content" data-shape-type="diamond" data-shape-fill-color="rgb(102, 0, 0)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 190 176"><polygon points="190,88 95,176 0,88 95,0" class="shape-element" fill="rgb(102, 0, 0)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 754px; top: 383px;" data-block-id="c69fc0112d6f9dea3cfc0a1236603812"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; color: rgb(255, 255, 255);">
+<p><strong>View</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 397px; top: 101px;" data-block-id="0aa004f0b41441315d399901f40ec032"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; color: rgb(0, 0, 0);">
+<p><strong>Model</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 649px; top: 446px;" data-block-id="c47c428b532a99a4fa31367e01654f94"><div class="sl-block-content" data-line-x1="41" data-line-y1="89" data-line-x2="183" data-line-y2="-35" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 18;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="142" height="124" viewBox="41 -35 142 124"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="47" y1="84" x2="183" y2="-35"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.852055590836773" stroke-linecap="round" x1="47" y1="84" x2="183" y2="-35"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(47,84) rotate(48.871)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 199px; height: 187px; left: 30px; top: 140px;" data-block-id="023b16257a3b2492b5adea4aacc2b549"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(127, 96, 0)" data-shape-stretch="true" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 199 187"><ellipse rx="99.5" ry="93.5" cx="99.5" cy="93.5" class="shape-element" fill="rgb(127, 96, 0)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 195px; top: 526px;" data-block-id="294fc2907fa1f3785eb24ed5db09ede3"><div class="sl-block-content" data-line-x1="15" data-line-y1="128" data-line-x2="140" data-line-y2="185" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 20;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="125" height="57" viewBox="15 128 125 57"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="22" y1="131" x2="140" y2="185"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 19.626096745644247" stroke-linecap="round" x1="22" y1="131" x2="140" y2="185"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(22,131) rotate(114.513)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 167px; left: 46px; top: 204px;" data-block-id="fe294fb03bebd3e38cb81b133786df83"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(255, 255, 255);">
+<p><strong>Update</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 93px; height: 106px; left: 435px; top: 157px; min-width: 4px; min-height: 4px;" data-block-id="a831eab1aa6598821fff1a73e8a3fe38"><div class="sl-block-content" style="z-index: 22;"><img style="" data-natural-width="441" data-natural-height="500" data-lazy-loaded="" data-src="elm-programming-language/8b780fb4bd11ad6a60b89614ae8bc245.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 229px; top: 202px;" data-block-id="0fc685bcb710397c4f3e97918471454f"><div class="sl-block-content" data-line-x1="313" data-line-y1="83" data-line-x2="152" data-line-y2="91" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 23;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="161" height="8" viewBox="152 83 161 8"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="306" y1="83" x2="152" y2="91"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 17.91095946999497" stroke-linecap="round" x1="306" y1="83" x2="152" y2="91"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(306,83) rotate(267.155)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 93px; height: 106px; left: 434px; top: 517px; min-width: 4px; min-height: 4px;" data-block-id="4196abfb2f3a7a230502afe0ada69124"><div class="sl-block-content" style="z-index: 24;"><img style="" data-natural-width="441" data-natural-height="500" data-lazy-loaded="" data-src="elm-programming-language/8b780fb4bd11ad6a60b89614ae8bc245.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 130px; height: 130px; left: 65px; top: 461px;" data-block-id="229ed25f2eefd4594092a0f71e1974a7"><div class="sl-block-content" style="z-index: 25;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="elm-programming-language/9f8ac33aab698c8b217d9be4622b0140.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 130px; top: 332px;" data-block-id="7ceb111542ac3c2327c72cb0dc99ffa7"><div class="sl-block-content" data-line-x1="30" data-line-y1="185" data-line-x2="30" data-line-y2="314" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 26;" data-line-style="dotted" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="129" viewBox="30 185 1 129"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="30" y1="193" x2="30" y2="314"></line><line stroke="#000000" stroke-width="10" stroke-dasharray="0 18.42857142857143" stroke-linecap="round" x1="30" y1="193" x2="30" y2="314"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="10" transform="translate(30,193) rotate(180)" d="M -22.5 -22.5 L 0 0 L 22.5 -22.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 229px; left: 15px; top: 591px;" data-block-id="3106a52a35f3b66cd2a8d9fde0774aa5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 27; color: rgb(0, 0, 0);">
+<p><strong>Elm Runtime</strong></p>
+</div></div></section><section data-id="a8cf2dd9b62093ccbd8896216b7ca5b1"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="815f6bf97c653d7e049d6e819e5454c0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Elm Architecture</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 704px; height: 542px; left: 135px; top: 130px;" data-block-id="9d900f726f9d572df27629435954e8e1"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 130%;"><pre class="http"><code>    
+    -- MODEL
+    
+    type alias Model = { ... }
+    
+    -- UPDATE
+    
+    type Msg = Reset | ...
+    
+    update : Msg -&gt; Model -&gt; Model
+    update msg model =
+      case msg of
+        Reset -&gt; ...
+        ...
+    
+    -- VIEW
+    
+    view : Model -&gt; Html Msg
+    view model =
+      ...</code></pre></div></div></section><section data-id="f6f63553ca3ab8c7abae556a7c5c57f6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="12e3b3e5b4d69a78f9dbed36b4f2085a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Elm Architecture</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 704px; height: 542px; left: 135px; top: 130px;" data-block-id="56aa6e57e25a3481637e69610009acdd"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 130%;"><pre class="http"><code>    
+    -- MODEL
+    
+    type alias Model = { ... }
+    
+    -- UPDATE
+    
+    type Msg = Reset | ...
+    
+    update : Msg -&gt; Model -&gt; Model
+    update msg model =
+      case msg of
+        Reset -&gt; ...
+        ...
+    
+    -- VIEW
+    
+    view : Model -&gt; Html Msg
+    view model =
+      ...</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 459px; height: 109px; left: 171px; top: 149px;" data-block-id="06ff04ea23523c8339c302ec5a85306a"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#274e13" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 459 109"><defs><clipPath id="shape-mask-11-1544161467544"><rect width="459" height="109" rx="0" ry="0"></rect></clipPath></defs><rect width="459" height="109" rx="0" ry="0" clip-path="url(#shape-mask-11-1544161467544)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#274e13" stroke-width="20"></rect></svg></div></div></section><section data-id="42383153e8f1e7a7b52a08df67c3cffa"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="505ead1019c4a0ebe68f270a59bfb579"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Elm Architecture</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 704px; height: 542px; left: 135px; top: 130px;" data-block-id="7d9f224da6b9bc7a7e24e7def2132a92"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 130%;"><pre class="http"><code>    
+    -- MODEL
+    
+    type alias Model = { ... }
+    
+    -- UPDATE
+    
+    type Msg = Reset | ...
+    
+    update : Msg -&gt; Model -&gt; Model
+    update msg model =
+      case msg of
+        Reset -&gt; ...
+        ...
+    
+    -- VIEW
+    
+    view : Model -&gt; Html Msg
+    view model =
+      ...</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 459px; height: 109px; left: 171px; top: 149px;" data-block-id="dd88147edb0db8c9e81f3fed4459465f"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#274e13" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 459 109"><defs><clipPath id="shape-mask-20-1544162111499"><rect width="459" height="109" rx="0" ry="0"></rect></clipPath></defs><rect width="459" height="109" rx="0" ry="0" clip-path="url(#shape-mask-20-1544162111499)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#274e13" stroke-width="20"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 459px; height: 167px; left: 171px; top: 505px;" data-block-id="4393a7db7b2c746f4f1ae157f98ef1bd"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#660000" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 459 167"><defs><clipPath id="shape-mask-19-1544162089572"><rect width="459" height="167" rx="0" ry="0"></rect></clipPath></defs><rect width="459" height="167" rx="0" ry="0" clip-path="url(#shape-mask-19-1544162089572)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#660000" stroke-width="20"></rect></svg></div></div></section><section data-id="ba1bcfe974f2f6015bd1ceb28cf1c7a5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="c5b04222e0468225580df5f2e5d0644f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Elm Architecture</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 704px; height: 542px; left: 135px; top: 130px;" data-block-id="b7b268aced741ab28cfed9cb4dca6a2b"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 130%;"><pre class="http"><code>    
+    -- MODEL
+    
+    type alias Model = { ... }
+    
+    -- UPDATE
+    
+    type Msg = Reset | ...
+    
+    update : Msg -&gt; Model -&gt; Model
+    update msg model =
+      case msg of
+        Reset -&gt; ...
+        ...
+    
+    -- VIEW
+    
+    view : Model -&gt; Html Msg
+    view model =
+      ...</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 459px; height: 109px; left: 171px; top: 149px;" data-block-id="231108fb8d06876439ae1254e2901816"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#274e13" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 459 109"><defs><clipPath id="shape-mask-14-1544161551430"><rect width="459" height="109" rx="0" ry="0"></rect></clipPath></defs><rect width="459" height="109" rx="0" ry="0" clip-path="url(#shape-mask-14-1544161551430)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#274e13" stroke-width="20"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 459px; height: 250px; left: 171px; top: 258px;" data-block-id="fbff88e44bf429db0271dc07bcec48dc"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#7f6000" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 459 250"><defs><clipPath id="shape-mask-15-1544161551436"><rect width="459" height="250" rx="0" ry="0"></rect></clipPath></defs><rect width="459" height="250" rx="0" ry="0" clip-path="url(#shape-mask-15-1544161551436)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#7f6000" stroke-width="20"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 459px; height: 167px; left: 171px; top: 505px;" data-block-id="d3db0fcc4692de4cb3ff1649858e75e5"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#660000" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 459 167"><defs><clipPath id="shape-mask-16-1544161555105"><rect width="459" height="167" rx="0" ry="0"></rect></clipPath></defs><rect width="459" height="167" rx="0" ry="0" clip-path="url(#shape-mask-16-1544161555105)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#660000" stroke-width="20"></rect></svg></div></div></section></section><section data-id="a3709e7d442deec9a863ea3167f8f3fb"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="1fd638f0fabeca62cebdfdbede61813b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Counter Example</h1>
+</div></div></section><section class="stack" data-id="f37a99d9cbd23ebc27e2c694c38847fe"><section data-id="ec17a6af4ade4dce006885d71ee47d61"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="0ed2444798d5ddd07f5f36ddffc09c3b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>JavaScript Interop</h1>
+</div></div></section><section data-id="ad315034099245ade33d134aa50c917d"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 12px; height: auto;" data-block-id="f5a422181bb216e8a0750ea0731d6a0a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>JavaScript Interop</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 628px; height: 150px; left: 166px; top: 140px;" data-block-id="e27a56ff44ea6d9352a6853eac032490"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre class="http"><code>
+    &gt; elm make src/Main.elm</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 903px; height: 150px; left: 29px; top: 465px;" data-block-id="55f294989f333f903778068a4fd5cb79"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 200%;"><pre class="http"><code>
+    &gt; elm make src/Main.elm --output=main.js</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 80px; height: 162px; left: 441px; top: 290px;" data-block-id="5f4959e5b03e6519b98f2903de389e51"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 162"><polygon points="40,162 80,81 56,81 56,0 24,0 24,81 0,81 40,162" class="shape-element" fill="#000000"></polygon></svg></div></div></section><section data-id="97112e2562d4f9391b615bf3e162933e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 12px; height: auto;" data-block-id="dfa40d90d090521f3c500caf60ba03bc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>JavaScript Interop</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 946px; height: 561px; left: 7px; top: 110px;" data-block-id="3cc9e9c35fa96216585ea8c3e5af7d22"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 150%;"><pre class="http"><code>
+    &lt;!DOCTYPE HTML&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+          &lt;meta charset="UTF-8"&gt;
+          &lt;title&gt;Main&lt;/title&gt;
+          &lt;script src="main.js"&gt;&lt;/script&gt;
+        &lt;/head&gt;
+    
+        &lt;body&gt;
+          &lt;div id="elm"&gt;&lt;/div&gt;
+          &lt;script&gt;
+              var app = Elm.Main.init({
+                node: document.getElementById('elm')
+              });
+          &lt;/script&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;</code></pre></div></div></section><section data-id="ba328e2f01f13838deeefaa43220a7d7"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 12px; height: auto;" data-block-id="a6b5762318e07388241282bf2b9d48b8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>JavaScript Interop</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 946px; height: 561px; left: 7px; top: 110px;" data-block-id="f92b9361355bdca1e6837d4018ed42c5"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 150%;"><pre class="http"><code>
+    &lt;!DOCTYPE HTML&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+          &lt;meta charset="UTF-8"&gt;
+          &lt;title&gt;Main&lt;/title&gt;
+          &lt;script src="main.js"&gt;&lt;/script&gt;
+        &lt;/head&gt;
+    
+        &lt;body&gt;
+          &lt;div id="elm"&gt;&lt;/div&gt;
+          &lt;script&gt;
+              var app = Elm.Main.init({
+                node: document.getElementById('elm')
+              });
+          &lt;/script&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 499px; height: 52px; left: 141px; top: 280px;" data-block-id="919f07cf21c7d3c65832fa1571cea749"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-corner-radius="5px" data-shape-stroke-color="#0000ff" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 499 52"><defs><clipPath id="shape-mask-5-1544155218249"><rect width="499" height="52" rx="5" ry="5"></rect></clipPath></defs><rect width="499" height="52" rx="5" ry="5" clip-path="url(#shape-mask-5-1544155218249)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#0000ff" stroke-width="20"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 640px; height: 112px; left: 171px; top: 455px;" data-block-id="ec46552132560a83f37956b1b65e8eb2"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-corner-radius="5px" data-shape-stroke-color="#0000ff" data-shape-stroke-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 640 112"><defs><clipPath id="shape-mask-6-1544155218256"><rect width="640" height="112" rx="5" ry="5"></rect></clipPath></defs><rect width="640" height="112" rx="5" ry="5" clip-path="url(#shape-mask-6-1544155218256)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#0000ff" stroke-width="20"></rect></svg></div></div></section><section data-id="feb5a25a74b55a88eacc130957eb579f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 12px; height: auto;" data-block-id="4dec47c79121fbdf70875acb7e3d42b6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Flags</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 685px; height: 155px; left: 138px; top: 146px;" data-block-id="5f69a97006927544fe21501a5e1f6bf5"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 150%;"><pre class="http"><code>
+    var app = Elm.Main.init({
+      node: document.getElementById('elm')
+    });</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 685px; height: 202px; left: 138px; top: 436px;" data-block-id="e0a8a71a781023b98555bdcbf3803227"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 150%;"><pre class="http"><code>
+    var app = Elm.Main.init({
+      node: document.getElementById('elm'),
+      flags: Date.now()
+    });</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 70px; height: 135px; left: 446px; top: 301px;" data-block-id="f877b6e30a68a71ef555361a262397ca"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 70 135"><polygon points="35,135 70,67.5 49,67.5 49,0 21,0 21,67.5 0,67.5 35,135" class="shape-element" fill="#000000"></polygon></svg></div></div></section><section data-id="c547b216dd5f4b4444a02bcd624ce864"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 301px; height: auto;" data-block-id="30dad5aed0d7355a207adc82eda73df1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Ports</h1>
+</div></div>
+</section></section><section class="stack" data-id="a6ca9282ba697f438c932aebdef65a00"><section data-id="53d851753c01baa79c3d72edee058aa4"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="039cd7e94828d6e99608f4c33b9e10ec"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Drawbacks</h1>
+</div></div></section><section data-id="69ab0b4080f17df2a616c1321f479423"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="3177cf806717132c3e7ca7bb4ae02f76"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>New Language</h1>
+</div></div></section><section data-id="684937598037f3e0ab390d38c0fbc194"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="6026e522776791636f7fdd1651f3c55f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Small Package Ecosystem</h1>
+</div></div></section><section data-id="f6c5770e06b7a8564f52ff8a33e024a7"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="bd1f7e246dc517c6f85bb181898c7825"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Hiring</h1>
+</div></div></section><section data-id="f3429930ed77655ea7d84e53bb6e53b3"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="7bb4f04ad29b9895ba0b3a6acb390f06"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Lots of code</h1>
+</div></div></section></section><section class="stack" data-id="4c35de59f5b7d8543757223e05ee8fbe"><section data-id="44da3f69c023b78b65ea33daa10796df"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="9ed93527d3f7541ddeee4e3feb5d619c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Future of Elm</h1>
+</div></div></section><section data-id="fdbae8d2f1141ea3a9efdfffa1c25e45"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="b4f75946222abdfd3b77094d4f92a7bb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Future of Elm</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 318px; height: auto;" data-block-id="93941c501b67e60825266491cf7c383a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; font-size: 75%;">
+<h2><a href="https://github.com/elm/projects/blob/master/roadmap.md" target="_blank">https://github.com/elm/projects/blob/master/roadmap.md</a></h2>
+</div></div></section><section data-id="08f8ace564c25d7b4eca3fa4aebd9401"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="491b2de99e940577fffe372597a5f4bf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Future of Elm</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 318px; height: auto;" data-block-id="1ff9db87847e48fdbf7bdc452c6d0965"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; font-size: 75%;">
+<h2><a href="https://2018.stateofjs.com/javascript-flavors/elm/" target="_blank">Popularity and Growth</a></h2>
+</div></div></section><section data-id="a9d0463dd1e128d31449626cbf8f17f0"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="7026a4891bc941cb6bace822fee32909"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Future of Elm</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 318px; height: auto;" data-block-id="e2d67325d7e4bf93b47f77dd91fb01ba"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; font-size: 75%;">
+<h2>Web Assembly</h2>
+</div></div></section></section><section class="stack" data-id="fec5ac5780cb65265114bb43cf86f0b1"><section data-id="d88dcbd5778f6057abde0a90bf3dc708"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="36b0044b2192b3418e6cf77bd71abde7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;"><h1>Additional Info</h1></div></div></section><section data-id="33c0e10a3326eb1aea4fb432401baa70"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 20px; height: auto;" data-block-id="8c7d2749e109a2631d5da325a3bda042"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Resources</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 107px; height: auto;" data-block-id="d8bfca0c75b2904f77652e49ce0a0db9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
+<ul>
+	<li>elm-lang.org</li>
+	<li>guide.elm-lang.org</li>
+	<li>Slack
+	<ul>
+		<li>elmlang.herokuapp.com</li>
+	</ul>
+	</li>
+	<li>elm-tutorial</li>
+	<li>
+<u>Elm In Action</u>
+	<ul>
+		<li>by Richard Feldman</li>
+	</ul>
+	</li>
+	<li>
+<u>Programming Elm</u>
+	<ul>
+		<li>by Jeremy Fairbanks</li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 451px; height: 338px; left: 480px; top: 136px; min-width: 4px; min-height: 4px;" data-block-id="2fdbf8738d535d5165a6778a68d2b90b"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1800" data-natural-height="1350" data-lazy-loaded="" data-src="elm-programming-language/2a609213ce3476de78f5056a1e1e56f2.jpg"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 360px; top: 661px;" data-block-id="6fbdc97e399b7ea70f74afe023525367"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 50%;">
+<p>By Jim.henderson - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=15909555</p>
+</div></div></section></section><section data-id="266bb9f2f69d4461f44bffb6c157abef"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="435302c2141f5e55c0facea361e8fc37"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Questions?</h1>
+</div></div></section><section data-id="80fffb85da61752f808ca1934d0303a5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="465dda7bb4ee76f8596c77a018687423"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Thank you!</h1>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1389333,"slug":"elm-programming-language","title":"Elm Programming Language","description":"a presentation for Iowa Code Camp as an introduction to the Elm Programming Language","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2018-12-05T00:05:10.512Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/67661f9340b4b7b332c2f9dc149bb6f5/thumb.jpg?1544202164","view_count":2191,"user":{"id":629464,"username":"boots","name":"Andrew Schutt","description":"","thumbnail_url":"https://www.gravatar.com/avatar/a4a6ea9a7c0197d9d98b923685006ba7?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture-2.png","account_type":"lite","team_id":null,"settings":{"id":476856,"present_controls":false,"present_upsizing":true,"present_pointer":false,"present_notes":false,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"sky-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":115,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1788204048787,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":null,"language":"en","source_deck_id":null,"notes":{"80fffb85da61752f808ca1934d0303a5":"Thanks for my coworkers for letting me practice this on. A special thanks to my friend Logan for his mentorship in the past and ongoing. ","39127da7e4f814571b7844d79e35aa49":"","ae3c9410c530b861a7639bb90137f0fe":"Before we get into Elm though\n\nLets step back though quick and take a moment to talk about the current state of Javascript development and developing an application in Javascript\n\nAs it stands right now the ecosystem has quite a few different choices to make...","53d851753c01baa79c3d72edee058aa4":"","b2cae5c907285eadf98ed839dde74d5e":"Lets start with Performance \n\nbundled Elm app is minuscule and this is without giving up productivity that other frameworks have","884f2e14b42d576705ff3c7d70678333":"Here is an graph that I got from the elm-lang blog that talks about the most recent release and how it achieved this mouth watering numbers. \n\nThe app here that is being used to perform this benchmarking is called \"Real World\" app that is a clone of Medium. It is used as a comparison for different backend and frontend technologies.\n\nHere is a link to check out if you are so inclined","4449f68e3473965463b41f520709a15d":"This graph is from the elm-lang blog that discusses the most recent release and goes into greater detail about the performance gains. \n\nThe app here that is being used to perform this bench marking is called \"Real World\". The app is a clone of Medium (the blogging site). This app is used as a comparison for different backend and frontend technologies.\n\nHere is a link to check out if you are so inclined\n\nBasically this is a more robust code examples in the vein of TodoMVC that Addy Osmani created. \n\nWith the most recent release of Elm 0.19 they got this application down to 29KB so for reference React is 32KB alone.\n\nAs the user base continues to grow on phone usage the importance of minified and performant JS importance grows alongside. \n\nWith JavaScript as well it's important to remember that there is more then should the JS file being sent down and involved in the processing. JS needs to parse, compile, make additional calls, etc. ","d1730c675963b17b6428b57364c6d3db":"Whoa. It gets out of hand quickly.\n\nActually on my most recent project I used 7 of these tool/technologies on the project. That project by the way was a two page application\n\nStart talking about how these technologies interact with one another and trying to make the best choices as well.\n\nThis isn't meant to be a bashing on JS or the community though. Javascript Fatigue is real and many agree this is part of the problem\n\nThis also doesn't include testing...","b06891b9417478ab491ba74096f5d26c":"","51ce0eec9cd3590bf23567ca47248a02":"What the heck is Elm anyways?","961df21ce54b806dcde26c4cb251e927":"Created by Evan Czaplicki around 2012 originally as part of a thesis he was working on. He is employed to work on Elm full time currently. ","de6766733363aec1a1aacfeecb80ae84":"The state of the Javascript ecosystem at times left me feeling frustrated. I for sure abused and misused different pieces, but frankly that's the modern JS way I feel.","20f97135548e8db3d76085e70b057d7b":"That was my state of mind as the project winded down and I reflected on my lost time during the project and wondered to myself if a better way existed. ","4558c78d319b2ea8ce3472059b6c6ba3":"With all of that in my mind I was listening to my a podcast called the ChangeLog and a core contributor for Elm was on talking the language. \n\nChangelog is a podcast that highlights different open source projects and creators.\n\nEverything that this guy said just resonated with me and my experience with JavaScript \n\nElm in particular seemed to be a great answer to many of the problems I experienced","35546ab1fea98d6d1d8f20693c841a79":"All of those different tools, choices, and pieces fall under Elm when you select Elm.\n\nFull disclosure at this time that I do not use Elm at work and honestly I have never even used it in hobby project.","70506482958b3fd25784752fcd41cbcd":"Elm is it's own stand alone language that compiles to Javascript.\nThis is just like Babel or Coffeescript, which, also compile to Javascript.\n\nThe best description I have read is that by using Elm you get to use a language that is LESS interesting then Javascript \n\nGo install the Elm executable and bam! You can compile and run Elm. ","aa18311296877c81cbd96be08ccfca62":"In the case below we would be able to compile Main.elm into elm.js. After installing Elm really all you need is to run \"elm make\" \n\nElm isn't an all or nothing selection you can have Elm live right next to existing JavaScript\n\nThe ease of this experience in comparison to losing days of work to wrestling with webpack felt like cheating","0c8d0847324adf474a746d139b634eae":"Elm is a typed frontend programming language and framework that compiles down to JavaScript. Elm has a great developer experience and focuses on being easy to learn.","12eeb0dae963b76a5c77f4a6e294c4ba":"Now bundled app size isn't the only measurement of performance. Rendering speed is important as well.\n\nThe versions here are a little older, but the point stands and that is that Elm is fast. \n\nIt uses a similar strategy of rendering using virtual DOM. This is the same way that React performs it's rendering as well.\n\nThe details of the performance comparison can be found on the elm-lang blog. ","da21550c08013d4ebbd7af6c65106d45":"How might you accomplish this you might ask? Is it necessary to pull in some sort of optimizer library?\n\nMaybe the people that created these examples are expert Elm developers that know the \"right\" data structures to use to achieve these numbers","0e1a4772b585a599e576c6bac07aa22a":"A crucial part of Elm is it's use of the functional programming paradigm \n\nFunctional programming is a paradigm that treats computation as the evaluation of functions.  \n\nThe empathize is on avoiding changing state and not mutating data.\n\nThe history of functional programming stems from lambada calculus.  \n\nMuch of the functional programming done is used in academia and only recently starting gaining more \"real life\" use across industry.\n\n","2f7828b13c959e8ad84665564294dc39":"Anybody ever heard of Elm? \n\nIf you _have_ heard of Elm you likely have heard this quote.\n\nAs any that have used Javascript know it is notorious being prone to runtime crashes.\n\n\"Undefined is not a function\" anybody?\n\nElm on the other hand has a reputation of NEVER throwing runtime exceptions\n\nThe largest known Elm codebase of ~250,000 lines has only had one exception caused by a debug command accidentally being left in that causes the app to crash.\n\nThere are a variety of reasons that ensure Elm applications never throw exceptions, but a major reason is the compiler that will inform the developer about issues before they are discovered by a user using the application","0d17131e0517251ac6e1605de04d3f11":"This is a talk for the Elm Programming language where we are going to spend some time doing a brief introduction to what Elm is and makes it interesting, why you might want to use and learn Elm, jump through some features of the language that are a little different then other languages, and do a little very simple demo \n\nThanks to the organizers for doing some much work to make this a reality and thanks to our sponsors as well","3ffddb071736acb41eba214038468c20":"compiler error messaging as part of the developer experience","64ed692785fa061406a019b948bdc93c":"this is an imperative example\n","fdbae8d2f1141ea3a9efdfffa1c25e45":"As I have spent the time digging into Elm and trying to digest as much as possible associated with the language and community. One of the especially interesting things is learning about the vision of Evan (the creator) and how he considers success. Elm has been around for 6 years now. \n\nHe isn't thinking of how to make Elm the number one trending language on Github or have a deluge of coverage show up on Hacker News. He is solely focused on making a great product and ecosystem that will last the test of time","a9d0463dd1e128d31449626cbf8f17f0":"Web Assembly, contrary to the name, is not a new assembly, but is more closely related to a virtual machine. \n\nWeb Assembly is exciting in that it is highly performant compared to JavaScript. In the future Elm will be compiled to Web Assembly it's not a matter of IF, but WHEN.","ec17a6af4ade4dce006885d71ee47d61":"JavaScript Interop is one of the ways that Elm allows developers to continue to leverage the JavaScript ecosystem as well as allows an easy way for Elm to be introduced into an existing JS codebase.\n\nAn interesting discovering for learning Elm is that the official documentation has suggested strategies and ideas for how to introduce JavaScript into a team or organization.","ba328e2f01f13838deeefaa43220a7d7":"Here are the important bits where we reference the compiled JavaScript from our make command\n\nThen the JavaScript that is run in the body tag to initialize the Elm program\n\nThis is the basics for actually embedding an Elm application into an HTML document. \n\nOf course this is great being able to have an Elm application work alongside an application, but what about having the two talk?\n","feb5a25a74b55a88eacc130957eb579f":"Here is the code again that demonstrates how to invoke an Elm program from Javascript with only the snippets pulled out\n\n and then an example of how you would pass a flag for the current time into the application by means of FLAGS\n\nYou will then have access to these flags on the initialization phase of the Elm application \n\nNow you may notice though that this flag lives outside of Elm and that means that it doesn't play by the same rules in regards to types\n\nDecoders are often employed in order to ensure the control of what to do when somebody passes in an unexpected value","c547b216dd5f4b4444a02bcd624ce864":"Flags are great of course, but what about when the talking to the JavaScript when the program is running?\n\nTo do this you can employ message passing in a similar fashion to our example of when we are communicating using HTTP. The difference is that Ports are used to facilitate this communication in a one way manner.\n\nUsing and setting up Ports is a little more involved then flags though and will save that for my next Elm talk :)","be13259848a4f4c70f1aa25c39b3e6da":"So we have talked about the What for Elm I want to spend some time talking about the Why ","9d0db0e700b8e5cc1204d72e06acdb70":"Imperative: (read definition) explicit steps for the program to perform. Think of it as recipes.  Follow these exact steps and this is what you get.  Tightly aligned with OO.\n\nDeclarative: (read definition) often defined as any style of programming that is not imperative.  Describes what you want.  Functional Programming falls into this camp.","a545eb1238d470f2a89cc68cf3a981fc":"Hand in hand with functional programming are pure functions\n\nPure functions have no side effects.   If an entire program is made up of pure functions then state is never mutated.\n\nAny time you have input to a pure function you can expect back the same result EVERYTIME","45434c1b6f194f809ccf4f01a895f3ee":"We have started to look at some of the language features in the context of functional features of Elm I want to show some additional features beyond that build further on these concepts","a8cf2dd9b62093ccbd8896216b7ca5b1":"in practice the code on this slide displays the outline of the diagram.\n\nLets take a look at some of the details though at what each of these pieces are","f763ad114847e60c71137eb5812506a0":"We start out with our model that will send it's value to the view","0e8d7c4b0156403eb36198f70e73a726":"A user action then will trigger that is passed to the update function to determine the new state of the application ","07da43e0e3c9793669d4a3383f18d5e0":"View handles the details for how to turn the model into a viewable representation","6c1c4fda3dc09f6e6f57710524d011b0":"Update will... well it updates the current state of the model","f70d9f25a2a1949f1165393553a9e857":"Finally the new state is sent to the view and displayed to the user.\n\nIf this looks familiar at all that is likely because this essentially how Redux works.  The creator of Redux even openly admits that it was heavily inspired by The Elm Architecture","e2492304808bfab91bf03c0b9ae3a08e":"The model is passed into the view ","a79b52685cbee601633a02128c1b75b8":"Model is the representation of the current state \n\nUpdate is a function that take the message for updating, the current state of the application and then turn will return an updated version of the state (a model) \n\nView consumes the current state and makes the choices for how to display the state of the model","caa4b54f05d19cbaf5becefb801a9cf4":"The Elm Architecture is a common pattern that has emerged from application creation using Elm that the creator realized was just a natural pattern used from beginners to experts.\n\nThis then organically became the recommended way to structure applications.","ba1bcfe974f2f6015bd1ceb28cf1c7a5":"Here is the Update function that takes in a Msg and Model\n\nThe Msg is generated by the Elm Runtime and the model is the current state of the application\n\nUpdate will create a new version of the model that is based off the Msg passed in","42383153e8f1e7a7b52a08df67c3cffa":"Here the definition of our View is highlighted\n\nYou can see it takes in a model that is the state we defined at the top","f6f63553ca3ab8c7abae556a7c5c57f6":"Here is the defined state. Again pretty straight forward as all of the implementation details are stripped out","3e3a0bfa998d563afc366c49c634f851":"This is a closer representation of how the state is passed around, updated, and displayed.\n\nThe Elm Runtime handles the actual message passing and invoking of the Update function with the message along with the previous state","266bb9f2f69d4461f44bffb6c157abef":"That's all I have!\n\nWhat questions do folks have? I will be of course around later and I would love to discuss more.","d88dcbd5778f6057abde0a90bf3dc708":"If you like what I have to say then here are some great resources that I leaned heavily on for my learning for this talk","cc54d0002c946eca1431fd121d3f6f4a":"The compiler is the greatest tool of Elm\n\nIn conjunction with the compiler and other tools that are a part of the language you are able to enforce edge cases using the compiler (that is to say code will not compile if these edge cases are not satisfied)\n\nThe compiler will also help with refactors and ensures that functionality you are moving is only referenced where you expect. \n\nOn top of this it has immensely helpful error messages that guide you when the compiler fails compilation. Next level aspect of the compiler\n\nI have a couple examples and later will show a very simple use case of an Elm app that benefits greatly from the advice of the compiler","fa17de529ad04ee50312670f5919f198":"One of the ways that Elm achieves No Runtime Exceptions is by forcing the user to handle the error state and will actually not compile if you do not.  \n\nLet me show a quick example of this","341944c1964182437a2f76739fc2185b":"In Javascript we could send off an http request like so. To the keen observer though I am missing a key piece of this","d54171c007e210ad8b1cb1a7276c0f6c":"I am missing my catch statement!\n\nIf I get an error while trying to get myself some cat pictures this will blow up in my face\n\nTrying to do this with Elm results in code that won't even compile","a2559070a7c86e2eebdc98ddf5c695de":"This logical branch could potentially return two different data types (string or number)\n\nWhen a developer attempts to compile this code they are shown this useful error that stopped them from creating problems. \n\nNot only did it give a detailed description of why it did not compile it also suggested a solution along with a link to additional information. ","2d2c8ac0b77a77a3192072464f205250":"Variables are immutable.  Once assigned they can not be changed!\n\nBecause of this programs become oriented around transforming data  and message passing. \n\nAs a result of immutability the danger of value changing right from underneath you because another process changes it is not a problem\n\nImmutable data also creates applications that are easier to reason about in junction with pure functions","8b92519d434c10c6fc181ccd64e8ac42":"Annotations although not required enable powerful documentation that is enforced by the compiler\n\nLets look at a quick example of this","130ee3d417c525f0de7eb4c46cb803a1":"pretty straight forward function here that doubles each of the inputs and then adds the two of them together here\n\nAt the top of this we have a comment that describe what is going on in our function.","49b2159145f75f72bc03421cee60dde3":"Time passes and someone comes in to make a fix, but forgets to update the comment. \n\nThe comment now is dead wrong as to what this function is doing.\n\nThis has never, EVER happened in the history of code writing as we all know","9b15084f077abacae32b5607b6e98a5c":"By adding the proper annotation. This code will not compile now. The compiler identifies that we are trying to use floats and will output floats \n\nwhile the annotation above is documenting that an Int would be expected out\n\n**Break down Int -\u003e Int -\u003e Int syntax**","7cf182cf273f1c6079a4676925f5875a":"Lets start with one of the essential building blocks of Elm: Functions","d9c406c3d685e650f240ed75aeabc4c4":"No wrapping arguments in parentheses or separating with commas it really is pretty bare bones here\n\nisNeagtive is our function name\n\nn is the argument and everything to the right of the equal sign is our body of the function","18490bd5133ab20aacb2915f2d0f6414":"When invoking an anonymous function you will need to use parens in order to distinguish when the body of the function ends and arguments begin ","f671ba9b02cf21e24addc4ef4b782823":"One of the primary data types are lists","0e6fda01d41da82f1105b96bfd7bc892":"Lists look very similar to arrays and they do share lots of similarities.\n\nThey are more closely related to Linked Lists under the hood with that being said.\n\nAnother large difference is that Lists can only share the same data type throughout. ","08f8ace564c25d7b4eca3fa4aebd9401":"In the 2018 State of Javascript a measurement of the popular libraries/frameworks/language features \n\nTo be frank Elm was not high on list. It really is not a popular language. Not many folks have even heard of it. The big reason that I even knew of it is because I spend some time learning about Elixir and the two communities cross pollinate.  \n\nThis is one of the biggest costs I would associate with adopting Elm. ","0fd3d68fbe38743d44817c79e2c620be":"Here is what the syntax for representing a Maybe type looks like\n\nThis is a type with two variants. You either will have Nothing or Just a value","33149aeebe9ff92b2f1f0a3d379659b1":"Just is actually wrapping the expected value ","0897559f9ccdb5760d15ad3f6849b49b":"A record is a fixed set of key-value pairs, similar to objects in JavaScript.\n\nLike lists they are a very common data structure that is quite useful","f4c661e86ce20a72ba04eb8989f1cdf4":"Records in Elm are similar to objects in JavaScript, but there are some important differences. With records:\n\n- You cannot ask for a field that does not exist.\n- No field will ever be undefined or null.\n- You cannot create recursive records with a this or self keyword.\n","318e1b2d256ddd2d8a37092a3d2ba49f":"We are unable to directly update the values in a desructive manner. actually invoking .title would remove the original value and then put in Abbey Road\n\nThe immutable way of doing this is to actually create a new variable of album record that has the value of Abbey Road in the title \n\n","e301eaa7f97973e2593cc5e384d4a654":"but what if we actually wanted to preserve the record that is our album variable?\n\nwe just need to assign a value after using the syntax of passing in our record","6d1c17dd820fadd3ed328795c8d8c33f":"Tuples are related to records but are only a collection of values with out keys","402d46a07d28a022d8693102bc585348":"Tuples are denoted with parens\n\nWe see here we can store different types alongside one another in Tuples, but you are unable to create a Tuple that has a max length of 3\n\nTrying to create one with a length of 4 or greater will result in a compile error \n\nThese are commonly used to return a collection of values from a function (True, \"all good\") or (False, \"bad bad not good\")","adb76772a191025223bbc93169ca137b":"Type aliases is a fancy way of describing your own types. I kind of think of them as classes or Structs","cd054ca13feb1c3d1f60c76f23e5565f":"Here we define our type alias of Pet\n\nIt takes a string for the name, a string for the breed, and int for the age","31773416eef7b3b7609ace110ff1cdb4":"Next step in this code is we are creating a new pet of our Pet type.\n\nThis is the constructor for our type alias","c74debda0459022da6586f4bd8c33aaf":"Here we are defining a new function called puppyBirthday that actually takes our type alias you can see in our annotation here that we are using the capital P for Pet\n\nThis then gives us assurances that someone can't just pass in any old record. It must be our Pet type\n\nlastly I am using our puppy birthday function to increment the age within our Pet record","343093222c6fbc231b45cf4dee1f5d51":"with our last example I was using a type of String for the Breed. As many know that can lead to some pretty crazy results when you just allow any old string to be put in\n\nI want to show an example where we will define a Union Type that will restrict what a user could input for the Breed","b5d4c49815962a5ff2c42a4d5db530ec":"The big change to our Pet type is now that the Breed must be of the our new union type that has a limited selection of choices. \n\nThis is all enforced by the compiler to ensure this. That means trying to construct a pet type and passing a String value for the Breed would not compile","f77a12b1c7cbd7a34d23f10a2e9f5840":"Piping is a nice bit of syntax for when you chain together multiple function calls in a row","8f474a58a8a7412ec6e4e08ef906f2dd":"So, function currying is mathematical term that \n\nCurrying is when you break down a function that takes multiple arguments into a series of functions that take part of the arguments.\n\nThat is to say that a function that takes three arguments would actually be a collection of three functions\n\nthis is also referred to as partial application and is possible because of first class functions\n\nThis is a pretty heavy topic, but lets take a look at an example of this idea being applied within Elm","27459e898f73b8560baf5224e97765f0":"this is a bit of a contrived example, but if we walk through this we can follow the various pieces of the function being passed into subsequent functions with each argument\n\nThe whole reason that I am even showing this is to help demonstrate how fundamental functions are to using Elm","279ab2997d14c66b85de1daf2dc4888a":"that's great that we have these Union Types for controlling the value within a type, but how can we actually continue to use these Types?\n\nWithin Elm you make use of Case statements to do pattern matching depending on the Type\n","5cf4f9154954e0acedba77b48afeca8f":"Here we defined two records one for a cat and one for a dog.\n\nWe then define a function called talk that will take in a pet and use pattern matching to determine the talking the pet will do","0d742e95d16b7685ebfde5a4f7649464":"this is a simple example, but we will actually used heavily as part of the elm architecture that applications follow","ed8bff9e75470b31c81de56152235afe":"Simple example of a pure function","6c562c10f6b61939fad2a473635c73a8":"Eliminates an entire class of issues at compile time","a489fb2d03e8c82742e9312587256890":"Like I said my name is Andrew Schutt and I am a Software Engineer with Hy-Vee\n\nWe are hiring!! go check out innovate.hy-vee.com\n\nA little bit about me though. My experience started in the backend world. Where I was using Ruby and Rails, but I have found myself writing more and more Javascript. In particular I have used JQuery/React/Node. ","69ab0b4080f17df2a616c1321f479423":"Learning a new language is not just a simple task especially one that has many different and foreign ideas. \n\nThere is an overhead associated with this every language has it's pitfalls. \n\nI showed only happy paths here, but problems exist with using Elm\n\n","684937598037f3e0ab390d38c0fbc194":"Elm has a much smaller ecosystem relative to NPM. It tries hard to make interop with JavaScript possible to make up for this, but reality is that it's bit of a crutch.","f6c5770e06b7a8564f52ff8a33e024a7":"Hiring engineers with Elm experience is going to be difficult (especially in Des Moines!) There is a flip side to this that because Elm is niche that those that want to do it will seek it out.\n\nIf you do choose to select Elm expect full well that you will be the champion and would be the one to train and educate everybody else","f3429930ed77655ea7d84e53bb6e53b3":"You will need up writing more code then you normally would for say a vanilla JS project. \n\nOften error states must be handled for code to compile rather then allowing you to spike or experiment with an idea with some hacked together code.","2046bf8a73909597b8d07b8e5ba3a771":"I want to talk a little bit about the why use Elm","018a1fe0043a3f60becfc8116db56909":"This is the Elm version of the same function call. \n\nThis does introduce some additional complexities though. As Elm functions are pure and will ALWAYS produces the same outcome with every call. To accomplish this goal though Elm makes use of the idea of commands and messages as a means of communication from your application and the outside world\n\nMost importantly though is that this function will never return a runtime error as you must define the error state up front for valid Elm code\n\nCommands and message passing is a reused pattern for communicating from Elm as well","fa4d7d8287f3baccac32a4cd63e7a53d":"the fact of the matter is that by simply using a simple \"optimize\" flag you get the best version possible\n\nEnsuring the most performant and production ready version of the code is easy","b7c696aa66dcbb4bfd4786f5cfa7ec0e":"Perfectly good Elm code no problems here. Nothing to see","2dce922e82ad18d0fb30d3bd8b44ce94":"Here is the actual correct annotation"}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				scrollActivationWidth: null,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+
+	</body>
+</html>

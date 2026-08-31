@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, minimal-ui">
+		<meta charset="utf-8">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="manifest" href='data:application/manifest+json,{"display": "standalone", "name": "Thor CLI"}' />
+		<title>Thor CLI</title>
+
+		<meta name="description" content="a presentation for Iowa Ruby Brigade around the Thor CLI tool with an example of creating a Magic the Gathering search CLI tool">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-helvetica theme-color-silver-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section class="stack" data-id="7205829814623d175f5838a5775ca708"><section data-id="4dd904b8fd360ee747d8543d7823925e">
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 594px; height: auto;" data-block-id="9e3fd3bb8d78bccc5c046d85ebc851d1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; font-size: 75%;">
+<h2>Andrew Schutt</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 665px; height: 277px; left: 143px; top: 65px;" data-block-id="2d77fc2594c4811e302e67860d6d7c23"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="665" data-natural-height="277" data-lazy-loaded="" data-src="deck-5/782138d26e2218dcbc391a927c4783f0.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 940px; height: 388px; left: 10px; top: 9px;" data-block-id="6bed44cde719c3dbc3b7971bc6ea02be"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 217, 102)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#000000" data-shape-stroke-width="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 940 388"><defs><clipPath id="shape-mask-1-1788204044117"><rect width="940" height="388" rx="0" ry="0"></rect></clipPath></defs><rect width="940" height="388" rx="0" ry="0" clip-path="url(#shape-mask-1-1788204044117)" class="shape-element" fill="rgb(255, 217, 102)" stroke="#000000" stroke-width="2"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 940px; left: 10px; top: 420px;" data-block-id="0f4a688333e4f7ceb3b7ddbde039b7c5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:0.9em">Thor: a toolkit for building powerful command-line interfaces</span></p>
+</div></div></section><section data-id="746501f814d2576c2cd4a14f569c7319"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="cd2f35e09e1fafcacdbbe42caad30836"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>What is Thor?</h1>
+</div></div></section><section data-id="83d70971547ca4b866f3a9e33e7f136a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="1b34ad36c9e6a4ff8db1cc904defd396"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>What is Thor?</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 401px;" data-block-id="2c2d713402f77beeea50c914c0ef0815"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<blockquote>
+<p>Thor is a simple and efficient tool for building self documenting command line utilities.</p>
+</blockquote>
+</div></div></section><section data-id="9a6a3ca05346647aa6dc2f1adf2d37f6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="00dc721c76d214ff23896989daa6eaad"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Why Thor?</h1>
+</div></div>
+</section><section data-id="d1dda1ac3e11f4bde5ff38a43d5ec26c"><div class="sl-block" data-block-type="text" style="width: 806px; left: 89px; top: 21px; height: auto;" data-block-id="6a4ef5c0649365d2516eb3a81e89759b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Why Thor?</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 645px; height: 403px; left: 170px; top: 203px;" data-block-id="f7a6d3f703d494bdb03091046f991958"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="709" data-natural-height="443" data-lazy-loaded="" data-src="deck-5/225dba00d509a90785c4165efadfca5d.png"></div></div></section></section><section class="stack" data-id="b976d9bc654bb030b895d6c5d18ec194"><section data-id="b599d68601543f015fca9815b382239a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="7b4a08ca00fa89adb7a17b17e94d91c4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Getting Started</h1>
+</div></div></section><section data-id="24cb2c452fad20e0398ef70998099da6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="b356ce8a745b269a4f79df268b3941e8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Getting Started</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 698px; height: 70px; left: 131px; top: 280px;" data-block-id="96fa35330f4c1baba94519f80cce5e2d"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 300%;"><pre><code>    gem install thor</code></pre></div></div></section><section data-id="04fe9147ba3ce9cf5b4fb1ee00bece78">
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="a0dc52f6724bc215160ab85009398805"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre><code>   
+
+    class Hello &lt; Thor
+        desc "odinson", "Prince of Asgard"
+        def odinson
+            puts "It is I Thor!"
+        end
+    end</code></pre></div></div></section><section data-id="6928c2e916af05d28f5774ae314e0761">
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="804a60150afc56dd7961cc16c75fa8a8"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre><code>   
+
+    class Hello &lt; Thor
+        desc "odinson", "Prince of Asgard"
+        def odinson
+            puts "It is I Thor!"
+        end
+    end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 134px; height: 70px; left: 186px; top: 70px;" data-block-id="63cc456e6f74d411c40881454dc352bd"><div class="sl-block-style" style="z-index: 12; opacity: 0.8;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 134 70"><defs><clipPath id="shape-mask-2-1529423370697"><rect width="134" height="70" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="134" height="70" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-2-1529423370697)"></rect></svg></div></div></div></section><section data-id="899cfd3ad67a33bc22f24ffe8283b637">
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="e92497a9ea5963c4627885d9ba76a608"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 200%;"><pre><code>   
+
+    class Hello &lt; Thor
+        desc "odinson", "Prince of Asgard"
+        def odinson
+            puts "It is I Thor!"
+        end
+    end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 704px; height: 70px; left: 149px; top: 105px;" data-block-id="86c36c41ed2347164230ccb69e5fd218"><div class="sl-block-style" style="z-index: 11; opacity: 0.8;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 704 70"><defs><clipPath id="shape-mask-3-1529423370916"><rect width="704" height="70" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="704" height="70" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-3-1529423370916)"></rect></svg></div></div></div></section><section data-id="bf34f99e1f6980ee61365b086253f949">
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="ed1259693380b573f2d944962af0e930"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 200%;"><pre><code>   
+
+    class Hello &lt; Thor
+        desc "odinson", "Prince of Asgard"
+        def odinson
+            puts "It is I Thor!"
+        end
+    end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 704px; height: 124px; left: 146px; top: 156px;" data-block-id="cc655d9a573ef24bd3232756d7d2350c"><div class="sl-block-style" style="z-index: 11; opacity: 0.8;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#00ff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 704 124"><defs><clipPath id="shape-mask-4-1529423371130"><rect width="704" height="124" fill="rgba(0, 0, 0, 0)" stroke="#00ff00" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="704" height="124" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#00ff00" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-4-1529423371130)"></rect></svg></div></div></div></section><section data-id="78d5a29b04559ed78d5c749e93f41a0b">
+<div class="sl-block" data-block-type="code" style="width: 506px; height: 210px; left: 227px; top: 86px;" data-block-id="d64e205ec431f19a7e3b84235440afc3"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre><code>   
+
+    thor hello:odinson
+
+   </code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 150px; height: 230px; left: 410px; top: 280px;" data-block-id="8861afd89cd6dedd80bb8ad8dc9551d6"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="rgb(170, 170, 170)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 150 230"><polygon points="75,230 150,115 105,115 105,0 45,0 45,115 0,115 75,230" class="shape-element" fill="rgb(170, 170, 170)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="code" style="width: 333px; height: 120px; left: 319px; top: 510px;" data-block-id="3089ae371b305048c4e1d346c5398309"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 200%;"><pre><code>   
+  It is I Thor!</code></pre></div></div></section><section data-id="6af55c49d29ddd9d39a3196819d841a7">
+<div class="sl-block" data-block-type="code" style="width: 520px; height: 190px; left: 220px; top: 210px;" data-block-id="ee1cdf3ecb8ee49a6a169606d9dd7025"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 300%;"><pre><code>
+    thor list</code></pre></div></div></section><section data-id="5930c40155986477ea33587545f78eb5">
+<div class="sl-block" data-block-type="code" style="width: 520px; height: 190px; left: 220px; top: 45px;" data-block-id="1f6e386913c69ec11fdc03290a546f4d"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 300%;"><pre><code>
+    thor list</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 150px; height: 230px; left: 400px; top: 219px;" data-block-id="9633d2616c6fe3e6fee04899c0340f2c"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="rgb(170, 170, 170)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 150 230"><polygon points="75,230 150,115 105,115 105,0 45,0 45,115 0,115 75,230" class="shape-element" fill="rgb(170, 170, 170)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 243px; left: 0px; top: 457px;" data-block-id="4402c3ad26c19e13e3e987622b2da96d"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre><code>
+    hello
+    #----
+    thor hello:odinson # Prince of Asgard</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 143px; height: 58px; left: 66px; top: 490px;" data-block-id="522273ca43f625fcaad3e56336a4a045"><div class="sl-block-style" style="z-index: 13; opacity: 0.8;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 143 58"><defs><clipPath id="shape-mask-7-1529423446986"><rect width="143" height="58" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="143" height="58" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-7-1529423446986)"></rect></svg></div></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 160px; height: 58px; left: 292px; top: 572px;" data-block-id="798e328529eeb1f61fcd0588bc56f8a0"><div class="sl-block-style" style="z-index: 15; opacity: 0.8;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 160 58"><defs><clipPath id="shape-mask-8-1529423446991"><rect width="160" height="58" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="160" height="58" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-8-1529423446991)"></rect></svg></div></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 338px; height: 58px; left: 492px; top: 572px;" data-block-id="ac196c4dd7b221e35a286a2fb8fc28eb"><div class="sl-block-style" style="z-index: 16; opacity: 0.8;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 16;" data-shape-stroke-color="#00ff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 338 58"><defs><clipPath id="shape-mask-9-1529423446997"><rect width="338" height="58" fill="rgba(0, 0, 0, 0)" stroke="#00ff00" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="338" height="58" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#00ff00" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-9-1529423446997)"></rect></svg></div></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 117px; height: 58px; left: 175px; top: 572px;" data-block-id="1e08de847aeb35d532b8f04e9809813f"><div class="sl-block-style" style="z-index: 17; opacity: 0.8;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 17;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 117 58"><defs><clipPath id="shape-mask-10-1529423447001"><rect width="117" height="58" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="117" height="58" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-10-1529423447001)"></rect></svg></div></div></div></section><section data-id="63734c69b597e661d288e1f850346498">
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 190px; left: 80px; top: 210px;" data-block-id="921abcf7eb968abbf6c93709e375e425"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 300%;"><pre><code>
+    thor help [COMMAND]</code></pre></div></div></section><section data-id="f26dd686688977405550ae14a5f81202">
+<div class="sl-block" data-block-type="code" style="width: 911px; height: 157px; left: 25px; top: 62px;" data-block-id="1ca815dc6211dd89de95168848fae565"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 300%;"><pre><code>
+    thor help hello:odinson</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 150px; height: 230px; left: 400px; top: 219px;" data-block-id="67510ee149ebee5c9af363e6a76b77cc"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="rgb(170, 170, 170)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 150 230"><polygon points="75,230 150,115 105,115 105,0 45,0 45,115 0,115 75,230" class="shape-element" fill="rgb(170, 170, 170)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 243px; left: 0px; top: 457px;" data-block-id="22e359b5158f180a08fb99536e95e662"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre><code>
+    Usage:
+      thor hello:odinson
+
+    Prince of Asgard</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 123px; height: 58px; left: 213px; top: 531px;" data-block-id="9d5d2202eec27ad2569d064e52562a90"><div class="sl-block-style" style="z-index: 13; opacity: 0.8;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 123 58"><defs><clipPath id="shape-mask-11-1529423632192"><rect width="123" height="58" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="123" height="58" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-11-1529423632192)"></rect></svg></div></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 160px; height: 58px; left: 336px; top: 531px;" data-block-id="6459b4742b7083599a16cfb39ca66130"><div class="sl-block-style" style="z-index: 14; opacity: 0.8;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 160 58"><defs><clipPath id="shape-mask-12-1529423632196"><rect width="160" height="58" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="160" height="58" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-12-1529423632196)"></rect></svg></div></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 338px; height: 58px; left: 71px; top: 611px;" data-block-id="e621e8f8ffccac1620a8a6896b6a4290"><div class="sl-block-style" style="z-index: 15; opacity: 0.8;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#00ff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 338 58"><defs><clipPath id="shape-mask-13-1529423632198"><rect width="338" height="58" fill="rgba(0, 0, 0, 0)" stroke="#00ff00" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="338" height="58" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#00ff00" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-13-1529423632198)"></rect></svg></div></div></div></section><section data-id="c18f8ba964e32e2bcc30fc3b04f71816"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="f346df5fd01105d12b2230f313e8cc25"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Long Description</h1>
+</div></div></section><section data-id="a2ced43a32062e8147c7ecfa538f2b14">
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="f7b0e734c1bcfa15a92c8d6e7cb115df"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 150%;"><pre><code>   
+
+    class Hello &lt; Thor
+        desc "odinson", "Prince of Asgard"
+        long_desc &lt;&lt;-LONGDESC
+            `hello:odinson` will print out a lovely message
+             from Thor odinson himself.
+    
+            The usage for this command is just invocation
+            using Thor.
+    
+            `thor hello:odinson`
+    
+            No additional option are available (yet!)
+        LONGDESC
+        def odinson
+            puts "It is I Thor!"
+        end
+    end</code></pre></div></div>
+</section><section data-id="45ecbb63a0333b0b466124846c875d67">
+<div class="sl-block" data-block-type="code" style="width: 911px; height: 157px; left: 25px; top: 18px;" data-block-id="78cfbc4abd38603e35a2a0e57deb4578"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 300%;"><pre><code>
+    thor help hello:odinson</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 81px; height: 166px; left: 440px; top: 157px;" data-block-id="ccf8264cd3f7ff1730a8487373a74789"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="rgb(170, 170, 170)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 81 166"><polygon points="40.5,166 81,83 56.699999999999996,83 56.699999999999996,0 24.3,0 24.3,83 0,83 40.5,166" class="shape-element" fill="rgb(170, 170, 170)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 296px; left: 0px; top: 323px;" data-block-id="a44905a3dc79330b4a05557b258c060d"><div class="sl-block-content notranslate" style="z-index: 12;"><pre><code>    
+    Usage:
+      thor hello:odinson
+    
+    
+    Description:
+      `hello:odinson` will print out a lovely message from Thor odinson himself.
+    
+      The usage for this command is just invocation using Thor.
+    
+      `thor hello:odinson`
+    
+      No additional option are available (yet!)</code></pre></div></div>
+
+
+</section><section data-id="358f9042ee6bda59e46178137297a514"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="53430ab2cf2bf3e88a4749807a945c93"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Arguments</h1>
+</div></div></section><section data-id="252877d5d9200f1739c6910e4eb8f100">
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="eae2dd2ceb83d87069b4529dc066bbe7"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 200%;"><pre><code>   
+
+    class Hello &lt; Thor
+        desc "odinson", "says hello"
+        def odinson(name)
+            puts "It is I Thor! Hello #{name}"
+        end
+    end</code></pre></div></div>
+</section><section data-id="80fc4d624fed64d45900f8575f29859f">
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="b433627cf76bf737f557a7b43f62493f"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 200%;"><pre><code>   
+
+    class Hello &lt; Thor
+        desc "odinson", "says hello"
+        def odinson(name)
+            puts "It is I Thor! Hello #{name}"
+        end
+    end</code></pre></div></div>
+</section></section><section class="stack" data-id="fbf72b19ae9e3f295bf71ec555e57ecb"><section data-id="086d7cfe2b4a9c73fc2f55fd285475f3"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="dd28c649504cee01e16e15a3477cb810"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Task Options</h1>
+</div></div></section><section data-id="a7b5d73edcb68389f8910dc05f96e65e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="4850bf20ecc3ded0a05bbf56c06daa4e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Options</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 509px; left: 0px; top: 121px;" data-block-id="8211243ac9a8bf59f972ce21ba24996b"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 145%;"><pre><code>   
+
+  class Hello &lt; Thor
+      desc "odinson", "Prince of Asgard"
+      method_option :verbose
+      def odinson
+          verbose_mode = options[:verbose]
+          if verbose_mode
+              puts "It is I Thor! Odinson! Prince of Asgard!"
+          else
+              puts "It is I Thor!"
+          end
+      end
+  end</code></pre></div></div></section><section data-id="8ca3cd6f99420a0320594e9c5cd1ec04"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="bd61512b747ef1ba0d6790d7cb2fc90b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Options</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 509px; left: 0px; top: 121px;" data-block-id="a0c1b0f49722b40a38a2837991cc0de1"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 145%;"><pre><code>   
+
+  class Hello &lt; Thor
+      desc "odinson", "Prince of Asgard"
+      method_option :verbose
+      def odinson
+          verbose_mode = options[:verbose]
+          if verbose_mode
+              puts "It is I Thor! Odinson! Prince of Asgard!"
+          else
+              puts "It is I Thor!"
+          end
+      end
+  end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 339px; height: 52px; left: 80px; top: 228px;" data-block-id="b2c3f690457fc275d750baf2a92c596e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 339 52"><defs><clipPath id="shape-mask-14-1529423671197"><rect width="339" height="52"></rect></clipPath></defs><rect width="339" height="52" clip-path="url(#shape-mask-14-1529423671197)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 475px; height: 46px; left: 141px; top: 287px;" data-block-id="842852f9339b7bb123d4469895c3872c"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 475 46"><defs><clipPath id="shape-mask-15-1529423671203"><rect width="475" height="46"></rect></clipPath></defs><rect width="475" height="46" clip-path="url(#shape-mask-15-1529423671203)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10"></rect></svg></div></div></section><section data-id="00611b10764b48269dfc1089606cc6bf">
+<div class="sl-block" data-block-type="code" style="width: 911px; height: 83px; left: 25px; top: 29px;" data-block-id="2b5f9ddea8b584223f7f879cff98db14"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 300%;"><pre><code>    thor help hello:odinson</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 150px; height: 230px; left: 406px; top: 104px;" data-block-id="074e4bc588c5678538a341de8db76d29"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="rgb(170, 170, 170)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 150 230"><polygon points="75,230 150,115 105,115 105,0 45,0 45,115 0,115 75,230" class="shape-element" fill="rgb(170, 170, 170)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="code" style="width: 936px; height: 350px; left: 13px; top: 335px;" data-block-id="9e8cd05509f21cac141000e0aaae72b9"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 150%;"><pre><code>
+    Usage:
+      thor hello:odinson
+
+    Options:
+      [--verbose=VERBOSE]  
+
+    Prince of Asgard</code></pre></div></div></section><section data-id="0a3f0150019e32ed4ad604e676db1385">
+<div class="sl-block" data-block-type="code" style="width: 920px; height: 169px; left: 20px; top: 239px;" data-block-id="566a96ee3394e691a7b680a20bb8ba82"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 300%;"><pre><code>  
+  thor hello:odinson --verbose</code></pre></div></div>
+
+</section><section data-id="b9ea73f4856ab13a4ad6fe5cb95473d9"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="4be30d9d5000c1a301ac54a42afb9326"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Options for the options</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 144px; height: auto;" data-block-id="eae182358c84d17d7b05e88e673581fc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%;">
+<ul>
+	<li>
+	<pre>:desc</pre>
+	</li>
+	<li>
+	<pre>:aliases</pre>
+	</li>
+	<li>
+	<pre>:banner</pre>
+	</li>
+	<li>
+	<pre>:default</pre>
+	</li>
+	<li>
+	<pre>:lazy_default</pre>
+	</li>
+	<li>
+	<pre>:required</pre>
+	</li>
+	<li>
+	<pre>:type</pre>
+
+	<ul>
+		<li>
+		<pre>:string, :hash, :array, :numeric, or :boolean</pre>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<pre>:enum</pre>
+	</li>
+</ul>
+</div></div></section><section data-id="c3e18a980a915a9ca4bd447d33eb45ea"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="bbf23bda5125f8ba996a8aaeb4d1eda7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<pre style="text-align:center"><span style="font-size:2.0em">:desc</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 509px; left: 0px; top: 121px;" data-block-id="a4fb40df282923167b45824ed8322ee2"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 145%;"><pre><code>   
+
+  class Hello &lt; Thor
+      desc "odinson", "Prince of Asgard"
+      method_option :verbose, 
+                    :desc =&gt; "display Thor's full name"
+      def odinson
+          verbose_mode = options[:verbose]
+          if verbose_mode
+              puts "It is I Thor! Odinson! Prince of Asgard!"
+          else
+              puts "It is I Thor!"
+          end
+      end
+  end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 531px; height: 55px; left: 278px; top: 259px;" data-block-id="5e3025b0b31db3fa2b45bbfb47329979"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 531 55"><defs><clipPath id="shape-mask-16-1529423683819"><rect width="531" height="55"></rect></clipPath></defs><rect width="531" height="55" clip-path="url(#shape-mask-16-1529423683819)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10"></rect></svg></div></div></section><section data-id="e356c5c6c1e507944d224c1a17d9243a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="74dbe1aceec8e22009a78016ff68c434"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<pre style="text-align: center;"><span style="font-size:2.0em">:aliases</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 509px; left: 0px; top: 121px;" data-block-id="70cb973e168d8831220a1e8a3d2c97a9"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 145%;"><pre><code>   
+
+  class Hello &lt; Thor
+      desc "odinson", "Prince of Asgard"
+      method_option :verbose, 
+                    :desc =&gt; "display Thor's full name",
+                    :aliases =&gt; "-v"
+      def odinson
+          verbose_mode = options[:verbose]
+          if verbose_mode
+              puts "It is I Thor! Odinson! Prince of Asgard!"
+          else
+              puts "It is I Thor!"
+          end
+      end
+  end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 282px; height: 55px; left: 278px; top: 280px;" data-block-id="d1f7c4cb982a0f0a3dbc024960a9dae2"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 282 55"><defs><clipPath id="shape-mask-17-1529423684591"><rect width="282" height="55"></rect></clipPath></defs><rect width="282" height="55" clip-path="url(#shape-mask-17-1529423684591)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10"></rect></svg></div></div></section><section data-id="339a99cb7d63f6ff625426d5442b8e35"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="b70ec0b4580db9be12e605fd4694a5ee"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<pre style="text-align:center"><span style="font-size:2.0em">:banner
+</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 509px; left: 0px; top: 121px;" data-block-id="789d296fdfc3a36e6b6cada7742df7f2"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 145%;"><pre><code>   
+
+  class Hello &lt; Thor
+      desc "odinson", "Prince of Asgard"
+      method_option :verbose, 
+                    :desc =&gt; "display Thor's full name",
+                    :banner =&gt; "to use this option append --verbose"
+      def odinson
+          verbose_mode = options[:verbose]
+          if verbose_mode
+              puts "It is I Thor! Odinson! Prince of Asgard!"
+          else
+              puts "It is I Thor!"
+          end
+      end
+  end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 167px; height: 49px; left: 278px; top: 286px;" data-block-id="e41e86fc33b9a62b2e03edc47f0feb23"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 167 49"><defs><clipPath id="shape-mask-18-1529423685683"><rect width="167" height="49"></rect></clipPath></defs><rect width="167" height="49" clip-path="url(#shape-mask-18-1529423685683)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10"></rect></svg></div></div></section><section data-id="4b50f6e293872eb723aba2bb812313a0"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="201a9197d534d993eebea2076f35ee56"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<pre style="text-align:center"><span style="font-size:2.0em">:default
+</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 509px; left: 0px; top: 121px;" data-block-id="67666578ba154a02409b69ab44668052"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 145%;"><pre><code>   
+
+  class Hello &lt; Thor
+      desc "odinson", "Prince of Asgard"
+      method_option :hello_to, 
+                    :desc =&gt; "who to say hello to",
+                    :default =&gt; "stranger"
+      def odinson
+          hello_to = options[:hello_to]
+          puts "It is I Thor! Hello #{hello_to}"
+      end
+  end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 345px; height: 49px; left: 278px; top: 286px;" data-block-id="df60e48a8080801f60a4ea3eb3ac82d7"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 345 49"><defs><clipPath id="shape-mask-19-1529423686213"><rect width="345" height="49"></rect></clipPath></defs><rect width="345" height="49" clip-path="url(#shape-mask-19-1529423686213)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10"></rect></svg></div></div></section><section data-id="2eec64a8731810f17f419ff8f68385c1"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="857e6bb858fb12e4d52c5f491a945224"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<pre style="text-align:center"><span style="font-size:2.0em">:lazy_default
+</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 509px; left: 0px; top: 121px;" data-block-id="b2395a095f25fd1d74d17c9a481ea502"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 145%;"><pre><code>   
+
+  class Hello &lt; Thor
+      desc "odinson", "Prince of Asgard"
+      method_option :hello_to, 
+                    :desc =&gt; "who to say hello to",
+                    :lazy_default =&gt; "stranger"
+      def odinson
+          hello_to = options[:hello_to]
+          puts "It is I Thor! Hello #{hello_to}"
+      end
+  end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 414px; height: 49px; left: 278px; top: 286px;" data-block-id="3b088bfd475741e126651c5bc377f67b"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 414 49"><defs><clipPath id="shape-mask-20-1529423686509"><rect width="414" height="49"></rect></clipPath></defs><rect width="414" height="49" clip-path="url(#shape-mask-20-1529423686509)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10"></rect></svg></div></div></section><section data-id="2a53f7466d94fbf64de3ddfb380fbb34"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="4d47bf27a25436c2350d750095a174f7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<pre style="text-align:center"><span style="font-size:2.0em">:required
+</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 509px; left: 0px; top: 121px;" data-block-id="38fb2a6d0315f92dcb0e5cf2bb47a886"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 145%;"><pre><code>   
+
+  class Hello &lt; Thor
+      desc "odinson", "Prince of Asgard"
+      method_option :hello_to, 
+                    :desc =&gt; "who to say hello to",
+                    :required =&gt; true
+      def odinson
+          hello_to = options[:hello_to]
+          puts "It is I Thor! Hello #{hello_to}"
+      end
+  end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 273px; height: 49px; left: 278px; top: 286px;" data-block-id="fdaf2f828a4bc0f739fc323a677acbcd"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 273 49"><defs><clipPath id="shape-mask-21-1529423686677"><rect width="273" height="49"></rect></clipPath></defs><rect width="273" height="49" clip-path="url(#shape-mask-21-1529423686677)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10"></rect></svg></div></div></section><section data-id="60f5d7fc33b2525eb1e3ffff6760801c"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="bd20e2b237b82c8cf9b488ac68f32640"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<pre style="text-align:center"><span style="font-size:2.0em">:type</span></pre>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 140px;" data-block-id="42d2684786b5207a8bd201f941c4628c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>
+	<pre>:boolean
+</pre>
+
+	<ul>
+		<li>
+		<pre>--option=true</pre>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<pre>:string</pre>
+
+	<ul>
+		<li>
+		<pre>--option=value</pre>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<pre>:numeric</pre>
+
+	<ul>
+		<li>
+		<pre>--option=1234</pre>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<pre>:array</pre>
+
+	<ul>
+		<li>
+		<pre>--option=one two three</pre>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<pre>:hash</pre>
+
+	<ul>
+		<li>
+		<pre>--option=name:string age:integer</pre>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="2ac2847d11d1c80bb1aca30f241e7530"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="196f8efc4d50e7d6f518c3314c9955eb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<pre style="text-align:center"><span style="font-size:2.0em">:enum
+</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 509px; left: 0px; top: 121px;" data-block-id="7446aeeb1ac357b54aec0028e3ba6726"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 145%;"><pre><code>   
+
+  class Hello &lt; Thor
+      desc "odinson", "Prince of Asgard"
+      method_option :hello_to, 
+                    :desc =&gt; "who to say hello to",
+                    :enum =&gt; ['Loki', 'Hela', 'Hulk']
+      def odinson
+          hello_to = options[:hello_to]
+          puts "It is I Thor! Hello #{hello_to}"
+      end
+  end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 501px; height: 49px; left: 278px; top: 286px;" data-block-id="9ecaef1e50961fb6c567d71f617ed737"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 501 49"><defs><clipPath id="shape-mask-22-1529423686982"><rect width="501" height="49"></rect></clipPath></defs><rect width="501" height="49" clip-path="url(#shape-mask-22-1529423686982)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10"></rect></svg></div></div></section><section data-id="d515d3a7f592dcb726a9a94ef7fd7751">
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="5ebd9758c2eaca5990e0bdb721251b60"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 110%;"><pre><code>   
+
+   class Hello &lt; Thor
+     desc "odinson", "Prince of Asgard"
+     method_option :verbose, desc: "display full message from thor",
+                             aliases: "-v",
+                             default: false,
+                             type: :boolean
+     method_option :family, desc: "display message for Thor family member",
+                            aliases: "-f",
+                            banner: "&lt;family member name&gt;",
+                            default: "brother",
+                            type: :string,
+                            enum: ["Loki", "Hela", "Odin"]
+     method_option :no_name, desc: "display message without Thor addressing anyone",
+                             aliases: "-nn",
+                             banner: "Thor addesses no one"
+     def odinson(name)
+         hello_to = options[:family] ? option[:family] : name
+         if option[:no_name]
+           puts "Hello! It is I Thor!"
+         else
+           if options[:verbose]
+             puts "Hello #{name}. It is I Thor! Son of Odin and Prince of Asgard!"
+           else
+             puts "Hello #{name}. It is I Thor!"
+           end
+         end
+     end
+   end</code></pre></div></div>
+</section><section data-id="6476a4ebfb74c14e2dd6840952098fec">
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="ae167a78f51eb5e008e88a24bafe699b"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 110%;"><pre><code>   
+
+   class Hello &lt; Thor
+     desc "odinson", "Prince of Asgard"
+     method_option :verbose, desc: "display full message from thor",
+                             aliases: "-v",
+                             default: false,
+                             type: :boolean
+     method_option :family, desc: "display message for Thor family member",
+                            aliases: "-f",
+                            banner: "&lt;family member name&gt;",
+                            default: "brother",
+                            type: :string,
+                            enum: ["Loki", "Hela", "Odin"]
+     method_option :no_name, desc: "display message without Thor addressing anyone",
+                             aliases: "-nn",
+                             banner: "Thor addesses no one"
+     def odinson(name)
+         hello_to = options[:family] ? option[:family] : name
+         if option[:no_name]
+           puts "Hello! It is I Thor!"
+         else
+           if options[:verbose]
+             puts "Hello #{name}. It is I Thor! Son of Odin and Prince of Asgard!"
+           else
+             puts "Hello #{name}. It is I Thor!"
+           end
+         end
+     end
+   end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 719px; height: 97px; left: 51px; top: 84px;" data-block-id="5654ec2eb903b6e99c83060b07b8d626"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 719 97"><defs><clipPath id="shape-mask-23-1529423687341"><rect width="719" height="97"></rect></clipPath></defs><rect width="719" height="97" clip-path="url(#shape-mask-23-1529423687341)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 781px; height: 136px; left: 51px; top: 174px;" data-block-id="88cafaa8b1788e2e1682dec8f28be169"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 781 136"><defs><clipPath id="shape-mask-24-1529423687343"><rect width="781" height="136"></rect></clipPath></defs><rect width="781" height="136" clip-path="url(#shape-mask-24-1529423687343)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 894px; height: 76px; left: 51px; top: 304px;" data-block-id="b921f9095757c426521a778b8c72f053"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 894 76"><defs><clipPath id="shape-mask-25-1529423687345"><rect width="894" height="76"></rect></clipPath></defs><rect width="894" height="76" clip-path="url(#shape-mask-25-1529423687345)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10"></rect></svg></div></div></section><section data-id="0e9191fc62681fdb7117bc59e681ebee">
+<div class="sl-block" data-block-type="code" style="width: 911px; height: 157px; left: 25px; top: 24px;" data-block-id="c518bb53af5624eaa74a1c44fc4a2ba0"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 300%;"><pre><code>
+    thor help hello:odinson</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 150px; height: 230px; left: 400px; top: 155px;" data-block-id="0aa7c58955a2cc669f26f0357b7756e9"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="rgb(170, 170, 170)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 150 230"><polygon points="75,230 150,115 105,115 105,0 45,0 45,115 0,115 75,230" class="shape-element" fill="rgb(170, 170, 170)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 314px; left: 0px; top: 377px;" data-block-id="b4aad28d0ba3af70c0d393219b9d9de7"><div class="sl-block-content notranslate" style="z-index: 12;"><pre><code>
+    Usage:
+      thor hello:odinson
+
+    Options:
+      -v, [--verbose], [--no-verbose]        # display full message from thor
+      -f, [--family=&lt;family member name&gt;]    # display message for Thor family member
+                                         # Default: brother
+                                         # Possible values: Loki, Hela, Odin
+      -nn, [--no-name=Thor addesses no one]  # display message without Thor addressing anyone
+
+    Prince of Asgard</code></pre></div></div>
+
+
+</section></section><section class="stack" data-id="bbc031aa90db2f4c81cce33632ff5227"><section data-id="63e217ca89cf71b87f89799ab91bb353"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="1961176f6236626561aa256bc21702d8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Class Options</h1>
+</div></div></section><section data-id="b15ef2562735da6f02afdd970ce0628c"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 25px; height: auto;" data-block-id="b7fd4782a7e93b31a30b5e21db61dde6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<pre style="text-align:center"><span style="font-size:2.0em">class_option</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 853px; height: 191px; left: 57px; top: 197px;" data-block-id="f5cbc86c519cf7c817d8756b520fe3f5"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 145%;"><pre><code>   
+
+  class_option :yelling, type: :boolean,
+                         default: false,
+                         desc: "engage yelling mode"</code></pre></div></div>
+</section><section data-id="d54916a7327fa53849c1bae94f33c381"><div class="sl-block" data-block-type="text" style="width: 806px; left: 78px; top: 8px; height: auto;" data-block-id="89ad1df781dcb57b9ba9a45c426e33ee"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<pre style="text-align:center"><span style="font-size:2.0em">class_option</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 903px; height: 583px; left: 29px; top: 97px;" data-block-id="74a4917a677af0761981233285b3c39d"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 110%;"><pre><code>  
+  class Volume &lt; Thor
+    class_option :yelling, :type =&gt; :boolean,
+                           :default =&gt; false,
+                           :aliases =&gt; "-y"
+
+    desc "yell", "yell it!"
+    def yell
+        msg = "I am not yelling! You're yelling!"
+        if options[:yelling]
+          puts msg.upcase
+        end
+        puts msg
+    end
+
+    desc "whisper", "shhhh"
+    def whisper
+        if options[:yelling]
+          msg = "please stop yelling. whisper time"
+        else
+          msg = "shhh, whisper, whisper"
+        end
+        puts msg
+    end
+  end</code></pre></div></div>
+</section><section data-id="bdd3f38ec6b5515d6e6d4e683d2d36a3">
+<div class="sl-block" data-block-type="code" style="width: 428px; height: 96px; left: 25px; top: 24px;" data-block-id="a68d042a3f1a7b9f39408041abd7c9b3"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 150%;"><pre><code>
+    thor help volume:yell</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 114px; height: 264px; left: 164px; top: 113px;" data-block-id="de496b5aca16c37720796fc401746992"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="rgb(170, 170, 170)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 114 264"><polygon points="57,264 114,132 79.8,132 79.8,0 34.199999999999996,0 34.199999999999996,132 0,132 57,264" class="shape-element" fill="rgb(170, 170, 170)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="code" style="width: 480px; height: 315px; left: 480px; top: 377px;" data-block-id="48e0ceeb941308d12b153bde5e4fbfc3"><div class="sl-block-content notranslate" style="z-index: 13;"><pre><code>Usage:
+  thor volume:whisper
+
+Options:
+  -y, [--yelling], [--no-yelling] 
+
+shhhh</code></pre></div></div>
+
+
+<div class="sl-block" data-block-type="code" style="width: 454px; height: 96px; left: 493px; top: 24px;" data-block-id="5e85c84b3a7da388f3299e39523e003e"><div class="sl-block-content notranslate" style="z-index: 14; font-size: 150%;"><pre><code>
+    thor help volume:whisper</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 446px; height: 315px; left: 0px; top: 377px;" data-block-id="d1fc94bec95be32a1091d65d1dae3421"><div class="sl-block-content notranslate" style="z-index: 15;"><pre><code>Usage:
+  thor volume:yell
+
+Options:
+  -y, [--yelling], [--no-yelling] 
+
+yell it!
+</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 114px; height: 264px; left: 686px; top: 113px;" data-block-id="bd34ad3f234d2d69ff3f99b85ab5cf58"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="rgb(170, 170, 170)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 114 264"><polygon points="57,264 114,132 79.8,132 79.8,0 34.199999999999996,0 34.199999999999996,132 0,132 57,264" class="shape-element" fill="rgb(170, 170, 170)"></polygon></svg></div></div></section></section><section data-id="b8f2e04cb9163614da9f8b9f74ab8257"><div class="sl-block" data-block-type="iframe" style="min-width: 30px; min-height: 30px; width: 960px; height: 694px; left: 1px; top: 1px;" data-block-id="bd8d987161d97aacd42edd2bbf06552d"><div class="sl-block-content" style="z-index: 11;"><iframe webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock allow-presentation" data-src="https://www.youtube.com/embed/K_8SBYQ4SI0?enablejsapi=1"></iframe></div></div></section><section class="stack" data-id="7bfc066e5249e0257d9d9799066f59a8"><section data-id="96e8ae6951d03fb2a2c04d09f00d23ac"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="29318d4a5b228437cb9c2517949df945"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Task Actions</h1>
+</div></div></section><section data-id="f2fdfe5a66573a35a82df00707cc1e9f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="3f98da090ef2a4bd39e2be6c116e5643"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Actions</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 602px; left: 0px; top: 98px;" data-block-id="fb8919d8672f711ad8cf4dc0d46a7afc"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 145%;"><pre><code>   
+
+  class Quinjet &lt; Thor
+    include Thor::Actions
+    desc "authenticate", "authenticates for quinjet access"
+    def authenticate
+      authenticated = false
+      run("say -v Moira Welcome. Authentication required.")
+      while !authenticated
+        username = ask "Welcome. Authentication required."
+        if username.upcase == "POINT BREAK"
+          authenticated = true
+          run("say -v Moira Welcome Point Break.")
+        else
+          run("say -v Moira Access Denied.")
+        end
+      end
+    end
+  end</code></pre></div></div></section><section data-id="2cb14f03604a55221ba33610f28fc686"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="7e9340c7699a4bfb274817983498a595"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Actions</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 602px; left: 0px; top: 98px;" data-block-id="6bfb85c3d2273b21c58880b2ba789f02"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 145%;"><pre><code>   
+
+  class Quinjet &lt; Thor
+    include Thor::Actions
+    desc "authenticate", "authenticates for quinjet access"
+    def authenticate
+      authenticated = false
+      run("say -v Moira Welcome. Authentication required.")
+      while !authenticated
+        username = ask "Welcome. Authentication required."
+        if username.upcase == "POINT BREAK"
+          authenticated = true
+          run("say -v Moira Welcome Point Break.")
+        else
+          run("say -v Moira Access Denied.")
+        end
+      end
+    end
+  end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 334px; height: 58px; left: 54px; top: 175px;" data-block-id="34ae68255c575fdd07c6901b4e1d6212"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 334 58"><defs><clipPath id="shape-mask-26-1529423772336"><rect width="334" height="58" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="334" height="58" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-26-1529423772336)"></rect></svg></div></div></section><section data-id="ba6af94febc513af18e52266385892b7"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="0f622ff9a3568923a6519ce1892331fa"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Actions</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 602px; left: 0px; top: 98px;" data-block-id="74e4f5d7184c433b5ef15f75b96c207e"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 145%;"><pre><code>   
+
+  class Quinjet &lt; Thor
+    include Thor::Actions
+    desc "authenticate", "authenticates for quinjet access"
+    def authenticate
+      authenticated = false
+      run("say -v Moira Welcome. Authentication required.")
+      while !authenticated
+        username = ask "Welcome. Authentication required."
+        if username.upcase == "POINT BREAK"
+          authenticated = true
+          run("say -v Moira Welcome Point Break.")
+        else
+          run("say -v Moira Access Denied.")
+        end
+      end
+    end
+  end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 334px; height: 58px; left: 54px; top: 175px;" data-block-id="55640f8c6f1c6b815264962003f1f087"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ffff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 334 58"><defs><clipPath id="shape-mask-27-1529423774610"><rect width="334" height="58" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="334" height="58" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffff00" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-27-1529423774610)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 780px; height: 51px; left: 80px; top: 292px;" data-block-id="740e2b95bf314b3a11496f566ef59089"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#00ff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 780 51"><defs><clipPath id="shape-mask-28-1529423774613"><rect width="780" height="51" fill="rgba(0, 0, 0, 0)" stroke="#00ff00" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="780" height="51" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#00ff00" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-28-1529423774613)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 603px; height: 51px; left: 128px; top: 433px;" data-block-id="7fb1ac0120702debb2aa81485c75fa90"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#00ff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 603 51"><defs><clipPath id="shape-mask-29-1529423774618"><rect width="603" height="51" fill="rgba(0, 0, 0, 0)" stroke="#00ff00" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="603" height="51" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#00ff00" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-29-1529423774618)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 512px; height: 51px; left: 128px; top: 490px;" data-block-id="ad95736b8313384574a6d3cfa2cfe115"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 16;" data-shape-stroke-color="#00ff00" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 512 51"><defs><clipPath id="shape-mask-30-1529423774622"><rect width="512" height="51" fill="rgba(0, 0, 0, 0)" stroke="#00ff00" stroke-width="10" rx="0" ry="0"></rect></clipPath></defs><rect width="512" height="51" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#00ff00" stroke-width="10" rx="0" ry="0" clip-path="url(#shape-mask-30-1529423774622)"></rect></svg></div></div></section><section data-id="8ed87231cfd56e222234adb2fc695137"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;" data-block-id="6facdbbabd8ac811ffb7a69752ec283c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Actions</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 98px; height: auto;" data-block-id="bec20892c48af247ef0a3e770c87a30e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%;">
+<ul>
+	<li>
+	<pre>:say</pre>
+	</li>
+	<li>
+	<pre>:ask</pre>
+	</li>
+	<li>
+	<pre>:yes?</pre>
+	</li>
+	<li>
+	<pre>:no?</pre>
+	</li>
+	<li>
+	<pre>:add_file, :remove_file, :copy_file</pre>
+	</li>
+	<li>
+	<pre>:template</pre>
+	</li>
+	<li>
+	<pre>:directory</pre>
+	</li>
+	<li>
+	<pre>:inside</pre>
+	</li>
+	<li>
+	<pre>:run</pre>
+	</li>
+	<li>
+	<pre>and more
+</pre>
+	</li>
+</ul>
+</div></div></section></section><section class="stack" data-id="9d588ab555c3760413ff4cb7e9eabc90"><section data-id="b1639fd8c4a88d4e0fe5dd86ce02de5c"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="5afb0be1f9a5225dea759f22b2f8db1a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Subcommands</h1>
+</div></div></section><section data-id="65184d8c7661ff8c12ce597e519a588a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;" data-block-id="400ff85d30bea6f88f2547085eded48d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Subcommands</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 602px; left: 0px; top: 97px;" data-block-id="761077c38f28dc6d14b8b19e1c9ad6a4"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 135%;"><pre><code> 
+  module GitCLI
+    class Remote &lt; Thor
+      desc "add &lt;name&gt; &lt;url&gt;", "Adds a remote"
+      def add(name, url)
+        # implement git remote add
+      end
+ 
+      desc "rename &lt;old&gt; &lt;new&gt;", "Rename the remote"
+      def rename(old, new)
+        # implement git remote rename
+      end
+    end
+ 
+    class Git &lt; Thor
+      desc "remote SUBCOMMAND ...ARGS", "manage set repositories"
+      subcommand "remote", Remote
+    end
+  end</code></pre></div></div>
+
+
+
+
+</section></section><section data-id="4d503809cba9181f04808147db4ecba5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="916d175a9b3f615362cf93eb9e0531b5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>System Wide</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 864px; height: 70px; left: 48px; top: 280px;" data-block-id="c46fc14842e089b1716b96738c59e2d6"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 300%;"><pre><code>  thor install [.THOR FILE]</code></pre></div></div></section><section data-id="f37d79d2af426f47001a2fe0a14f94da"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 112px; height: auto;" data-block-id="ca4e99db5ab3507cdbb4cd6aea4fc560"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1><a href="https://github.com/cartothemax/mac_setup_script/blob/master/setup.thor" target="_blank">Setup script example</a></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 103px; top: 350px; height: auto;" data-block-id="a006a5949a6182e338b2b7062d12aa42"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<h1><a href="https://github.com/cartothemax/thor-cli-examples/blob/master/tcgplayer.thor" target="_blank">Magic card searcher</a></h1>
+</div></div></section><section data-id="0e6e050c3c8e88488a0c88afc660a843"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="1ef0210e7ed55e33dcef990a218b3b9d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1><strong><em>Thank you!</em></strong></h1>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1275621,"slug":"deck-5","title":"Thor CLI","description":"a presentation for Iowa Ruby Brigade around the Thor CLI tool with an example of creating a Magic the Gathering search CLI tool","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2018-06-13T02:05:28.092Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/afbc3a84b29d91e83a7bcf7429a6dfa0/thumb.jpg?1529375021","view_count":1717,"user":{"id":629464,"username":"boots","name":"Andrew Schutt","description":"","thumbnail_url":"https://www.gravatar.com/avatar/a4a6ea9a7c0197d9d98b923685006ba7?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture-2.png","account_type":"lite","team_id":null,"settings":{"id":476856,"present_controls":false,"present_upsizing":true,"present_pointer":false,"present_notes":false,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"helvetica","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":54,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1788204050578,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":null,"language":"en","source_deck_id":null,"notes":{"4dd904b8fd360ee747d8543d7823925e":"Hello! I am Andrew Schutt a Software Developer with Hy-Vee. My day to day is working on various web applications that are used across different parts of the business units within Hy-Vee.\n\nI do this using Javascript for the most part along with some C#.\n\nWho let the JS guy in?\n\nI used to be a Ruby and Rails developer and I love Ruby. I am now actively trying to sneak into the door at Hy-Vee.\n\nThat is why we are talking about Thor today. I am spinning up to create some CLI tools that will leverage Ruby and Thor can be used to facilitate that. ","32886bcd5859e7d836dbb76637e0e4e1":"I will be making bad Thor references.  Sorry not sorry.\n\nThe history of Thor though did catch my eye. It was first created man","83d70971547ca4b866f3a9e33e7f136a":"Thor is a framework for helping build out command line applications. It was used for bundler, vagrant and rails.\n\nRead a good description of it being a system wide Rake\n\nBundler even leverages Thor as the framework for the tutorial of building a gem on it's site","04fe9147ba3ce9cf5b4fb1ee00bece78":"Create a file with a .thor extension or a file named Thorfile. \n\nAny standard ruby code can be used for building out the functionality within the files\n\nAfter we define our task we are able to execute it using the \"thor\" command when we run the thor command will automatically look for .thor files and load them\n\nThis is an example of instead of Hello World we have Hello Thor :D","6af55c49d29ddd9d39a3196819d841a7":"Now that we have our first task. Lets get it run.\n\nFirst we can confirm that the task is setup and found by Thor\n\n\"thor list\" will output all of the current tasks within the system.\n\nIf we save off that previous .thor file and run thor list we will see the following output","6928c2e916af05d28f5774ae314e0761":"Lets break this example a little bit.\n\nThe classname Hello for this example is used as the namespace for the task","899cfd3ad67a33bc22f24ffe8283b637":"The \"desc\" method is used to describe the task that we are creating. The first parameter here \"odinson\" is the name of the task (the method) and the second is the plain text description of what this task does\n\nThis is the documentation piece of Thor that helps you build out well documented and digestible command-line tools.\n\nSetting this description will pop up in a couple of different forms\n\nThis here is the \"short\" description and also has a long description as well","a2ced43a32062e8147c7ecfa538f2b14":"Finally we have the method itself. Thor will use the method name as the actual task name.\n\nAgain for this example \"odinson\" is the task name","5930c40155986477ea33587545f78eb5":"Here is what is displayed after running thor list\n\nI have highlighted how Thor translates all the pieces into the documentation.\n\nYou can see here those values that we enter within the class (Classname, task name, and description)","086d7cfe2b4a9c73fc2f55fd285475f3":"Thor allows you to specify options for its tasks.","b9ea73f4856ab13a4ad6fe5cb95473d9":"Here are the all of the available options that you can set. \n\nThese options are then made available Using our previous simple example I am going to run through some quick uses of these","a7b5d73edcb68389f8910dc05f96e65e":"Here is an example of options being used for a task\n\nWhat we created here is the \"verbose\" option for the odinson task","8ca3cd6f99420a0320594e9c5cd1ec04":"Inside the yellow boxes we have the additional code for making the option available and then also the use of the option within the task itself ","63734c69b597e661d288e1f850346498":"In addition to the list helper we also have help.\n\nUsing thor help you can also get more information on the task that you supply to the help command.","f26dd686688977405550ae14a5f81202":"This is what gets printed out when we use \"thor help\" for our basic Odinson task/command.\n\nDesc actually gets printed out along with the command.\n\nAgain the various pieces of the task get translated into the output. This example is like any Hello World example a bit contrived, but this simple example can easily be expanded greatly on. \n\nNot to mention as you add more pieces to your script additional documentation gets added\n\nI am going to expand on our example a bit now with task options","00611b10764b48269dfc1089606cc6bf":"Here is a quick example of what we get now within the thor help command for our command with the option. It will display the basic description that we give it along with the previous basic usage and task description","24cb2c452fad20e0398ef70998099da6":"Installs thor system wide and gives us access to the \"thor \" command to run our custom commands that we will be writing.\n\nAny of the examples that I show are .thor files as well","339a99cb7d63f6ff625426d5442b8e35":"gives a better description for how to use the method option\n\nI am going to print out the thor list to show where all of these are positioned and used \n\nYou can use banner to describe what the sort of input the method option is expecting","2eec64a8731810f17f419ff8f68385c1":"Very similar to default, but if the method option is not set then the value will be null","2a53f7466d94fbf64de3ddfb380fbb34":"Trying to run the task without the option will present the user with a message stating that no value provided for the option that is required","60f5d7fc33b2525eb1e3ffff6760801c":"Here you can enforce a type for setting of the option.\n\nIf the incorrect type is passed in for the option say a string for a numeric option the task will close gracefully and print out an error stating the wrong type was used vs what was expected","2ac2847d11d1c80bb1aca30f241e7530":"Sets up a list of valid options that can be used for the method_option\n\nIn this small example we are only allowing these three names to be set\n\nAgain we get a friendly message stating we expected the option passed in to equal one of the three from the enum method option","b8f2e04cb9163614da9f8b9f74ab8257":"What if we want to create a command line app that mirrors what the Quinjet computer is doing in this scene?\n\nThankfully Thor also comes with a class called Actions to help out with this ","96e8ae6951d03fb2a2c04d09f00d23ac":"Show running example of quinjet:authenticate task","8ed87231cfd56e222234adb2fc695137":"Here are all of the possible action commands\n\nMany of these may be familiar as they are frequently used with Rails\n\nWorth noting that the \"say\" command here is NOT the Terminal say command that you can use to talk to somebody","746501f814d2576c2cd4a14f569c7319":"Anybody here ever heard of Thor?\n\nhttps://rubygems.org/stats","b599d68601543f015fca9815b382239a":"Getting started!\n\nLets start from the beginning to work with Thor","358f9042ee6bda59e46178137297a514":"Of course we won't very often run static commands and will be taking in input. \n\nThor makes this pretty easy as the arguments are the arguments we define in the method ","63e217ca89cf71b87f89799ab91bb353":"You can specify an option that should exist for the entire class by using class_option. Class options take exactly the same parameters as options for individual commands, but apply across all commands for a class.\n\n\n","b15ef2562735da6f02afdd970ce0628c":"It would be silly to have to define the same option over and over again on every method. That’s why Thor provides a class option.\n\nClass options are defined with the class_option method. These options can be added anywhere in your class, but it’s probably best to concentrate them at the top.","65184d8c7661ff8c12ce597e519a588a":"This is was a hard example to keep to a single slide, but hopefully the idea comes across here\n\nUsing the separate Remote class we are able to create subcommands that are invoked by using \"git remote add/rename\"","b1639fd8c4a88d4e0fe5dd86ce02de5c":"As your CLI becomes more complex, you might want to be able to specify a command that points at its own set of subcommands.","0e6e050c3c8e88488a0c88afc660a843":"thanks that is a run down of thor\n\nI have a couple projects that I have been working on that make use of Thor you can check out on my github if you are interested\n\nnext steps for my learning are understanding how to create a executable for any operating system \n\nI also wanted to give a quick shout out to Colleen for encouraging me to give this talk and to Trent for giving me the idea to look into Thor","9a6a3ca05346647aa6dc2f1adf2d37f6":"So, why learn Thor?\n\nNot only is a widely used Ruby library that is good to at least have a basic understanding as a Ruby developer.\n\nThor is a great tool for creating command line applications quickly. It will help you create well documented and easy to use applications.\n\n","d1dda1ac3e11f4bde5ff38a43d5ec26c":"A piece of advice I had been given when I was a just a young CS student was to automate any problems that I have. \n\nEverytime I tried to do this starting out I would become overwhelmed by the learning curve of getting up and started.\n\nI attempted to write a couple ruby scripts to run locally, which, worked for the most part, but Thor gives a more seamless experience that gives me access to a tool that can be expanded in a work environment","d54916a7327fa53849c1bae94f33c381":"Here we are using the class option to define a yelling option that can be used in each of the tasks whisper and yelling.","4d503809cba9181f04808147db4ecba5":"Now that we have walked through the basics of how to create a some thor tasks you can also use the thor install command to install a task system wide!\n\n","bf34f99e1f6980ee61365b086253f949":"","78d5a29b04559ed78d5c749e93f41a0b":"","c18f8ba964e32e2bcc30fc3b04f71816":"","45ecbb63a0333b0b466124846c875d67":"","f2fdfe5a66573a35a82df00707cc1e9f":"","2cb14f03604a55221ba33610f28fc686":"","ba6af94febc513af18e52266385892b7":"","f37d79d2af426f47001a2fe0a14f94da":""}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				scrollActivationWidth: null,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+
+	</body>
+</html>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, minimal-ui">
+		<meta charset="utf-8">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="manifest" href='data:application/manifest+json,{"display": "standalone", "name": "Elixir Talk for Iowa Ruby Brigade"}' />
+		<title>Elixir Talk for Iowa Ruby Brigade</title>
+
+		<meta name="description" content="a presentation for Iowa Ruby Brigade presenting on the Elixir programming language">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-helvetica theme-color-blue-yellow">
+		<div class="reveal">
+			<div class="slides">
+				<section class="stack" data-id="86d9a4323c5eec041dba95fb15d95219"><section data-id="e40c5d6ec01c5dbc6b511fa8d3d7e122"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 210px; height: auto;" data-block-id="2d8bbef717a094c525e9d71930b77282"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h4><span style="font-size:2.0em">Elixir Programming Language</span></h4>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="17fedb14d13a2a628fe8b8ec4494567a" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 381px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<p>Andrew Schutt</p>
+<p>@schuttandrew<br></p>
+</div></div></section><section data-id="af318501fdd59d7b2bfb0a079623c9e0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 276px; height: auto;" data-block-id="c1c266f16a4fa38babaeab25f6e2fecd"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Who am I?</h2>
+</div></div></section></section><section class="stack" data-id="9b5345efa682156d69f4026f0e7b7dc2"><section data-id="0dd3fddfaacd0d38bae816da4d9c4143"><div class="sl-block" data-block-type="text" style="width: 800px; left: 95px; top: 280px; height: auto;" data-block-id="3d6cb828b3cda4be1578040075ada642"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h4><span style="font-size:2.0em">Why learn Elixir?</span></h4>
+</div></div></section><section data-id="774252892341c2e869cd9316f2ce9d80"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 451px; height: auto;" data-block-id="af05761904a2bfe0f0363e9b5e85f37f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h4><s><span style="font-size:2.0em">Why learn Elixir?</span></s></h4>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 95px; top: 272px; height: auto;" data-block-id="921070480aef099fa3206bf01665a469"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<h4><span style="font-size:2.0em">Why learn any language?</span></h4>
+</div></div></section><section data-id="5c664b9ab0b27347a9248b90f2e241ca">
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 229px; height: auto;" data-block-id="9e9fc80b81df8a11859451d678e768b9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 150%;">
+<ul>
+	<li>Languages don't use a single paradigm</li>
+	<li>Different languages solve the same problems in different ways</li>
+	<li>New opportunities</li>
+</ul>
+</div></div></section></section><section class="stack" data-id="1e5fbda1f824691cc0be9409d651a9ea"><section data-id="78c9ff2bb28fe61d8124d258fc964742"><div class="sl-block" data-block-type="text" style="width: 827px; left: 80px; top: 227px; height: auto;" data-block-id="cfe1b2971afd811a6cf1b4fe14a81d91"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Theme from previous languages</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 301px; height: auto;" data-block-id="6477928b08e40eca000fef9729ec8b0b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 150%;">
+<ul>
+	<li>All Object Oriented</li>
+	<li>All Imperative languages</li>
+</ul>
+</div></div></section><section data-id="9202b08a5e63d24bc82240b44c178f72"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="b1d0c6fa2de2c049b53503cea56cb1ab"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Why did I learn Elixir?</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 264px; height: auto;" data-block-id="7471397a06518c2ffe2ccad6f54d03c8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 150%;">
+<ul>
+	<li>Functional Programming</li>
+	<li>Similarity to Ruby</li>
+	<li>Phoenix web framework</li>
+	<li>Built on Erlang VM</li>
+</ul>
+</div></div></section></section><section class="stack" data-id="a7627a694ce2893071a5c09deac70681"><section data-id="95be9bb8c507ae924b3a3b59f4dc5a17"><div class="sl-block" data-block-type="text" style="width: 410px; left: 49px; top: 106px; height: auto;" data-block-id="97db1c47ef41f4c41ed96ba26821218d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Imperative</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 49px; top: 200px; height: auto;" data-block-id="ede38f619ba48ec7595b8091c8e6c1db"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 11; font-size: 120%;">
+<blockquote>
+<p>a programming paradigm that uses statements that change a program's state.</p>
+</blockquote>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 499px; top: 107px; height: auto;" data-block-id="b6da65a6f4eef1ef1fe094ad221fc31d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 12;">
+<h2>Declarative</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 499px; top: 200px; height: auto;" data-block-id="ff306074dca773a03f1304ec7ebd784a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 13; font-size: 120%;">
+<blockquote>
+<p>describing <em>what</em> the program must accomplish in terms of the problem domain, rather than describe <em>how</em> to accomplish it</p>
+</blockquote>
+</div></div></section><section data-id="5e8a34811dcf7d993c0c4046df228406"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="eae4596334ee6e11b6ebb8577d81dae6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Functional Programming</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 430px;" data-block-id="a7804de494148769c403cac01c30c580"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<blockquote>
+<p><span style="font-size:1.6em">programming paradigm treats computation as the evaluation of functions</span></p>
+</blockquote>
+</div></div></section><section data-id="7375d9145028e5f2117116077ffe92cf"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="f09d277f2b7eecb1740baefc89de0ad1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Immutable Values</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 264px; height: auto;" data-block-id="7a87a1f2ffa31dcf412b615904416f24"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 150%;">
+<ul>
+	<li>Variables are immutable</li>
+</ul>
+</div></div></section><section data-id="3eb6d0f28125e5676d36b515ed05932c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="3d1bc9ad458b03f687ddbb8584241392"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>First Class Functions</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 144px; top: 280px;" data-block-id="3c073a3853dd51fb3fc2885a8bf8206c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 150%;">
+<ul>
+	<li>Functions can be...
+	<ul>
+		<li>variables</li>
+		<li>arguments</li>
+		<li>return values</li>
+		<li>anonymous</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="8cb362d1818755c8826a8a488e46808b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="928b490f0cdbca7e80ed2894cbf4ec41"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Pure Functions</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 280px;" data-block-id="789686a451640f5e3f822e6bc2b76704"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 150%;">
+<ul>
+	<li>same input = same output</li>
+</ul>
+</div></div></section><section data-id="e2078841544ea531a092624ace55b957"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="331bcf3a6e7d5d14cde9a53fc88d25a0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Recursion</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 240px; top: 280px;" data-block-id="997755509ba3d4ae7a16b4906c03d2da"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 150%;">
+<ul>
+	<li>Recursion
+	<ul>
+		<li>Recursion
+		<ul>
+			<li>Recursion
+			<ul>
+				<li>Recursion
+				<ul>
+					<li>Recursion!</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section></section><section class="stack" data-id="a5908dbffd0a728ff466fca96cec71ad"><section data-id="ce8c706f3d2db5ff9bf2e05a51632495"><div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 87px; height: auto;" data-block-id="8f64bf4c8756f4338f1f2d54bd7d3f55"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Elixir</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 457px; left: 23px; top: 181px; height: auto;" data-block-id="dae4493cd54d8d364ccdcc688251c8a0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li>Erlang</li>
+	<li>History</li>
+	<li>Tooling (Mix, IEX, ExDoc, Pry)</li>
+	<li>Syntax</li>
+	<li>Types</li>
+	<li>Data Structures</li>
+	<li>Pattern Matching</li>
+	<li>First Class Functions</li>
+	<li>Guard Clauses</li>
+	<li>Control Flow</li>
+	<li>Pipe Operator</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 454px; height: 454px; left: 506px; top: 124px; min-width: 4px; min-height: 4px;" data-block-id="5863b8585b1f1cffc353353bbeef21aa"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="400" data-natural-height="400" data-lazy-loaded="" data-src="deck/28468f92f9a0f9c416cf2175e8cccaf8.png"></div></div></section><section data-id="3f55acd6d895571d5870dd02dc27c674"><div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 87px; height: auto;" data-block-id="6ea8e151625f459824389d8ea093526c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Erlang</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 457px; left: 22px; top: 181px; height: auto;" data-block-id="22ff87fa1e2a53aa51404728924cd579"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;" dir="ui">
+<ul>
+	<li>Proven</li>
+	<li>Fault Tolerant</li>
+	<li>Hot Swap</li>
+	<li>OTP</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 454px; height: 454px; left: 480px; top: 124px; min-width: 4px; min-height: 4px;" data-block-id="af6159bae9f7c0c694e26a2d3e996389"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1350" data-natural-height="1350" data-lazy-loaded="" data-src="deck/cd6ac7b41965f4336359a82bb1fa4fe7.jpeg"></div></div></section><section data-id="5bbea1507469a1d9d944f6761d768418"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="4781da793597294a9a51df9a6e2c8cbf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>History</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 265px; height: auto;" data-block-id="1eca8961f7c7e43815291f70fcab85ae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>created 2011</li>
+	<li>Josè Valim creator</li>
+</ul>
+</div></div></section><section data-id="ca51670d31952a4e9f68478c314e1c56"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="9fde3829530f200a5510a589b642bb32"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Tools</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 264px; height: auto;" data-block-id="df7c62e54ca9627461d5b112f04c0e28"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>IEX
+	<ul>
+		<li>h method</li>
+	</ul>
+	</li>
+	<li>ExUnit
+	<ul>
+		<li>DocTest</li>
+	</ul>
+	</li>
+	<li>Mix</li>
+</ul>
+</div></div></section><section data-id="a850c412978deb62d1114d9958c7cbbe"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="8214460530314884ed116cbb928f40eb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Syntax</h1>
+</div></div></section><section data-id="d3d70d29f7f7d8150ccacacfdaa381a7"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="02073477dca0b92ea3005de2b8bacf29"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Types</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 142px; height: auto;" data-block-id="a5f4f3edb76377eea14f72347345fa8c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Integer</li>
+	<li>Float</li>
+	<li>String</li>
+	<li>Bitstring</li>
+	<li>Boolean</li>
+	<li>Atom</li>
+	<li>Tuple</li>
+	<li>List</li>
+	<li>PID</li>
+</ul>
+</div></div></section><section data-id="7a0c93f5b7abbc414ac9f345c10cf92e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="cedfcfd2be0225e2d67b271700b3ac06"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>BitString and String</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 730px; height: 467px; left: 96px; top: 140px;" data-block-id="97f4b7cdf32441d668b26aa8732a27c4"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre class="stylus"><code>
+    'string?' == "string?"
+      false
+
+    is_list 'string?
+      true
+
+    String.valid?("string?")
+      true</code></pre></div></div></section><section data-id="57507caecbd565ddabeb3a5c68883cdf"><div class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 21px; height: auto;" data-block-id="bfdafdedcac24dcd6fc394c1f93077e4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Atom</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 495px; height: 286px; left: 233px; top: 137px;" data-block-id="c157f38b55a04d9d82f106d70ddca6f1"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 225%;"><pre class="stylus"><code>
+    :atom
+
+    :true == true
+      true</code></pre></div></div></section><section data-id="7abbd4b3db7afffd2df884848b7bbf96"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="302a8566edfdd1d625f07cd6ca708ad0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Tuple</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 950px; height: 260px; left: 5px; top: 140px;" data-block-id="4e75650a9926b2b19b3601c52cb856ee"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre class="stylus"><code>
+    {1, 2, 3, 4}
+
+    {1, 2.0, :atom, {"a", "tuple"}, "cool"}</code></pre></div></div></section><section data-id="64e566102641bd8d7645618225055f8e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="d2b004385dc784dc456e8d16fd69f347"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>List</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 343px; left: 0px; top: 131px;" data-block-id="6d1c6d71d9baaef21535e6524fb29d5c"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre class="stylus"><code>
+ [1, 2, 3, 4]
+
+ [1, 2.0, :atom, {"a", "tuple"}, ["a", ['list']]</code></pre></div></div></section><section data-id="a8f116259e6d50ab7a9c73e63dced608"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="ad982b9778bb39176e8ba86d26c0a711"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>List</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 811px; height: 569px; left: 75px; top: 119px;" data-block-id="83d25d1fd25d5d49b9ff214a81004aae"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 220%;"><pre class="stylus"><code>
+    list = [1, 2, 3, 4]
+
+    [ head | tail ] = list
+
+    head
+      1
+    tail
+      [2, 3, 4]
+
+    new_list = ["new head" | list ]
+      ["new head", 1, 2, 3, 4]</code></pre></div></div></section><section data-id="d5381a440286de190ba568beae426eaa"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="c25b01752cfdeb251d36b7cc99b87807"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>List</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 872px; height: 578px; left: 44px; top: 113px;" data-block-id="9659a6254188ea25a2e032e1f855c985"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 225%;"><pre class="stylus"><code>
+    list = [1, 2, 3, 4, 5, 6]
+
+    [ 1, 2, third | rest ] = list
+
+    third
+      3
+    rest
+      [4, 5, 6]
+
+    [ 2, 3, third | rest ] = list
+    MatchError!</code></pre></div></div></section><section data-id="862240543d7f9cb3e5a8fd1249ab54f5"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="839dbbc6bfd069a98eb098aa11dd27cb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Keyword List</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 889px; height: 435px; left: 36px; top: 133px;" data-block-id="07ad455e9b77cf73bc8bb0b31f883139"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 225%;"><pre class="stylus"><code>
+    keyword_list = [key: "value"]
+
+    keyword_list[:key]
+      "value"</code></pre></div></div></section><section data-id="1a11f8eb94ba985a8f0f165e1fffb58d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 93px; top: 21px; height: auto;" data-block-id="29f8a457746782474324f6eb57f14dee"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Keyword List</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 865px; height: 239px; left: 48px; top: 140px;" data-block-id="3de18fbc7dc98e6a05dbb45d339b0a84"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre class="stylus"><code>    
+    [{:key, "value"}] == [key: "value"]
+      true</code></pre></div></div></section><section data-id="ffd4369ded663824dc0d100f09d87d30"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="0ce59af57de1b9e71c6d4cf92fd64ca9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>Enum</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 897px; height: 401px; left: 32px; top: 140px;" data-block-id="34f6c7017c87d39755c3b1b1e0085a40"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 225%;"><pre class="stylus"><code>
+    list = [1, 2, 3]
+
+    Enum.map(list, fn(x) -&gt; x * 2 end)
+      [2, 4, 6]
+
+    Enum.map(list, &amp;(&amp;1 * 2))</code></pre></div></div></section><section data-id="3b97770325cf3c224cd971f9d2e6e3fd"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="8ba53e9f5e0f4067adcd39d8ddf024ff"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>Binding</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 740px; height: 584px; left: 110px; top: 108px;" data-block-id="af34f14de15110d4d1564be2fd0c7977"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 225%;"><pre class="stylus"><code>
+    a = 1
+
+    b = 2
+
+    a = 3
+
+    ^a = 1
+      false
+    ^a = 3
+      true
+    a
+      3</code></pre></div></div></section><section data-id="34282f0085db78090e4a5c3ea222ec9a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="96f20c59ace4670abcaa5de7fc9a0b41"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>Binding</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 929px; height: 576px; left: 14px; top: 104px;" data-block-id="3665052400639b962b645ea17df6989c"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 170%;"><pre class="stylus"><code>
+    value = 100
+
+    old_val = fn -&gt; IO.puts "value was #{value}" end
+      #Function
+    old_val.()
+      value was 100
+    value = 1234
+
+    value
+      1234
+    old_val.()
+      value was 100
+
+    
+    </code></pre></div></div></section><section data-id="b057770512d746c81254a63deb691f52"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 22px; height: auto;" data-block-id="eaf722c93bdacafe3d78c723c2e3e85c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>Dot Notation</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 935px; height: 561px; left: 10px; top: 119px;" data-block-id="9d213a988af0bb5d481278b0698444cb"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 170%;"><pre class="stylus"><code>
+    value = 100
+
+    old_val = fn -&gt; IO.puts "value was #{value}" end
+      #Function
+    old_val.()
+      value was 100
+    value = 1234
+
+    value
+      1234
+    old_val.()
+      value was 100
+
+    
+    </code></pre></div></div></section><section data-id="23922494b832220dace709cdee3dabf8"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="c832ee76b884b02b7a5c0ed4c64dc1a0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>Pattern Matching</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 921px; height: 522px; left: 13px; top: 140px;" data-block-id="c02508f72026f1cb73313f9d15b0a315"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre class="stylus"><code>
+    a = 1
+
+    [_, 2, 3] = [1, 2, 3]
+
+    [_, 2, 3] = [{:value}, 2, 3]
+
+    [_first, _second, third] = [1, 2, 3]
+      _first
+
+    [1, 2, 3] = [2, 3, 4]
+      MatchError!
+</code></pre></div></div></section><section data-id="f2e699b0e933d14e8f6aa2089923f794"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="e249ac75030a61de3773f2b991dcaae5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>First Class Functions</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 856px; height: 458px; left: 52px; top: 130px;" data-block-id="57e8c60cc3ce69f90b58d48944e88954"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 180%;"><pre class="stylus"><code>
+    add = fn n1, n2 -&gt; n1 + n2 end
+
+    subtract = fn n1, n2 -&gt; n1 - n2 end
+
+    perform_calc = fn n1, n2, func -&gt;
+                     func.(n1, n2)
+                   end
+
+    perform_calc.(5, 6, add)
+      11</code></pre></div></div></section><section data-id="b6053194ceb7fa920b7be94a605d1d8b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="9df8035a9851e6fc5714b56c24f7fd0c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>Control Flow</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 740px; height: 580px; left: 110px; top: 104px;" data-block-id="4799e1ae1c7a8bc676e9391bd50fa9fa"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre class="stylus"><code>
+    if true do
+      "it's true!"
+    end
+
+    if done do
+      "all done!"
+    else
+      "still doing something"
+    end
+
+    unless orange do
+      "not orange"
+    end</code></pre></div></div></section><section data-id="60ed2e2199411aeb7c6d25560215c8f9"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="9a15404d625d694e3afb8e1f9ce9d65b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>Control Flow</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 843px; height: 445px; left: 59px; top: 128px;" data-block-id="777e22837e1a5ede153a3cdf6b4f1005"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre class="stylus"><code>    
+    temp = 30
+
+    cond do
+      temp &gt;= 212 -&gt; "Boiling"
+      temp &lt;= 32 -&gt; "Freezing"
+      temp &lt;= -459.67 -&gt; "Absolute Zero"
+    end</code></pre></div></div></section><section data-id="c5f59dc12e7b882546cf5f775abe8ef9"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="243086a1b45ee51e220cd9095ac16979"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>Case Statements</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 867px; height: 568px; left: 47px; top: 119px;" data-block-id="9cfa7aa202bbd990b196b940fdc245b4"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre class="stylus"><code>
+    calculate = fn expression -&gt;
+      case expression do
+        {:+, num1, num2} -&gt; num1 + num2
+        {:-, num1, num2} -&gt; num1 - num2
+        {:*, num1, 0} -&gt; 0 #short circuit
+        {:*, num1, num2} -&gt; num1 * num2
+        {:/, num1, num2} -&gt; num1 / num2
+      end
+    end
+
+    calculate.({:+, 1, 2})
+      3</code></pre></div></div></section><section data-id="56e1274e3064c4745a27b9e648f2b9dd"><div class="sl-block" data-block-type="text" style="width: 800px; left: 86px; top: 21px; height: auto;" data-block-id="de1d9ca34e3c02416d8f2e7f9d71e25b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>Guard Clauses</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 500px; left: 0px; top: 140px;" data-block-id="7cf059b6ae83bd8fbac5e6712dfa87e2"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 170%;"><pre class="stylus"><code>
+    {:/, num1, num2} when num2 != 0 -&gt; num1 / num2
+
+    grade = "A"
+    good_job = fn(grade) when grade in ["A"] do
+      IO.puts "good job"
+    end
+
+    good_job.(grade)
+      "good job"</code></pre></div></div></section><section data-id="69f2cdf206960765a6bd1def67970fc8"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="db3733d90eaa449cfb722b81cb0bb869"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>Pipe Operator</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 859px; height: 531px; left: 51px; top: 140px;" data-block-id="57b58217e32b8390777d998c8208f35a"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 200%;"><pre class="stylus"><code>
+    IO.puts "hello"
+      "hello"
+
+    "hello" |&gt; IO.puts
+      "hello"
+
+    Enum.map([1, 2, 3], fn i -&gt; i * 2)
+      [2, 4, 6]
+
+    [1, 2, 3] |&gt; Enum.map(fn i -&gt; * 2)
+      [2, 4, 6]</code></pre></div></div></section><section data-id="733a50cb7ae00e2f3c6a514dca14d9fd"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="3a55bbfc47d8e7372f8aebf94be9443a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>find user by token</li>
+	<li>fetch user messages</li>
+	<li>convert response to JSON</li>
+	<li>save messages</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="dc0e3c10b0bb0bb14ff4cbff7b79660f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h1>Pipe Operator</h1>
+</div></div></section><section data-id="dfac25bcc020616f0449c25b2cafef50"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 119px; height: auto;" data-block-id="d6385cfeefd09cf0fc719b736c4fb57a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>find user by token</li>
+	<li>fetch user messages</li>
+	<li>convert response to JSON</li>
+	<li>save messages</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 936px; height: 330px; left: 14px; top: 280px;" data-block-id="06475b866bb88bfc5331428fb90d0881"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 170%;"><pre class="stylus"><code>
+    def import_messages
+      Enum.each(
+        parse_json_to_message_list(
+          fetch(find_user_by_token(token), "messages/")
+        ), &amp;save_message(&amp;1)
+    end</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="6cdeaca0a7d2e2b39aa73bad5429848e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;" dir="ui">
+<h1>Pipe Operator</h1>
+</div></div></section><section data-id="5d48405fbd874c9b8faffc5d4909c4e1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 109px; height: auto;" data-block-id="309b89cc0acdaf959a6f0e7ea88e2eef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>find user by token</li>
+	<li>fetch user messages</li>
+	<li>convert response to JSON</li>
+	<li>save messages</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 810px; height: 389px; left: 80px; top: 265px;" data-block-id="b45096e9e406310555cb107551bcac9c"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 200%;"><pre class="stylus"><code>
+    def import_messages
+      token
+      |&gt; find_user_by_token
+      |&gt; fetch("messages/")
+      |&gt; parse_json_to_message_list
+      |&gt; Enum.each(&amp;save_message(&amp;1)
+    end</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;" data-block-id="92f2b828a744df4e2bbbcab3894c838f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;" dir="ui">
+<h1>Pipe Operator</h1>
+</div></div></section><section data-id="9ae4b749e603a3b0f39673159decc9e7"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 0px; height: auto;" data-block-id="9c558ccf13a3b35cafbd13ff7b8dd89f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>Module</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 611px; left: 0px; top: 77px;" data-block-id="45534e7297d6baa58e39ef327da578bc"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 170%;"><pre class="stylus"><code>    
+    defmodule CoffeeCup do
+
+      def start_drinking(oz) when oz &gt; 0 and oz &lt; 20 do
+        IO.puts "Cup is full with #{oz} oz"
+        drink_up(oz)
+      end
+
+      defp drink_up(0), do: get_more
+      defp drink_up(oz_left) do
+        IO.puts oz_left
+        drink_up(oz_left - 1)
+      end
+
+      def get_more do
+        IO.puts "Get more coffee!"
+      end
+    end</code></pre></div></div></section></section><section class="stack" data-id="5e3820ec023f89fc40a43529fd46deca"><section data-id="8a4be03c1544f7864981ba5515c47366"><div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 87px; height: auto;" data-block-id="6a825142cb01fe84f5343988d5719a2d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Phoenix</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 457px; left: 23px; top: 181px; height: auto;" data-block-id="b067d8650bae2191f1bcdeacbd0ec7ce"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li>MVC</li>
+	<li>Similar Project Structure</li>
+	<li>Scaffolding</li>
+	<li>Channels</li>
+	<li>Performance</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 454px; height: 454px; left: 480px; top: 123px; min-width: 4px; min-height: 4px;" data-block-id="0a081b0989182b552a108958407ad943"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1350" data-natural-height="1350" data-lazy-loaded="" data-src="deck/6cbbde6c1d4afec10ae1781b5d75e76a.png"></div></div></section><section data-id="1144ccb01a9d561e034841c138cb3851"><div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 87px; height: auto;" data-block-id="e9084780daa971ee8ebe2df9f1264989"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;" dir="ui">
+<h2>Phoenix New</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 161px; height: auto;" data-block-id="150722f8777f3618e11c0adb454668db"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
+<p>Very simple to get a new Phoenix project up and going similar to Rails</p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p>Running the above commands generates a simple Twitter clone. </p>
+
+<p> </p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 960px; height: 146px; left: 0px; top: 280px;" data-block-id="0a6d1cf8c3646af4209777ba191ecda0"><div class="sl-block-content notranslate" style="z-index: 14; font-size: 145%;"><pre><code>mix phoenix.new example_app
+mix ecto.create
+mix phoenix.gen.html Comment comments body:string username:string
+mix ecto.migrate</code></pre></div></div></section><section data-id="6bec8c6675afde617cacae6d3b1504ef"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="b6838503c1ad460376411944960c3b1d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Channels</h1>
+</div></div></section><section data-id="a06a4c546dfce5ebebcebe30966ae2d7"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="f260d0d00fcf9058b061634a2e8f148e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Performance</h1>
+</div></div></section><section data-id="c55d002d96f400e367e87395db08b9a4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="c1ff2df99b70a3ed5f25b1bfdaca4568"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Switch Now!</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 360px;" data-block-id="94ce44c5bea34d24955f1453df54a6fb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="https://www.thoughtworks.com/radar/languages-and-frameworks" target="_blank">https://www.thoughtworks.com/radar/languages-and-frameworks</a></p>
+</div></div></section><section data-id="637ca3441de9bf58539c6ce88f79cabd"><div class="sl-block" data-block-type="text" style="width: 900px; left: 30px; top: 58px; height: auto;" data-block-id="3cb283b3748ef22fa5b86238c7bc83ec"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
+<h1>DO NOT<br>
+ACTUALLY<br>
+SWITCH</h1>
+</div></div></section></section><section data-id="a39839985b4eed0e15d33b1aa65a85d6"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="f4752fbb9f76984478bdb8cc140da980"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>In Conclusion...</h1>
+</div></div></section><section data-id="d6cb3711896348f37f337fa770f3447c"><div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 33px; height: auto;" data-block-id="ec6b4789820761c4be12bb04d1415442"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Resources:</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 110px; height: auto;" data-block-id="64f8866b24a69a992b5928e4f3b7dd9a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li>Programming Elixir
+	<ul>
+		<li>Dave Thomas</li>
+	</ul>
+	</li>
+	<li>Elixir in Action
+	<ul>
+		<li>Saša Jurić</li>
+	</ul>
+	</li>
+	<li>Elixir Sips (videocasts)
+	<ul>
+		<li>Josh Adams</li>
+	</ul>
+	</li>
+	<li>elixir-lang.org</li>
+	<li>phoenixframework.org</li>
+	<li>Elixir Fountain (podcast)
+	<ul>
+		<li>Johnny Winn</li>
+	</ul>
+	</li>
+	<li>Quick References</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 553px; height: 632px; left: 400px; top: 27px; min-width: 4px; min-height: 4px;" data-block-id="2c921bc03f993d4d5f426aaa2bea42d3"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="700" data-natural-height="800" data-lazy-loaded="" data-src="deck/8c4e9c795b207562e38a18eda51dde20.png"></div></div></section><section data-id="a26247457f112f47bfb8a684435fc1ee"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="986b530dc5f91cae6b1e0bba64454ab7"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Thank you!</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 179px; top: 140px;" data-block-id="d99a21b1eed9d25709eac0b0c1bbc092"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>@schuttandrew</p>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":880353,"slug":"deck","title":"Elixir Talk for Iowa Ruby Brigade","description":"a presentation for Iowa Ruby Brigade presenting on the Elixir programming language","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2016-12-19T03:29:06.919Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/8a1fad4c2a3f8f61f86dd46d8f85b534/thumb.jpg","view_count":1290,"user":{"id":629464,"username":"boots","name":"Andrew Schutt","description":"","thumbnail_url":"https://www.gravatar.com/avatar/a4a6ea9a7c0197d9d98b923685006ba7?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture-2.png","account_type":"lite","team_id":null,"settings":{"id":476856,"present_controls":false,"present_upsizing":true,"present_pointer":false,"present_notes":false,"default_deck_tag_id":null}},"background_transition":"slide","transition":"fade","theme_id":null,"theme_font":"helvetica","theme_color":"blue-yellow","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":true,"slide_number":false,"slide_count":57,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1573015331245,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":null,"language":"en","source_deck_id":null,"notes":{"af318501fdd59d7b2bfb0a079623c9e0":"Who is Andrew Schutt?\n\nI work here at Shift Interactive\n    - 2 years as a Rails Developer\nHave worked for 2.5 years with Ruby\n\n\nAlong with Ruby I have used...\n    - Python\n    - Java\n    - ADA\n    - VB.NET\n    - Javascript\n\nWhy I am I telling you my resume?\n    - Helps give some context around my decision to spend time learning Elixir.\n\n","78c9ff2bb28fe61d8124d258fc964742":"Themes of Previous Languages\n\nA couple common themes rise up between all of the languages that I have worked with. \n\nAll OOP: The main paradigm of each of the languages I spoke of have OOP at the core of them.  Python, Ruby, and (of course) Java in particular.\n\nImperative languages vs declarative languages.  We will talk briefly more on the difference in a minute.\n\nBig asterisk is Javascript from my history.\n    - I haven't done a lot of serious JS\n    - Most of the JS I learned and have done was OO as well.","0dd3fddfaacd0d38bae816da4d9c4143":"Why learn Elixir?\n\nBUT this is not really the right question...","774252892341c2e869cd9316f2ce9d80":"Why Learn any language?\n\nWhy learn a language outside of the current language that you work with everyday.\n\nArguments against learning a new language:\n\n========================================\n\nYou are productive with what you know.  Why learn something you won't be paid for?   If you are not doing a deep dive and learn the nooks and crannies of that languages tools, frameworks, libraries, etc.  It's a waste of time.\n","95be9bb8c507ae924b3a3b59f4dc5a17":"DISCLAIMER: I don't want to get too bogged down in the EXACT differences between these two.  Many languages fall into both, but will lend themselves towards one over the other.  I don't want to get caught up giving a CS lecture either, but it is important to have a defination in your mind of each.\n\nASK Audience: Anyone know the difference at all?  Imperative vs Declarative?\n\nImperative: (read definition) explicit steps for the program to perform. Think of it as recipes.  Follow these exact steps and this is what you get.  Tightly aligned with OO.\n\nDeclarative: (read definition) often defined as any style of programming that is not imperative.  Describes what you want.  Functional Programming falls into this camp.\n\nExample: Sandwich example PB \u0026 J recipe vs Generic Sandwich Recipe.  NOT SURE ON THIS\n\nMUCH MORE HERE.  This is only a simple intro to the two.  Both topics are very old (for computer science)","5c664b9ab0b27347a9248b90f2e241ca":"Response to why learn a new language at all\n\n---------------------------------------------------------------------------\nMy re-butt-al: \n\nLanguages I spoke about use MANY other paradigms.  For example Ruby has functional aspects (anybody used .each before?).  Javascript can look OO Programming or Functional programming easily.\n\nExploring these different paradigms that make up languages helps you understand your primary language better.\n\nJust learning to THINK a different way is very beneficial.\n\n==========================================\n\nExposure to different languages (\"tools\") means you might discover the perfect language (\"tool\") to solve a problem.\n\n========================================\n\nNew opportunities.  Many Ruby and Rails shops are adding Elixir and Phoenix to their portfolio.  Might be reason enough to learn Elixir. \n\n==========================================\n\nYou don't even need to learn Elixir.  Biggest take away from today is go and explore other languages (expand your horizons) that grab your attention or go back and relearn something old.  What is old is new again.  \n\nYou know Javascript?  Javascript in a pure FP way?  Why not learn Elm?\nYou love OOP?  Why not learn Smalltalk?\nYou write SQL all day long?  Why not look into MongoDB or Cassondra?\nDon't limit yourself to programming languages!","9202b08a5e63d24bc82240b44c178f72":"Why did I learn Elixir?\n\nI wanted to improve my Functional Programming.  It's something I use everyday, but hardly understand.  Furthering my understanding of functional programming will help me in my Ruby programming.\n\n==========================================\n\nElixir is similar ENOUGH to Ruby that picking up the syntax should be easier.  Elixir is advertised as a easy syntax for Ruby developers to learn.\n\n==========================================\n\nHas a web framework in Phoenix.  Compared to Go or Rust for example. \n\nThis was important for me since I DO web development.\n\nWill talk more about Phoenix.\n\n==========================================\n\nShow of hands: Poll regarding having heard of Elixir then Erlang.\n\nBuild on top of Erlang VM called The BEAM.  No conversion cost.  Compiled to Erlang byte code.  ","8a4be03c1544f7864981ba5515c47366":"MVC serverside web framework.   Great for creating APIs though.  What Rails is for Ruby is what Phoenix is for Elixir.  Phoenix is responsible for driving much of the adaption of Elixir. \n\nCreated by Chris McCord a long time Rails and Ruby developer.  His Ruby and Rails background heavily influenced the Phoenix web framework.  He created Phoenix out of frustration of lack of concurrency within Rails and a lack of realtime support.\n\nHas the same \"feel\" as other frameworks in the market (Rails and Django)\n\nAlso makes use of scaffolding mix phoenix.gen.html = rails generate x\n\nChannels: Great support for creating realtime web applications.  Phoenix was actually born out of the need to create a great realtime experience.\n\nGreat performance super fast.\nhttps://github.com/chrismccord/phoenix_vs_rails_showdown","3f55acd6d895571d5870dd02dc27c674":"Erlang\n============================================\n\n- Created in 1986\n    - Windows 1.0 came out in 1985\n    - \n- Developed by Ericsson company for telecom technologies.  Currently handles 50% of all telecom traffic.  Had the requirements of being distributed,  highly concurrent, and fault tolerant.\n\n- Mythic: But the language strives for 99.9999999% uptime.  \"Nine nines\"\n\n- WhatsApp uses Erlang (now Facebook for chat) gets 2 million connections per server.  When bought out had 400 million users supported by 30 engineers.\n\n- Self healing.  Fault tolerant for Erlang doesn't mean stable.  Erlang was designed to have a means of recovering from error states.\n\n- Code deploys are hot swappable.  No down time during a deploy\n\n- OTP: Open Telecom Protocol\n    - design principles, libraries, and middleware used to create highly fault tolerant systems\n    - falls under the umbrella of Erlang and is maintained along side of the language itself","5e8a34811dcf7d993c0c4046df228406":"Is a programming paradigm treats computation as the evaluation of functions.  Avoids changing state and mutable data.\n\nHistory stems from lambada calculus.  Much of the functional programming done is used in academia and only recently starting gaining more \"real life\" use across industry.","2184ac8271ca3d85061c9b047ab2285e":"Talk quickly about the Nerves Project that is meant to bring Elixir to embedded systems and internet of things.  \n\nHas all of the Elixir tooling come with it (Mix etc.)\n\nHas an incredibly small footprint (12 MB)","d6cb3711896348f37f337fa770f3447c":"These were my primary resources for learning Elixir.  My style of learning is to read a hard copy of a book and really do a deep dive.  I like to understand things fully.  \n\nhttps://pragprog.com/book/elixir/programming-elixir\n\nhttps://www.manning.com/books/elixir-in-action\n\nhttp://elixirsips.com/\n\nhttp://www.elixir-lang.org\n\nhttp://www.phoenixframework.org\n\nhttp://www.elixirfountain.com/\n\nhttps://www.dropbox.com/s/lr1t87rw4wfnyb3/elixir-cheat-sheet-v2.pdf?dl=0\n\nhttps://github.com/itsgreggreg/elixir_quick_reference/blob/master/README.md\n","a39839985b4eed0e15d33b1aa65a85d6":"As I said before the biggest take away is to learn a new language. Help yourself by expanding your tool set and change the way you approach problems.\n\nAnd if you can't think of any language to learn.  Elixir is fantastic place to start of any developer, but especially for Ruby developers and Rails developers.\n\nIt has been adopted by Bleacher Report, Dockyard, Thoughtbot, Pinterest, Thoughtworks technology radar.\n\nMy next steps are to begin taking a closer look at the Phoenix frame work or find a unit of work that would be a good fit for Elixir","5bbea1507469a1d9d944f6761d768418":"Created 2011.  v1.0 released September 2014. The most recent release was this month as v1.4.\n\nJose Valim created the Devise and Simple Form gems.\n\nCreated in response to performance with Ruby and no satisfactory concurrency story for Ruby\n\nBuilt on Erlang VM.  Think of what Scala or Clojure are to Java.  That is what Elixir is to Erlang.","7375d9145028e5f2117116077ffe92cf":"Variables are immutable.  Once assigned they can not be changed!\n\nBecause of this programs become more about data transformation and message passing.  Take in value and spit out a value that uses that value as a base.  (x + 1)  actually will returned a newly referenced variable.\n\nQuick caveat to this with Elixir is that you can rebind a variable.  Hardcore Erlangers consider this mutability.  Any references to the variable before it's rebound will maintain the previous reference though.","3eb6d0f28125e5676d36b515ed05932c":"Functions that can take functions as arguments in or return functions as a result.  Assign functions as variables and anonymous functions are allowed. Something that you often think of with JS.\n\nGreeter function example:  return a string with \"Hello #{name}\"","8cb362d1818755c8826a8a488e46808b":"Pure functions have no side effects.  Largely used for optimization.  If an entire program is made up of pure functions then state is never mutated.\n\nIf anytime a value is passed in you expect the same result.  That can optimized to be considered a constant.  (x + 1) x = 2 always returns 3.  That is considered a constant if 2 is passed in. ","e2078841544ea531a092624ace55b957":"Recursion is when a function/method calls itself until a base case is reached.\n\nLargely stands in as a replacement for looping in lots of instances.\n\nFor Elixir tail recursion is identified and you don't need to maintain the stack.\n","a850c412978deb62d1114d9958c7cbbe":"Looks a lot like Ruby, but don't be fooled into writing Ruby with Elixir.  This I thought was a strength of learning Elixir, but ended up being a bit of a challenge to get over.","4b18631854b757eddb77d5bf04ef002c":"asset pipeline comes with Brunch asset compiler.  Phoenix also implements page auto refresh on file update.\n\nMaking changes to the template or view will automatically be updated on the page without refresh.","a06a4c546dfce5ebebcebe30966ae2d7":"Phoenix has considerable better performance compared to Rails.  \n\nhttps://www.techempower.com/benchmarks/#section=data-r17\u0026hw=ph\u0026test=fortune\u0026c=6\u0026o=e\u0026f=zik05z-zik073-zik0zj-zik0zj-zhxjwf-zdk8an-q2xtz3-qmx0qn-e3","c55d002d96f400e367e87395db08b9a4":"not quite... library is lacking and so is support across the interwebs.  this makes sense as Elixir and Phoenix are both young.\n\nPhoenix 1.0 came out August 2015.\n\nRecently both Elixir and Phoenix both just recently landed on the Thoughtworks Radar.\n\nhttps://www.thoughtworks.com/radar/languages-and-frameworks","57507caecbd565ddabeb3a5c68883cdf":"Atoms are constants where their name is their own value. Some other languages call these symbols *cough* Ruby *cough*\n\nBoolean values actually just are atoms under the hood.\n\nthink of atoms as symbols within Ruby.  They even look like symbols as they have the semicolon prefixed before them.  often used for pattern matching","7abbd4b3db7afffd2df884848b7bbf96":"Tuples store elements contiguously in memory and can hold any combo of types.\n\nThis means accessing a tuple element by index or getting the tuple size is a fast operation\n\nMost commonly used as a return value of a function.","64e566102641bd8d7645618225055f8e":"A list in Elixir is actually a linked list under the hood.  Lists are used everywhere.  ","a8f116259e6d50ab7a9c73e63dced608":"lists have access to a cool method that accesses the head and the tail of a list\n\nthese are also defined as methods that take in a list \n\nhd and tl\n\nThis can then in turn be used to define new lists.","d3d70d29f7f7d8150ccacacfdaa381a7":"Here are the basic types of Elixir.  Elixir is dynamically typed.\n ","d5381a440286de190ba568beae426eaa":"head and tail are only variable names as well.  the actual [ | ] are a function.\n\nA cool use of this is to use as a means of pattern matching.\n\nEach side can be a pattern to match against.","862240543d7f9cb3e5a8fd1249ab54f5":"Think of this as a Ruby hash or a dictionary\n\nKeyword Module is used to often access pieces of the keyword list","ffd4369ded663824dc0d100f09d87d30":"Other collections exist Map, Struct, Range, and Stream\n\nEnum is a module that provides a lot different methods for operating on enumerable types (lists, tuples)\n\nThis will look very familiar to Ruby developers as Enumerable is a often used.\n\nOn this page I make use of the function shorthand.  I define an anonymous function in the first call to .map.  The second time I use the shorthand syntax since this is such a common use case.","1a11f8eb94ba985a8f0f165e1fffb58d":"Under the hood this is basically just a linked list of tuples.\n\nThe following little snippet shows that","3b97770325cf3c224cd971f9d2e6e3fd":"Binding is like assignment, but is doing pattern matching \n\nTALK THROUGH CODE SNIPPET\n\nThat looks like mutability.  don't be tricked!\n\nThe pin symbol (carrot) enforces a check against the variable.  called the hat symbol\n\nAlthough you are able to do reassignment... it's not really.  what you are really doing is changing the reference.  If you use a variable within a function it will maintain it's reference.","34282f0085db78090e4a5c3ea222ec9a":"example of maintain reference within a function","b057770512d746c81254a63deb691f52":"Dot operator is also what's called.\n\nThis is used to distinguish a call to an anonymous function rather then just return a reference of the function.\n\n","23922494b832220dace709cdee3dabf8":"Something that we have skimmed over during this little walk through of the language is use of pattern matching.\n\nIt's subtle functionality, but quite powerful\n\nThe equal sign is actually called the match operator.\n\nVariables are only assigned when they are on the left side of the match operator.\n\nPattern matching is powerful way to compare more complex data structures in addition to simple types.\n\n_ is a wildcard symbol that means you don't care at all what the value is\n\n_variable name means it will capture the value, but still match on anything","f2e699b0e933d14e8f6aa2089923f794":"take a moment to discuss functions after walking through code snippet.\n\nfunctions have a fixed number of arguments.  this is different then Ruby\n\nEach function has a unique identity that is  defined by name and arity of the function (the number of arguments that are passed to it)\n\nFunctions can have the same name but different arity.  It's kind of like overloading a function.","69f2cdf206960765a6bd1def67970fc8":"the result of the previous function is piped into the next function.\n\nmake code much more readable","733a50cb7ae00e2f3c6a514dca14d9fd":"My simple example doesn't really do the pipe operator justice. \n\nImagine the following requirements from a client\n\nDoing all of these in a row might look something like the following...","5d48405fbd874c9b8faffc5d4909c4e1":"that turns into the following","dfac25bcc020616f0449c25b2cafef50":"this messy bit of code that is readable, but just hard to digest","1144ccb01a9d561e034841c138cb3851":"Should remind you of Rails new.","b6053194ceb7fa920b7be94a605d1d8b":"pretty similar to Ruby has do on the end of the if statement and that's because if is just a function defined by the language.  \n\nworth noting no else if exists","c5f59dc12e7b882546cf5f775abe8ef9":"Here is a slightly complex example of a case statement you might encounter.  \n\ntalk about the pattern matching going on.\n\n_ -\u003e \"unable to parse #{inspect expression}\n\nand\n\n{:+, 7, _} -\u003e \"NO SEVENS\"","56e1274e3064c4745a27b9e648f2b9dd":"Guard Clauses can only use built in Elixir functionality though.\n\ncomparisons, boolean, arithmetic, concatation, the in operator, and type checking functions","9ae4b749e603a3b0f39673159decc9e7":"Majority of code written will live in a Module.\n\ncontains named functions\n\nnotice difference between def and defp\n\ndefp designates the function as pattern matched against","a26247457f112f47bfb8a684435fc1ee":"Especially to Logan Keenan, Cliff Braton, and my wife","ca51670d31952a4e9f68478c314e1c56":"IEX is Elixir's interactive shell.  Great for testing out development.  Pretty much like IRB or Rails Console.\n\nh helper method is fantastic within IEX and you can also load .exs files directly into the shell to test out written modules\n\n==========================================\n\nExUnit is Elixir's test framework very similar to what Minitest is for Ruby.  The big difference is that documentation is considered a first class within Elixir.  Documenting is done in markdown and at compile time extracted out and spun up into a server.  \n\nDocumentation is even has it's own tests for the code examples that are you documentation.  Similar to Python's doctest.\n\n==========================================\n\nMix is kind of like make for Elixir, but more.  It's more like a combination between make, rake, and bundler.","6bec8c6675afde617cacae6d3b1504ef":"How Phoenix adds realtime support is via the concept of Channels.  These are similar to a controller, but communication goes both directions.  \n\nThey allow to both receive and send messages.  \n\nThis feature of Phoenix is the most compelling reason to switch over other web frameworks as this is was the main feature and cause for creation of Phoenix.","e40c5d6ec01c5dbc6b511fa8d3d7e122":"","ce8c706f3d2db5ff9bf2e05a51632495":"","7a0c93f5b7abbc414ac9f345c10cf92e":"","60ed2e2199411aeb7c6d25560215c8f9":"","637ca3441de9bf58539c6ce88f79cabd":""}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: true,
+				slideNumber: false,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				scrollActivationWidth: null,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "fade",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+
+	</body>
+</html>
