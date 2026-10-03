@@ -6,7 +6,7 @@ gem "jekyll", "~> 4.3"
 
 group :jekyll_plugins do
   gem "jekyll-remote-theme"
-  gem "jekyll-feed", "~> 0.17"
+  gem "jekyll-feed", "~> 0.18"
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "jekyll-target-blank"
